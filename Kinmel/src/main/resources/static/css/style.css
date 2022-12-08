@@ -544,7 +544,7 @@ float: right;
 /* breadcrumb-area
 -------------------------------------*/
 .breadcrumb-area {
-  background: rgba(0, 0, 0, 0) url("/assets/img/breadcrumbs.png") no-repeat scroll center top;
+  background: rgba(0, 0, 0, 0) url("..//img/breadcrumbs.png") no-repeat scroll center top;
   padding: 215px 0 135px;
   position:relative
 }
