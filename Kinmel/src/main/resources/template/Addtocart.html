@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Add to cart</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+
+<body>
+     
+    <div class="cart-container">
+      <form action="#">
+        <table>
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="first-row">
+              <td><a href="#"><img src="images/cartthe.png" alt="cartthe.png"></a></td>
+              <td class="product-name"><a href="#">Lorrem ipsum dolor</a></td>
+              <td>Rs.125.0</td>
+              <td><input type="number"value="1"></td>
+              <td>Rs.125.00</td>
+              <td><a href="#"><i class=""></i></a></td>
+            </tr>
+            <tr class="second-row">
+              <td><a href="#"><img src="images/cartimage.png" alt="cartimage.png"></a></td>
+              <td class="product-name"><a href="#">Lorrem ipsum dolor</a></td>
+              <td>Rs.90.0</td>
+              <td><input type="number"value="1"></td>
+              <td>Rs.90.00</td>
+              <td><a href="#"><i></i></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+  
+      <div class="second-section">
+        <div class="left-section">
+        <div class="update-cart-btn">
+          <input class="update-btn" type="button" value="update cart">
+          <input type="button" value="continue shopping">
+        </div>
+        <div class="coupon-sec">
+          <h3>coupon</h3>
+          <p>Enter your coupon if you have one.</p>
+          <input type="text" placeholder="Coupon code">
+          <button class="apply-btn">apply coupon</button>
+        </div>
+      </div>
+  
+      <div class="right-section">
+        <div class="total-cart">
+          <h1>cart totals</h1>
+        </div>
+        <table>
+          <tbody>
+            <tr class="subtotal-row">
+              <th>Subtotal</th>
+              <td><span class="amount">Rs.125.00</span></td>
+            </tr>
+            <tr class="shipping-row">
+              <th>Shipping</th>
+              <td>
+                <ul class="shipping-stuffs">
+                  <li>
+                    <input type="radio" />
+                    <p>
+                      Flat Rate: <span class="amount">Rs.7.00</span>
+                    </p>
+                  </li>
+                  <li>
+                    <input type="radio" />
+                    <p>
+                      Free Shipping
+                    </p>
+                  </li>
+                </ul>
+                <p>
+                  Calculate Shipping
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <th>Total</th>
+              <td>Rs.125.00</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="checkout">
+          <button>Proceed to checkout</button>
+        </div>
+      </div>
+      </div>
+    </div>
+
+</body>
+</html>
