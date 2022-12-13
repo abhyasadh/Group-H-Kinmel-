@@ -851,7 +851,7 @@ ul.product-nav li:last-child:before{display:none}
 5. upcoming-product-area
 ---------------------------- */
 .upcoming-product-area {
-  background: rgba(0, 0, 0, 0) url("img/bg2.jpg") repeat scroll center center / cover ;
+  background: rgba(0, 0, 0, 0) url("../img/bg2.jpg") repeat scroll center center / cover ;
 }
 .upcoming-img {
   border: 1px solid #ddd;
@@ -1182,7 +1182,7 @@ ul.footer-contact li i {
 10. testimonial-area
 ---------------------------- */
 .testimonial-area {
-	background: rgba(0, 0, 0, 0) url("img/bg.jpg") no-repeat scroll center center;
+	background: rgba(0, 0, 0, 0) url("../img/bg.jpg") no-repeat scroll center center;
 	padding: 120px 0;
 	background-size: cover;
 }
@@ -1385,7 +1385,7 @@ h3.sidebar-title::before {
 12. breadcrumb-area
 -------------------------------------*/
 .breadcrumb-area {
-  background: rgba(0, 0, 0, 0) url("..//img/breadcrumbs.png") no-repeat scroll center top;
+  background: rgba(0, 0, 0, 0) url("../img/breadcrumbs.png") no-repeat scroll center top;
   padding: 215px 0 135px;
   position:relative
 }
