@@ -2926,7 +2926,7 @@ width: 100%;}
 .category-area-3 .button-cart {
   clear: inherit;
 }
-.category-area-3 .button-top a:hover,.category-area-3 .button-cart button:hover {
+.category-area-3 .button-top a:hover,.category-area-3 .button-cart button:hover {}
 
 /* -------------------------
 9. footer
