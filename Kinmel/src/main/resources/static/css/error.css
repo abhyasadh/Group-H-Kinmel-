@@ -90,7 +90,7 @@ body{
   display: inline-flex;
 }
 .content .btns a{
-  display: inline-block;
+
   margin: 0 10px;
   text-decoration: none;
   border: 2px solid #454747;
@@ -99,7 +99,7 @@ body{
   padding: 10px 25px;
   border-radius: 25px;
   text-transform: uppercase;
-  transition: all 0.3s ease;
+ 
 }
 .content .btns a:hover{
   background: #454747;
