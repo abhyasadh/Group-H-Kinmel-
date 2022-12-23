@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-<<<<<<< HEAD
-    <data-source source="LOCAL" name="projectmgmtsystem@localhost" uuid="57ee920b-49bd-4b15-9b6e-3a85ecaa4c45">
+    <data-source source="LOCAL" name="kinmel@localhost" uuid="caeab20a-ff5b-4e91-ba5b-83c21f65cde9">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/projectmgmtsystem</jdbc-url>
-=======
-    <data-source source="LOCAL" name="main_kinmel@localhost" uuid="6e2f86c0-26aa-4aab-a6d1-490e42f5a64a">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/main_kinmel</jdbc-url>
->>>>>>> Edit-Profile
+      <jdbc-url>jdbc:postgresql://localhost:5432/kinmel</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
