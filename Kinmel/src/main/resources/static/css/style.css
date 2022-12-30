@@ -29,6 +29,7 @@
 	20. four-zero-four
 	21. blog-area
 	22. home-wrapper
+  23. review-page
 
 
 
@@ -3314,4 +3315,208 @@ width: 100%;}
 .category-area-2{}
 .category-area-2 .product-curosel .col-md-12 .single-product:last-child {
   margin-top: 0px;
+}
+
+
+/* 23. review page */
+
+p {
+  margin: 0;
+}
+.review-container {
+  display: grid;
+  background-color: rgb(220, 218, 218);
+  width: 70%;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.first-review ,
+.second-review, .third-review, .fourth-review,
+.fifth-review{
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  margin-top: 20px;
+  width: 80%;
+  margin-left: 7%;
+}
+
+.col-1 img {
+  width: 70px;
+  height: 70px;
+  border-radius: 45px;
+}
+
+.col-2{
+  margin: 0;
+}
+
+.col-2 .name {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 3px;
+}
+
+.col-2 .id {
+  color: rgb(86, 85, 85);
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.col-3, .col-4 {
+  margin-left: 7rem;
+}
+
+.col-3, .col-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-3 .delete-btn,
+.col-4 .edit-btn{
+  text-transform: uppercase;
+  padding: 10px 15px;
+  font-weight: bold;
+  letter-spacing: .1rem;
+  background-color: rgb(37, 37, 37);
+  color: white;
+  cursor: pointer;
+}
+
+.col-3 .delete-btn:hover,
+.col-4 .edit-btn:hover {
+  background-color: red;
+  color: white;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+
+
+.review-rating-container{
+  position: relative;
+  width: 400px;
+  background: #111;
+  padding: 20px 30px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+.review-rating-container .post{
+  display: none;
+}
+.review-rating-container .text{
+  font-size: 25px;
+  color: #666;
+  font-weight: 500;
+  margin-top: 20px;
+}
+.review-rating-container .edit{
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.review-rating-container .delete{
+  position: absolute;
+  right: 55px;
+  top: 5px;
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+}
+.review-rating-container .edit:hover,
+.review-rating-container .delete:hover{
+  text-decoration: underline;
+}
+.review-rating-container .star-widget input{
+  display: none;
+}
+.star-widget label{
+  font-size: 40px;
+  color: #444;
+  padding: 10px;
+  float: right;
+  transition: all 0.2s ease;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+  color: #fd4;
+}
+input:checked ~ label{
+  color: #fd4;
+}
+input#rate-5:checked ~ label{
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+}
+
+.review-rating-container .review-form{
+  display: none;
+}
+input:checked ~ .review-form{
+  display: block;
+}
+.review-form header{
+  width: 100%;
+  font-size: 25px;
+  color: #fe7;
+  font-weight: 500;
+  margin: 5px 0 20px 0;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+.review-form .textarea{
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+.review-form .textarea textarea{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #eee;
+  border: 1px solid #333;
+  background: #222;
+  padding: 10px;
+  font-size: 17px;
+  resize: none;
+}
+.textarea textarea:focus{
+  border-color: #444;
+}
+.review-form .post-btn{
+  height: 45px;
+  width: 100%;
+  margin: 15px 0;
+}
+.review-form .post-btn button{
+  height: 100%;
+  width: 100%;
+  border: 1px solid #444;
+  outline: none;
+  background: #222;
+  color: rgb(189, 186, 186);
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.review-form .post-btn button:hover{
+  background: red;
 }

@@ -9,6 +9,11 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
     <!-- Place favicon.ico in the root directory -->
 
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+
 <!-- all css here -->
 <!-- bootstrap v3.3.6 css -->
     <link rel="stylesheet" href="../static/css/bootstrap.min.css">
@@ -30,6 +35,7 @@
     <link rel="stylesheet" href="../static/css/responsive.css">
 <!-- modernizr js -->
     <script src="../static/js/vendor/modernizr-2.8.3.min.js"></script>
+
 
 </head>
 
@@ -223,12 +229,41 @@
 
     <!-- review section starts -->
 
+    <div class="review-rating-container">
+      <div class="post">
+        <div class="text">Thanks for rating us!</div>
+        <div class="edit">EDIT</div>
+        <div class="delete">DELETE</div>
+        </div>
+          <div class="star-widget">
+        <input type="radio" name="rate" id="rate-5">
+        <label for="rate-5" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-4">
+        <label for="rate-4" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-3">
+        <label for="rate-3" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-2">
+        <label for="rate-2" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-1">
+        <label for="rate-1" class="fas fa-star"></label>
+        <form class="review-form" action="#">
+          <header></header>
+          <div class="textarea">
+            <textarea cols="30" placeholder="Describe your experience.."></textarea>
+          </div>
+          <div class="post-btn">
+            <button type="submit">Post</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <section>
       <div class="review-container">
   
         <div class="first-review">
           <div class="col-1">
-            <img src="/channel-1.jpeg" alt="">
+            <img src="../static/img/review/channel-1.jpeg" alt="">
           </div>
           <div class="col-2">
             <p class="name">
@@ -241,17 +276,12 @@
               Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit aspernatur animi ab quod, sapiente nulla, expedita optio iure aliquam magni rerum ratione voluptas nesciunt natus soluta odit! Architecto, dolorum fugit!
             </p>
           </div>
-          <div class="col-3">
-            <button type="button" class="delete-btn">delete</button>
-          </div>
-          <div class="col-4">
-            <button type="button" class="edit-btn">edit</button>
-          </div>
+        
         </div>
   
         <div class="second-review">
           <div class="col-1">
-            <img src="/channel-2.jpeg" alt="">
+            <img src="../static/img/review/channel-2.jpeg" alt="">
           </div>
           <div class="col-2">
             <p class="name">
@@ -264,17 +294,12 @@
               Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
             </p>
           </div>
-          <div class="col-3">
-            <button type="button" class="delete-btn">delete</button>
-          </div>
-          <div class="col-4">
-            <button type="button" class="edit-btn">edit</button>
-          </div>
+      
         </div>
   
         <div class="third-review">
           <div class="col-1">
-            <img src="/channel-3.jpeg" alt="">
+            <img src="../static/img/review/channel-3.jpeg" alt="">
           </div>
           <div class="col-2">
             <p class="name">
@@ -287,17 +312,12 @@
               Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
             </p>
           </div>
-          <div class="col-3">
-            <button type="button" class="delete-btn">delete</button>
-          </div>
-          <div class="col-4">
-            <button type="button" class="edit-btn">edit</button>
-          </div>
+         
         </div>
   
         <div class="fourth-review">
           <div class="col-1">
-            <img src="/channel-4.jpeg" alt="">
+            <img src="../static/img/review/channel-4.jpeg" alt="">
           </div>
           <div class="col-2">
             <p class="name">
@@ -310,17 +330,12 @@
               Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
             </p>
           </div>
-          <div class="col-3">
-            <button type="button" class="delete-btn">delete</button>
-          </div>
-          <div class="col-4">
-            <button type="button" class="edit-btn">edit</button>
-          </div>
+          
         </div>
   
         <div class="fifth-review">
           <div class="col-1">
-            <img src="/in darkness1.jpeg" alt="">
+            <img src="../static/img/review/in darkness1.jpeg" alt="">
           </div>
           <div class="col-2">
             <p class="name">
@@ -332,21 +347,16 @@
             <p class="review">
               Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
             </p>
-          </div>
-          <div class="col-3">
-            <button type="button" class="delete-btn">delete</button>
-          </div>
-          <div class="col-4">
-            <button type="button" class="edit-btn">edit</button>
-          </div>
+          </div>  
         </div>
       </div>
     </section>
-
     <!-- review section ends here!!!!! -->
 
+
+
     
-     <!-- footer start -->
+		 <!-- footer start -->
 		 <footer>
 			<div class="footer-top">
 				<div class="container">
@@ -467,7 +477,7 @@
 			<!-- footer-bottom-area end -->			
 		</footer>
 		<!-- footer end -->
-
+      
 				<!-- all js here -->
 		<!-- jquery latest version -->
 		<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../static/js/vendor/jquery-1.12.0.min.js"></script>
@@ -485,4 +495,26 @@
         <script src="../static/js/plugins.js"></script>
 		<!-- main js -->
         <script src="../static/js/main.js"></script>
+
+
+        <script>
+          const btn = document.querySelector(".post-btn");
+          const post = document.querySelector(".post");
+          const widget = document.querySelector(".star-widget");
+          const editBtn = document.querySelector(".edit");
+          btn.onclick = ()=>{
+            widget.style.display = "none";
+            post.style.display = "block";
+            editBtn.onclick = ()=>{
+              widget.style.display = "block";
+              post.style.display = "none";
+            }
+            return false;
+          }
+        </script>
+
+
+</body>
+
+</html>
     
