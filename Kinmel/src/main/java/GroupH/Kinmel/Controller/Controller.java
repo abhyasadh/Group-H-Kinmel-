@@ -1,4 +1,4 @@
-package Controller;
+package GroupH.Kinmel.Controller;
 
 public class Controller {
     //controller
