@@ -852,7 +852,7 @@ ul.product-nav li:last-child:before{display:none}
 5. upcoming-product-area
 ---------------------------- */
 .upcoming-product-area {
-  background: rgba(0, 0, 0, 0) url("../img/bg2.jpg") repeat scroll center center / cover ;
+  background: rgba(0, 0, 0, 0) url("img/bg2.jpg") repeat scroll center center / cover ;
 }
 .upcoming-img {
   border: 1px solid #ddd;
@@ -1183,7 +1183,7 @@ ul.footer-contact li i {
 10. testimonial-area
 ---------------------------- */
 .testimonial-area {
-	background: rgba(0, 0, 0, 0) url("../img/bg.jpg") no-repeat scroll center center;
+	background: rgba(0, 0, 0, 0) url("img/bg.jpg") no-repeat scroll center center;
 	padding: 120px 0;
 	background-size: cover;
 }
@@ -1386,7 +1386,7 @@ h3.sidebar-title::before {
 12. breadcrumb-area
 -------------------------------------*/
 .breadcrumb-area {
-  background: rgba(0, 0, 0, 0) url("../img/breadcrumbs.png") no-repeat scroll center top;
+  background: rgba(0, 0, 0, 0) url("..//img/breadcrumbs.png") no-repeat scroll center top;
   padding: 215px 0 135px;
   position:relative
 }
@@ -2927,9 +2927,6 @@ width: 100%;}
 .category-area-3 .button-cart {
   clear: inherit;
 }
-<<<<<<< HEAD
-.category-area-3 .button-top a:hover,.category-area-3 .button-cart button:hover {
-=======
 .category-area-3 .button-top a:hover,.category-area-3 .button-cart button:hover {}
 
 /* -------------------------
@@ -3060,7 +3057,6 @@ ul.footer-contact li i {
   text-transform: capitalize;
 }
 .product-tag ul li a:hover {
->>>>>>> 13bc211f7a623a81a496f6c576582259dac0dfad
   background: #fe4847 none repeat scroll 0 0;
   border-color: #fe4847;
   color: #fff;
@@ -3319,8 +3315,6 @@ width: 100%;}
 .category-area-2{}
 .category-area-2 .product-curosel .col-md-12 .single-product:last-child {
   margin-top: 0px;
-<<<<<<< HEAD
-=======
 }
 
 
@@ -3336,6 +3330,23 @@ p {
   margin: auto;
   margin-top: 60px;
   margin-bottom: 60px;
+}
+
+.review-container .review-heading {
+  text-transform: capitalize;
+  font-weight: bold;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.review-container .customer-say {
+  font-size: 17px;
+  font-weight: bold;
+  color: black;
+  margin: auto;
+  padding: 10px 13px;
+  background-color: gray;
+  margin-top: 10px;
 }
 .first-review ,
 .second-review, .third-review, .fourth-review,
@@ -3371,36 +3382,15 @@ p {
   margin-bottom: 8px;
 }
 
-.col-3, .col-4 {
-  margin-left: 7rem;
+
+
+
+
+.review_rating-heading {
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 50px;
 }
-
-.col-3, .col-4 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.col-3 .delete-btn,
-.col-4 .edit-btn{
-  text-transform: uppercase;
-  padding: 10px 15px;
-  font-weight: bold;
-  letter-spacing: .1rem;
-  background-color: rgb(37, 37, 37);
-  color: white;
-  cursor: pointer;
-}
-
-.col-3 .delete-btn:hover,
-.col-4 .edit-btn:hover {
-  background-color: red;
-  color: white;
-  border: none;
-  transition: all 0.2s ease;
-}
-
-
 
 .review-rating-container{
   position: relative;
@@ -3414,8 +3404,7 @@ p {
   justify-content: center;
   flex-direction: column;
   margin: auto;
-  margin-bottom: 60px;
-  margin-top: 60px;
+  margin-top: 15px;
 }
 .review-rating-container .post{
   display: none;
@@ -3424,9 +3413,10 @@ p {
   font-size: 25px;
   color: #666;
   font-weight: 500;
-  margin-top: 20px;
+  margin-top: 15px;
 }
-.review-rating-container .edit{
+.review-rating-container .edit,
+.review-rating-container .delete{
   position: absolute;
   right: 10px;
   top: 5px;
@@ -3436,14 +3426,8 @@ p {
   cursor: pointer;
 }
 
-.review-rating-container .delete{
-  position: absolute;
-  right: 55px;
-  top: 5px;
-  font-size: 16px;
-  color: #666;
-  font-weight: 500;
-  cursor: pointer;
+.delete {
+  margin-right: 40px;
 }
 .review-rating-container .edit:hover,
 .review-rating-container .delete:hover{
@@ -3471,13 +3455,13 @@ input#rate-5:checked ~ label{
   text-shadow: 0 0 20px #952;
 }
 
-.review-rating-container .review-form{
+.review-rating-container form{
   display: none;
 }
-input:checked ~ .review-form{
+input:checked ~ form{
   display: block;
 }
-.review-form header{
+form header{
   width: 100%;
   font-size: 25px;
   color: #fe7;
@@ -3486,12 +3470,12 @@ input:checked ~ .review-form{
   text-align: center;
   transition: all 0.2s ease;
 }
-.review-form .textarea{
+form .textarea{
   height: 100px;
   width: 100%;
   overflow: hidden;
 }
-.review-form .textarea textarea{
+form .textarea textarea{
   height: 100%;
   width: 100%;
   outline: none;
@@ -3505,25 +3489,24 @@ input:checked ~ .review-form{
 .textarea textarea:focus{
   border-color: #444;
 }
-.review-form .post-btn{
+form .post-btn{
   height: 45px;
   width: 100%;
   margin: 15px 0;
 }
-.review-form .post-btn button{
+form .post-btn button{
   height: 100%;
   width: 100%;
   border: 1px solid #444;
   outline: none;
   background: #222;
-  color: rgb(189, 186, 186);
+  color: #999;
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.review-form .post-btn button:hover{
-  background: red;
->>>>>>> 13bc211f7a623a81a496f6c576582259dac0dfad
+form .post-btn button:hover{
+  background: rgb(220, 23, 23);
 }
