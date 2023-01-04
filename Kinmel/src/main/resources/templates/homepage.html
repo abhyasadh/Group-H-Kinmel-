@@ -112,6 +112,38 @@
 								display:block;
 							}
 						</style>
+						<input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+						
+							<a href="#women_clothing">women clothing</a>
+							<a href="#jewelleries">Jewelleries</a>
+							<a href="#men_clothing">men clothing</a>
+							<a href="#hats">hats</a>
+							<a href="#tshirts">tshirts</a>
+							<a href="#skirts">Skirts</a>
+							<a href="#jackets">jackets</a>
+					</div>
+					<script>
+						function myFunction() {
+							document.getElementById("myDropdown").classList.toggle("show");
+						  }
+						  
+						  function filterFunction() {
+							var input, filter, ul, li, a, i;
+							input = document.getElementById("myInput");
+							filter = input.value.toUpperCase();
+							div = document.getElementById("myDropdown");
+							a = div.getElementsByTagName("a");
+							for (i = 0; i < a.length; i++) {
+							  txtValue = a[i].textContent || a[i].innerText;
+							  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+								a[i].style.display = "";
+							  } else {
+								a[i].style.display = "none";
+							  }
+							}
+						  }
+					</script>
+					
 
 		</header>
 
