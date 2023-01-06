@@ -1,4 +1,4 @@
-<html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -232,11 +232,11 @@
 							<div class="social-sign">
 								<a href="#" style="background-color: #00a1f1;"><i class="fa fa-google-plus"></i> Sign in with Google</a>
 							</div>
-							<form action="#">
+							<form th:action="@{/login}" th:object="${loginUser}" method="post">
 								<label>Email Address</label>
-								<input type="text" />
+								<input type="text" name="email"/>
 								<label>Password</label>
-								<input type="password" />
+								<input type="password" name="password" />
 								<div class="login-lost">
 									<span class="forgot-login">
 										<a href="#">Forgot your Password?</a>
@@ -296,13 +296,8 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="footer-logo">
-<<<<<<< HEAD
-								<img src="img/logo-white-text.png" alt="" />
-								<p>Kinmel is the platform that you are bound to visit for your clothing needs. <br />It is our topmost priority to make sure that the customers are satisfied. </p>
-=======
 								<img src="../static/img/logo-white-text.png" alt="" />
-								<p> Kinmel is the platform that you are bound to visit for your clothing needs. <br />It is our topmost priority to make sure that the customers are satisfied. </p>
->>>>>>> 13bc211f7a623a81a496f6c576582259dac0dfad
+								<p>Kinmel is the platform that you are bound to visit for your clothing needs. <br />It is our topmost priority to make sure that the customers are satisfied. </p>
 								<div class="widget-icon">
 									<a href="#"><i class="fa fa-facebook"></i></a>
 									<a href="#"><i class="fa fa-twitter"></i></a>
