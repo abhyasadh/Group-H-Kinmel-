@@ -6,30 +6,31 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="shortcut icon" type="image/x-icon" href="../static/img/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
         <!-- Place favicon.ico in the root directory -->
 
 		<!-- all css here -->
 		<!-- bootstrap v3.3.6 css -->
-        <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+
+        <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
 		<!-- animate css -->
-        <link rel="stylesheet" href="../static/css/animate.css">
+        <link rel="stylesheet" th:href="@{/css/animate.css}">
 		<!-- jquery-ui.min css -->
-        <link rel="stylesheet" href="../static/css/jquery-ui.min.css">
+        <link rel="stylesheet" th:href="@{/css/jquery-ui.min.css}">
 		<!-- meanmenu css -->
-        <link rel="stylesheet" href="../static/css/meanmenu.min.css">
+        <link rel="stylesheet" th:href="@{/css/meanmenu.min.css}">
 		<!-- owl.carousel css -->
-        <link rel="stylesheet" href="../static/css/owl.carousel.css">
+        <link rel="stylesheet" th:href="@{/css/owl.carousel.css}">
 		<!-- slick css -->
-        <link rel="stylesheet" href="../static/css/slick.css">
+        <link rel="stylesheet" th:href="@{/css/slick.css}">
 		<!-- font-awesome css -->
-        <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+        <link rel="stylesheet" th:href="@{/css/font-awesome.min.css}">
 		<!-- style css -->
-		<link rel="stylesheet" href="../static/css/style.css">
+		<link rel="stylesheet" th:href="@{/css/style.css}">
 		<!-- responsive css -->
-        <link rel="stylesheet" href="../static/css/responsive.css">
+        <link rel="stylesheet" th:href="@{/css/responsive.css}">
 		<!-- modernizr js -->
-        <script src="../static/js/vendor/modernizr-2.8.3.min.js"></script>
+        <script th:src="@{/js/vendor/modernizr-2.8.3.min.js}"></script>
 
 		<style>
 			.fa{
@@ -54,7 +55,7 @@
 						<div class="row">
 							<div class="col-md-2 col-sm-4 col-xs-5">
 								<div class="logo">
-									<a href="index.html"><img src="../static/img/logo-white-text.png" alt="" /></a>
+									<a href="index.html"><img th:src="@{/img/logo-white-text.png}" alt="" /></a>
 								</div>
 							</div>
 							<div class="col-md-8 hidden-xs hidden-sm">
@@ -107,7 +108,7 @@
 													</div>
 													<div class="mega-right">
 														<span class="mega-menu-img">
-															<a href="shop.html"><img alt="" src="../static/img/1.jpg"></a>
+															<a href="shop.html"><img alt="" th:src="@{/img/1.jpg}" /></a>
 														</span>
 													</div>
 												</div>
@@ -136,7 +137,7 @@
 														<a href="shop.html">nail set </a>
 													</span>
 													<span class="mega-menu-img">
-														<a href="shop.html"><img alt="" src="../static/img/1.jpg"></a>
+														<a href="shop.html"><img alt="" th:src="@{/img/1.jpg}"></a>
 													</span>
 												</div>
 											</li>
@@ -157,7 +158,7 @@
 									<ul>
 										<li>
 											<div class="cart-img">
-												<a href="#"><img alt="" src="../static/img/cart/1.jpg"></a>
+												<a href="#"><img alt="" th:src="@{/img/cart/1.jpg}"></a>
 											</div>
 											<div class="cart-info">
 												<h4><a href="#">Product - 1</a></h4>
@@ -169,7 +170,7 @@
 										</li>
 										<li>
 											<div class="cart-img">
-												<a href="#"><img alt="" src="../static/img/cart/1.jpg"></a>
+												<a href="#"><img alt="unknown" th:src="@{/img/cart/1.jpg}"></a>
 											</div>
 											<div class="cart-info">
 												<h4><a href="#">Vestibulum suscipit</a></h4>
@@ -271,7 +272,7 @@
 		<!-- slider start -->
 		<div class="slider-area">
 			<div class="slider-active">
-				<div class="single-slider slide-height d-flex align-items-center" style="background-image:url(../static/img/slider/slide4.jpg)">
+				<div class="single-slider slide-height d-flex align-items-center" style="background-image:url('img/slider/slide4.jpg');">
 					<div class="container">
 						<div class="row">
 							<div class="col-xl-10 offset-xl-1">
@@ -286,7 +287,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="single-slider slide-height d-flex align-items-center" style="background-image:url(../static/img/slider/slide1.jpg)">
+				<div class="single-slider slide-height d-flex align-items-center" style="background-image:url('img/slider/slide1.jpg')">
 					<div class="container">
 						<div class="row">
 							<div class="col-xl-10 offset-xl-1">
@@ -301,7 +302,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="single-slider slide-height d-flex align-items-center" style="background-image:url(../static/img/slider/slide2.jpg)">
+				<div class="single-slider slide-height d-flex align-items-center" style="background-image:url('img/slider/slide2.jpg')">
 					<div class="container">
 						<div class="row">
 							<div class="col-xl-10 offset-xl-1">
@@ -326,7 +327,7 @@
 					<div class="col-md-4 col-sm-6">
 						<div class="single-banner">
 							<a href="#">
-								<img src="../static/img/banner/6.jpg" alt="" />
+								<img th:src="@{/img/banner/6.jpg}" alt="" />
 								<div class="banner-caption">
 									<h2>Men's <span>Sunglasses</span></h2>
 									<p>Our sunglasses and retro frames are all shades of great.</p>
@@ -335,7 +336,7 @@
 						</div>
 						<div class="single-banner marg-20">
 							<a href="#">
-								<img src="../static/img/banner/5.jpg" alt="" />
+								<img th:src="@{/img/banner/5.jpg}" alt="" />
 								<div class="banner-caption">
 									<h2>Men's <span>Watches</span></h2>
 									<p>Designer or digital, vintage or leather - it's time to get smart.</p>
@@ -346,7 +347,7 @@
 					<div class="col-md-4 col-sm-6">
 						<div class="single-banner">
 							<a href="#">
-								<img src="../static/img/banner/b1.jpg" alt="" />
+								<img th:src="@{/img/banner/b1.jpg}" alt="" />
 								<div class="banner-caption">
 									<h2>New Men's <span> style</span></h2>
 									<p>Style it like a boss with this week's most hyped T-shirts.</p>
@@ -357,7 +358,7 @@
 					<div class="col-md-4">
 						<div class="single-banner">
 							<a href="#">
-								<img src="../static/img/banner/1.jpg" alt="" />
+								<img th:src="@{/img/banner/1.jpg}" alt="" />
 								<div class="banner-caption">
 									<h2>Men's <span>Shoes</span></h2>
 									<p>Marley tried to convince her but she was not interested.</p>
@@ -366,7 +367,7 @@
 						</div>
 						<div class="single-banner marg-20">
 							<a href="#">
-								<img src="../static/img/banner/3.jpg" alt="" />
+								<img th:src="@{/img/banner/3.jpg}" alt="" />
 								<div class="banner-caption">
 									<h2><span> Sunglasses</span></h2>
 									<p>Our sunglasses and retro frames are all shades of great.</p>
@@ -409,8 +410,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/w1.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/w2.jpg" alt="" />
+															<img th:src="@{/img/product/w1.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/w2.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -438,8 +439,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/3.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/4.jpg" alt="" />
+															<img th:src="@{/img/product/3.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/4.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -467,8 +468,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/w3.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/w7.jpg" alt="" />
+															<img th:src="@{/img/product/w3.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/w7.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -496,8 +497,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/7.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/8.jpg" alt="" />
+															<img th:src="@{/img/product/7.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/8.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -525,8 +526,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/9.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/10.jpg" alt="" />
+															<img th:src="@{/img/product/9.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/10.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -554,8 +555,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/w8.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/w12.jpg" alt="" />
+															<img th:src="@{/img/product/w8.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/w12.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -583,8 +584,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/13.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/14.jpg" alt="" />
+															<img th:src="@{/img/product/13.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/14.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -612,8 +613,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/15.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/16.jpg" alt="" />
+															<img th:src="@{/img/product/15.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/16.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -647,8 +648,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/17.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/18.jpg" alt="" />
+															<img th:src="@{/img/product/17.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/18.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -676,8 +677,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/19.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/20.jpg" alt="" />
+															<img th:src="@{/img/product/19.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/20.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -705,8 +706,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/21.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/22.jpg" alt="" />
+															<img th:src="@{/img/product/21.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/22.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -734,8 +735,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/23.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/6.jpg" alt="" />
+															<img th:src="@{/img/product/23.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/6.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -763,8 +764,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/2.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/1.jpg" alt="" />
+															<img th:src="@{/img/product/2.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/1.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -792,8 +793,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/4.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/3.jpg" alt="" />
+															<img th:src="@{/img/product/4.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/3.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -821,8 +822,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/6.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/5.jpg" alt="" />
+															<img th:src="@{/img/product/6.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/5.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -850,8 +851,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/7.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/8.jpg" alt="" />
+															<img th:src="@{/img/product/7.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/8.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -885,8 +886,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/10.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/9.jpg" alt="" />
+															<img th:src="@{/img/product/10.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/9.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -914,8 +915,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/12.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/11.jpg" alt="" />
+															<img th:src="@{/img/product/12.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/11.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -943,8 +944,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/14.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/13.jpg" alt="" />
+															<img th:src="@{/img/product/14.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/13.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -972,8 +973,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/16.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/15.jpg" alt="" />
+															<img th:src="@{/img/product/16.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/15.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -1001,8 +1002,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/18.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/17.jpg" alt="" />
+															<img th:src="@{/img/product/18.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/17.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -1030,8 +1031,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/20.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/19.jpg" alt="" />
+															<img th:src="@{/img/product/20.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/19.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -1059,8 +1060,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/21.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/22.jpg" alt="" />
+															<img th:src="@{/img/product/21.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/22.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -1088,8 +1089,8 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a href="product-details.html">
-															<img src="../static/img/product/23.jpg" alt="" />
-															<img class="secondary-img" src="../static/img/product/5.jpg" alt="" />
+															<img th:src="@{/img/product/23.jpg}" alt="" />
+															<img class="secondary-img" th:src="@{/img/product/5.jpg}" alt="" />
 														</a>
 														<span class="tag-line">new</span>
 														<div class="product-action">
@@ -1131,7 +1132,7 @@
 						<div class="upcoming-single">
 							<div class="col-md-4 col-sm-4">
 								<div class="upcoming-img">
-									<a href="product-details.html"><img src="../static/img/product/9.jpg" alt="" /></a>
+									<a href="product-details.html"><img th:src="@{/img/product/9.jpg}" alt="" /></a>
 								</div>
 							</div>
 							<div class="col-md-8 col-sm-8">
@@ -1162,7 +1163,7 @@
 						<div class="upcoming-single">
 							<div class="col-md-4 col-sm-4">
 								<div class="upcoming-img">
-									<a href="product-details.html"><img src="../static/img/product/w1.jpg" alt="" /></a>
+									<a href="product-details.html"><img th:src="@{/img/product/w1.jpg}" alt="" /></a>
 								</div>
 							</div>
 							<div class="col-md-8 col-sm-8">
@@ -1193,7 +1194,7 @@
 						<div class="upcoming-single">
 							<div class="col-md-4 col-sm-4">
 								<div class="upcoming-img">
-									<a href="product-details.html"><img src="../static/img/product/5.jpg" alt="" /></a>
+									<a href="product-details.html"><img th:src="@{/img/product/5.jpg}" alt="" /></a>
 								</div>
 							</div>
 							<div class="col-md-8 col-sm-8">
@@ -1224,7 +1225,7 @@
 						<div class="upcoming-single">
 							<div class="col-md-4 col-sm-4">
 								<div class="upcoming-img">
-									<a href="product-details.html"><img src="../static/img/product/w9.jpg" alt="" /></a>
+									<a href="product-details.html"><img th:src="@{/img/product/w9.jpg}" alt="" /></a>
 								</div>
 							</div>
 							<div class="col-md-8 col-sm-8">
@@ -1274,8 +1275,8 @@
 							<div class="single-product">
 								<div class="product-img">
 									<a href="product-details.html">
-										<img src="../static/img/product/2.jpg" alt="" />
-										<img class="secondary-img" src="../static/img/product/1.jpg" alt="" />
+										<img th:src="@{/img/product/2.jpg}" alt="" />
+										<img class="secondary-img" th:src="@{/img/product/1.jpg}" alt="" />
 									</a>
 									<span class="tag-line">new</span>
 									<div class="product-action">
@@ -1299,8 +1300,8 @@
 							<div class="single-product">
 								<div class="product-img">
 									<a href="product-details.html">
-										<img src="../static/img/product/5.jpg" alt="" />
-										<img class="secondary-img" src="../static/img/product/7.jpg" alt="" />
+										<img th:src="@{/img/product/5.jpg}" alt="" />
+										<img class="secondary-img" th:src="@{/img/product/7.jpg}" alt="" />
 									</a>
 									<span class="tag-line">new</span>
 									<div class="product-action">
@@ -1328,8 +1329,8 @@
 							<div class="single-product">
 								<div class="product-img">
 									<a href="product-details.html">
-										<img src="../static/img/product/16.jpg" alt="" />
-										<img class="secondary-img" src="../static/img/product/14.jpg" alt="" />
+										<img th:src="@{/img/product/16.jpg}" alt="" />
+										<img class="secondary-img" th:src="@{/img/product/14.jpg}" alt="" />
 									</a>
 									<span class="tag-line">new</span>
 									<div class="product-action">
@@ -1353,62 +1354,8 @@
 							<div class="single-product">
 								<div class="product-img">
 									<a href="product-details.html">
-										<img src="../static/img/product/13.jpg" alt="" />
-										<img class="secondary-img" src="../static/img/product/12.jpg" alt="" />
-									</a>
-									<span class="tag-line">new</span>
-									<div class="product-action">
-										<div class="button-top">
-											<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
-											<a href="#" ><i class="fa fa-heart"></i></a>
-										</div>
-										<div class="button-cart">
-											<button><i class="fa fa-shopping-cart"></i> add to cart</button>
-										</div>
-									</div>
-								</div>
-								<div class="product-content">
-									<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
-									<div class="price">
-										<span>Rs. 80.00</span>
-										<span class="old">Rs. 90.11</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- single-product end -->
-						<!-- single-product start -->
-						<div class="col-md-12">
-							<div class="single-product">
-								<div class="product-img">
-									<a href="product-details.html">
-										<img src="../static/img/product/11.jpg" alt="" />
-										<img class="secondary-img" src="../static/img/product/6.jpg" alt="" />
-									</a>
-									<span class="tag-line">new</span>
-									<div class="product-action">
-										<div class="button-top">
-											<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
-											<a href="#" ><i class="fa fa-heart"></i></a>
-										</div>
-										<div class="button-cart">
-											<button><i class="fa fa-shopping-cart"></i> add to cart</button>
-										</div>
-									</div>
-								</div>
-								<div class="product-content">
-									<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
-									<div class="price">
-										<span>Rs. 80.00</span>
-										<span class="old">Rs. 90.11</span>
-									</div>
-								</div>
-							</div>
-							<div class="single-product">
-								<div class="product-img">
-									<a href="product-details.html">
-										<img src="../static/img/product/9.jpg" alt="" />
-										<img class="secondary-img" src="../static/img/product/8.jpg" alt="" />
+										<img th:src="@{/img/product/13.jpg}" alt="" />
+										<img class="secondary-img" th:src="@{/img/product/12.jpg}" alt="" />
 									</a>
 									<span class="tag-line">new</span>
 									<div class="product-action">
@@ -1436,8 +1383,8 @@
 							<div class="single-product">
 								<div class="product-img">
 									<a href="product-details.html">
-										<img src="../static/img/product/7.jpg" alt="" />
-										<img class="secondary-img" src="../static/img/product/8.jpg" alt="" />
+										<img th:src="@{/img/product/11.jpg}" alt="" />
+										<img class="secondary-img" th:src="@{/img/product/6.jpg}" alt="" />
 									</a>
 									<span class="tag-line">new</span>
 									<div class="product-action">
@@ -1461,62 +1408,8 @@
 							<div class="single-product">
 								<div class="product-img">
 									<a href="product-details.html">
-										<img src="../static/img/product/5.jpg" alt="" />
-										<img class="secondary-img" src="../static/img/product/2.jpg" alt="" />
-									</a>
-									<span class="tag-line">new</span>
-									<div class="product-action">
-										<div class="button-top">
-											<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
-											<a href="#" ><i class="fa fa-heart"></i></a>
-										</div>
-										<div class="button-cart">
-											<button><i class="fa fa-shopping-cart"></i> add to cart</button>
-										</div>
-									</div>
-								</div>
-								<div class="product-content">
-									<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
-									<div class="price">
-										<span>Rs. 80.00</span>
-										<span class="old">Rs. 90.11</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- single-product end -->
-						<!-- single-product start -->
-						<div class="col-md-12">
-							<div class="single-product">
-								<div class="product-img">
-									<a href="product-details.html">
-										<img src="../static/img/product/1.jpg" alt="" />
-										<img class="secondary-img" src="../static/img/product/2.jpg" alt="" />
-									</a>
-									<span class="tag-line">new</span>
-									<div class="product-action">
-										<div class="button-top">
-											<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
-											<a href="#" ><i class="fa fa-heart"></i></a>
-										</div>
-										<div class="button-cart">
-											<button><i class="fa fa-shopping-cart"></i> add to cart</button>
-										</div>
-									</div>
-								</div>
-								<div class="product-content">
-									<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
-									<div class="price">
-										<span>Rs. 80.00</span>
-										<span class="old">Rs. 90.11</span>
-									</div>
-								</div>
-							</div>
-							<div class="single-product">
-								<div class="product-img">
-									<a href="product-details.html">
-										<img src="../static/img/product/9.jpg" alt="" />
-										<img class="secondary-img" src="../static/img/product/10.jpg" alt="" />
+										<img th:src="@{/img/product/9.jpg}" alt="" />
+										<img class="secondary-img" th:src="@{/img/product/8.jpg}" alt="" />
 									</a>
 									<span class="tag-line">new</span>
 									<div class="product-action">
@@ -1544,8 +1437,8 @@
 							<div class="single-product">
 								<div class="product-img">
 									<a href="product-details.html">
-										<img src="../static/img/product/12.jpg" alt="" />
-										<img class="secondary-img" src="../static/img/product/18.jpg" alt="" />
+										<img th:src="@{/img/product/7.jpg}" alt="" />
+										<img class="secondary-img" th:src="@{/img/product/8.jpg}" alt="" />
 									</a>
 									<span class="tag-line">new</span>
 									<div class="product-action">
@@ -1569,62 +1462,8 @@
 							<div class="single-product">
 								<div class="product-img">
 									<a href="product-details.html">
-										<img src="../static/img/product/7.jpg" alt="" />
-										<img class="secondary-img" src="../static/img/product/12.jpg" alt="" />
-									</a>
-									<span class="tag-line">new</span>
-									<div class="product-action">
-										<div class="button-top">
-											<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
-											<a href="#" ><i class="fa fa-heart"></i></a>
-										</div>
-										<div class="button-cart">
-											<button><i class="fa fa-shopping-cart"></i> add to cart</button>
-										</div>
-									</div>
-								</div>
-								<div class="product-content">
-									<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
-									<div class="price">
-										<span>Rs. 80.00</span>
-										<span class="old">Rs. 90.11</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- single-product end -->
-						<!-- single-product start -->
-						<div class="col-md-12">
-							<div class="single-product">
-								<div class="product-img">
-									<a href="product-details.html">
-										<img src="../static/img/product/16.jpg" alt="" />
-										<img class="secondary-img" src="../static/img/product/17.jpg" alt="" />
-									</a>
-									<span class="tag-line">new</span>
-									<div class="product-action">
-										<div class="button-top">
-											<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
-											<a href="#" ><i class="fa fa-heart"></i></a>
-										</div>
-										<div class="button-cart">
-											<button><i class="fa fa-shopping-cart"></i> add to cart</button>
-										</div>
-									</div>
-								</div>
-								<div class="product-content">
-									<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
-									<div class="price">
-										<span>Rs. 80.00</span>
-										<span class="old">Rs. 90.11</span>
-									</div>
-								</div>
-							</div>
-							<div class="single-product">
-								<div class="product-img">
-									<a href="product-details.html">
-										<img src="../static/img/product/8.jpg" alt="" />
-										<img class="secondary-img" src="../static/img/product/9.jpg" alt="" />
+										<img th:src="@{/img/product/5.jpg}" alt="" />
+										<img class="secondary-img" th:src="@{/img/product/2.jpg}" alt="" />
 									</a>
 									<span class="tag-line">new</span>
 									<div class="product-action">
@@ -1652,8 +1491,8 @@
 							<div class="single-product">
 								<div class="product-img">
 									<a href="product-details.html">
-										<img src="../static/img/product/9.jpg" alt="" />
-										<img class="secondary-img" src="../static/img/product/10.jpg" alt="" />
+										<img th:src="@{/img/product/1.jpg}" alt="" />
+										<img class="secondary-img" th:src="@{/img/product/2.jpg}" alt="" />
 									</a>
 									<span class="tag-line">new</span>
 									<div class="product-action">
@@ -1677,8 +1516,170 @@
 							<div class="single-product">
 								<div class="product-img">
 									<a href="product-details.html">
-										<img src="../static/img/product/12.jpg" alt="" />
-										<img class="secondary-img" src="../static/img/product/9.jpg" alt="" />
+										<img th:src="@{/img/product/9.jpg}" alt="" />
+										<img class="secondary-img" th:src="@{/img/product/10.jpg}" alt="" />
+									</a>
+									<span class="tag-line">new</span>
+									<div class="product-action">
+										<div class="button-top">
+											<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
+											<a href="#" ><i class="fa fa-heart"></i></a>
+										</div>
+										<div class="button-cart">
+											<button><i class="fa fa-shopping-cart"></i> add to cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-content">
+									<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
+									<div class="price">
+										<span>Rs. 80.00</span>
+										<span class="old">Rs. 90.11</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- single-product end -->
+						<!-- single-product start -->
+						<div class="col-md-12">
+							<div class="single-product">
+								<div class="product-img">
+									<a href="product-details.html">
+										<img th:src="@{/img/product/12.jpg}" alt="" />
+										<img class="secondary-img" th:src="@{/img/product/18.jpg}" alt="" />
+									</a>
+									<span class="tag-line">new</span>
+									<div class="product-action">
+										<div class="button-top">
+											<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
+											<a href="#" ><i class="fa fa-heart"></i></a>
+										</div>
+										<div class="button-cart">
+											<button><i class="fa fa-shopping-cart"></i> add to cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-content">
+									<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
+									<div class="price">
+										<span>Rs. 80.00</span>
+										<span class="old">Rs. 90.11</span>
+									</div>
+								</div>
+							</div>
+							<div class="single-product">
+								<div class="product-img">
+									<a href="product-details.html">
+										<img th:src="@{/img/product/7.jpg}" alt="" />
+										<img class="secondary-img" th:src="@{/img/product/12.jpg}" alt="" />
+									</a>
+									<span class="tag-line">new</span>
+									<div class="product-action">
+										<div class="button-top">
+											<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
+											<a href="#" ><i class="fa fa-heart"></i></a>
+										</div>
+										<div class="button-cart">
+											<button><i class="fa fa-shopping-cart"></i> add to cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-content">
+									<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
+									<div class="price">
+										<span>Rs. 80.00</span>
+										<span class="old">Rs. 90.11</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- single-product end -->
+						<!-- single-product start -->
+						<div class="col-md-12">
+							<div class="single-product">
+								<div class="product-img">
+									<a href="product-details.html">
+										<img th:src="@{/img/product/16.jpg}" alt="" />
+										<img class="secondary-img" th:src="@{/img/product/17.jpg}" alt="" />
+									</a>
+									<span class="tag-line">new</span>
+									<div class="product-action">
+										<div class="button-top">
+											<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
+											<a href="#" ><i class="fa fa-heart"></i></a>
+										</div>
+										<div class="button-cart">
+											<button><i class="fa fa-shopping-cart"></i> add to cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-content">
+									<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
+									<div class="price">
+										<span>Rs. 80.00</span>
+										<span class="old">Rs. 90.11</span>
+									</div>
+								</div>
+							</div>
+							<div class="single-product">
+								<div class="product-img">
+									<a href="product-details.html">
+										<img th:src="@{/img/product/8.jpg}" alt="" />
+										<img class="secondary-img" th:src="@{/img/product/9.jpg}" alt="" />
+									</a>
+									<span class="tag-line">new</span>
+									<div class="product-action">
+										<div class="button-top">
+											<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
+											<a href="#" ><i class="fa fa-heart"></i></a>
+										</div>
+										<div class="button-cart">
+											<button><i class="fa fa-shopping-cart"></i> add to cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-content">
+									<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
+									<div class="price">
+										<span>Rs. 80.00</span>
+										<span class="old">Rs. 90.11</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- single-product end -->
+						<!-- single-product start -->
+						<div class="col-md-12">
+							<div class="single-product">
+								<div class="product-img">
+									<a href="product-details.html">
+										<img th:src="@{/img/product/9.jpg}" alt="" />
+										<img class="secondary-img" th:src="@{/img/product/10.jpg}" alt="" />
+									</a>
+									<span class="tag-line">new</span>
+									<div class="product-action">
+										<div class="button-top">
+											<a href="#" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></a>
+											<a href="#" ><i class="fa fa-heart"></i></a>
+										</div>
+										<div class="button-cart">
+											<button><i class="fa fa-shopping-cart"></i> add to cart</button>
+										</div>
+									</div>
+								</div>
+								<div class="product-content">
+									<h3><a href="product-details.html">Lorem ipsum dolor</a></h3>
+									<div class="price">
+										<span>Rs. 80.00</span>
+										<span class="old">Rs. 90.11</span>
+									</div>
+								</div>
+							</div>
+							<div class="single-product">
+								<div class="product-img">
+									<a href="product-details.html">
+										<img th:src="@{/img/product/12.jpg}" alt="" />
+										<img class="secondary-img" th:src="@{/img/product/9.jpg}" alt="" />
 									</a>
 									<span class="tag-line">new</span>
 									<div class="product-action">
@@ -1722,7 +1723,7 @@
 						<div class="col-md-12">
 							<div class="blog-wrapper">
 								<div class="blog-img">
-									<a href="single-blog.html"><img src="../static/img/blog/4.jpg" alt="" /></a>
+									<a href="single-blog.html"><img th:src="@{/img/blog/4.jpg}" alt="" /></a>
 								</div>
 								<div class="blog-content">
 									<h3><a href="single-blog.html">Lorem ipsum dolor sit</a></h3>
@@ -1739,7 +1740,7 @@
 						<div class="col-md-12">
 							<div class="blog-wrapper">
 								<div class="blog-img">
-									<a href="single-blog.html"><img src="../static/img/blog/2.jpg" alt="" /></a>
+									<a href="single-blog.html"><img th:src="@{/img/blog/2.jpg}" alt="" /></a>
 								</div>
 								<div class="blog-content">
 									<h3><a href="single-blog.html">Lorem ipsum dolor sit</a></h3>
@@ -1756,7 +1757,7 @@
 						<div class="col-md-12">
 							<div class="blog-wrapper">
 								<div class="blog-img">
-									<a href="single-blog.html"><img src="../static/img/blog/3.jpg" alt="" /></a>
+									<a href="single-blog.html"><img th:src="@{/img/blog/3.jpg}" alt="" /></a>
 								</div>
 								<div class="blog-content">
 									<h3><a href="single-blog.html">Lorem ipsum dolor sit</a></h3>
@@ -1773,7 +1774,7 @@
 						<div class="col-md-12">
 							<div class="blog-wrapper">
 								<div class="blog-img">
-									<a href="single-blog.html"><img src="../static/img/blog/1.jpg" alt="" /></a>
+									<a href="single-blog.html"><img th:src="@{/img/blog/1.jpg}" alt="" /></a>
 								</div>
 								<div class="blog-content">
 									<h3><a href="single-blog.html">Lorem ipsum dolor sit</a></h3>
@@ -1790,7 +1791,7 @@
 						<div class="col-md-12">
 							<div class="blog-wrapper">
 								<div class="blog-img">
-									<a href="single-blog.html"><img src="../static/img/blog/5.jpg" alt="" /></a>
+									<a href="single-blog.html"><img th:src="@{/img/blog/5.jpg}" alt="" /></a>
 								</div>
 								<div class="blog-content">
 									<h3><a href="single-blog.html">Lorem ipsum dolor sit</a></h3>
@@ -1806,7 +1807,7 @@
 						</div>
 						<div class="col-md-12">
 							<div class="single-blog">
-								<a href="single-blog.html"><img src="../static/img/blog/2.jpg" alt="" /></a>
+								<a href="single-blog.html"><img th:src="@{/img/blog/2.jpg}" alt="" /></a>
 							</div>
 							<div class="blog-content">
 								<h3><a href="single-blog.html">Lorem ipsum dolor sit</a></h3>
@@ -1832,47 +1833,47 @@
 						<div class="brand-curosel">
 							<div class="col-md-12">
 								<div class="single-brand">
-									<a href="#"><img src="../static/img/brand/1.png" alt="" /></a>
+									<a href="#"><img th:src="@{/img/brand/1.png}" alt="" /></a>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="single-brand">
-									<a href="#"><img src="../static/img/brand/1.png" alt="" /></a>
+									<a href="#"><img th:src="@{/img/brand/1.png}" alt="" /></a>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="single-brand">
-									<a href="#"><img src="../static/img/brand/1.png" alt="" /></a>
+									<a href="#"><img th:src="@{/img/brand/1.png}" alt="" /></a>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="single-brand">
-									<a href="#"><img src="../static/img/brand/1.png" alt="" /></a>
+									<a href="#"><img th:src="@{/img/brand/1.png}" alt="" /></a>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="single-brand">
-									<a href="#"><img src="../static/img/brand/1.png" alt="" /></a>
+									<a href="#"><img th:src="@{/img/brand/1.png}" alt="" /></a>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="single-brand">
-									<a href="#"><img src="../static/img/brand/1.png" alt="" /></a>
+									<a href="#"><img th:src="@{/img/brand/1.png}" alt="" /></a>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="single-brand">
-									<a href="#"><img src="../static/img/brand/1.png" alt="" /></a>
+									<a href="#"><img th:src="@{/img/brand/1.png}" alt="" /></a>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="single-brand">
-									<a href="#"><img src="../static/img/brand/1.png" alt="" /></a>
+									<a href="#"><img th:src="@{/img/brand/1.png}" alt="" /></a>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="single-brand">
-									<a href="#"><img src="../static/img/brand/1.png" alt="" /></a>
+									<a href="#"><img th:src="@{/img/brand/1.png}" alt="" /></a>
 								</div>
 							</div>
 						</div>
@@ -1889,7 +1890,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="footer-logo">
-								<img src="../static/img/logo-white-text.png" alt="" />
+								<img th:src="@{/img/logo-white-text.png}" alt="" />
 								<p>Kinmel is the platform that you are bound to visit for your clothing needs. <br />It is our topmost priority to make sure that the customers are satisfied. </p>
 								<div class="widget-icon">
 									<a href="#"><i class="fa fa-facebook"></i></a>
@@ -1995,7 +1996,7 @@
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-6">
 							<div class="payment-img">
-								<img src="../static/img/payment.png" alt="" />
+								<img th:src="@{/img/payment.png}" alt="" />
 							</div>
 						</div>
 					</div>
@@ -2018,7 +2019,7 @@
 							<div class="modal-product">
 								<div class="product-images">
 									<div class="main-image images">
-										<img alt="" src="../static/img/product/13.jpg">
+										<img alt="" src="@{/img/product/13.jpg}">
 									</div>
 								</div><!-- .product-images -->
 
@@ -2059,26 +2060,47 @@
 			</div>
 			<!-- END Modal -->
 		</div>
+
+		<table>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Price</th>
+				<th>Description</th>
+				<th>Size</th>
+				<th>Color</th>
+				<th>Category</th>
+			</tr>
+			<tr th:each="product : ${products}">
+				<td th:text="{product.product_name}"></td>
+				<td th:text="${product.product_price}"></td>
+				<td th:text="${product.product_description}"></td>
+				<td th:text="${product.productSize}"></td>
+				<td th:text="${product.productColor}"></td>
+				<td th:text="${product.productCategory}"></td>
+			</tr>
+		</table>
+
 		<!-- END QUICKVIEW PRODUCT -->
 
 
 		<!-- all js here -->
 		<!-- jquery latest version -->
-        <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../static/js/vendor/jquery-1.12.0.min.js"></script>
+        <script data-cfasync="false" th:src="@{/../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js}"></script><script th:src="@{/js/vendor/jquery-1.12.0.min.js}"></script>
 		<!-- bootstrap js -->
-        <script src="../static/js/bootstrap.min.js"></script>
+        <script th:src="@{/js/bootstrap.min.js}"></script>
 		<!-- owl.carousel js -->
-        <script src="../static/js/owl.carousel.min.js"></script>
+        <script th:src="@{/js/owl.carousel.min.js}"></script>
 		<!-- meanmenu js -->
-        <script src="../static/js/jquery.meanmenu.js"></script>
+        <script th:src="@{/js/jquery.meanmenu.js}"></script>
 		<!-- jquery-ui js -->
-        <script src="../static/js/jquery-ui.min.js"></script>
+        <script th:src="@{/js/jquery-ui.min.js}"></script>
 		<!-- wow js -->
-        <script src="../static/js/wow.min.js"></script>
+        <script th:src="@{/js/wow.min.js}"></script>
 		<!-- plugins js -->
-        <script src="../static/js/plugins.js"></script>
+        <script th:src="@{/js/plugins.js}"></script>
 		<!-- main js -->
-        <script src="../static/js/main.js"></script>
+        <script th:src="@{/js/main.js}"></script>
     </body>
 
 </html>

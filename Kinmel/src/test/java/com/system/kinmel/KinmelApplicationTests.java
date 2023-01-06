@@ -1,4 +1,4 @@
-package GroupH.Kinmel;
+package com.system.kinmel;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
