@@ -3512,3 +3512,148 @@ form .post-btn button:hover{
   background: rgb(220, 23, 23);
 }
 
+
+/* 24. edti profile page */
+
+.editProfile-container {
+  background: rgb(241, 241, 241);
+  margin: auto;
+  width: 85%;
+  height: 75vh;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.editProfile-container .leftSection {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  height: 100%;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+.leftSection .user-profile img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.leftSection .user-name {
+  font-size: 17px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.leftSection .user-email {
+  font-size: 14px;
+  color: rgb(123, 123, 123);
+  margin: 0;
+}
+
+
+.leftSection #file {
+  display: none;
+}
+.leftSection .changePicture {
+  margin-top: 22px;
+  margin-bottom: 16px;
+  
+}
+
+.leftSection .changePicture label {
+  padding: 9px 12px;
+  border: none;
+  background-color: blue;
+  margin: 8px;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+}
+
+
+
+.leftSection .about-user h5 {
+  margin: 0;
+  font-size: 20px;
+  color: blue;
+  text-transform: capitalize;
+
+}
+
+.editProfile-container .rightSection {
+  display: inline-block;
+  width: 67%;
+  vertical-align: top;
+  height: 100%;
+  margin-top: 15px;
+}
+
+
+.rightSection .user-details .right-topSection {
+  display: flex;
+}
+
+.rightSection h5 {
+  margin-left: 22px;
+  font-size: 19px;
+  text-transform: capitalize;
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: blue;
+}
+
+.right-topSection .top-leftSection ,
+.right-topSection .top-rightSection  {
+  width: 42%;
+  margin-right: 10px;
+  margin-left: 23px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.top-leftSection input,
+.top-rightSection input{
+  display: block;
+  width: 100%;
+  border: 2px solid black;
+  padding: 11px 11px;
+  margin-bottom: 7px;
+  border: none;
+  border-radius: 8%;
+  box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.right-topSection label {
+  display: block;
+  padding: 10px 0px;
+  text-transform: capitalize;
+  font-size: 17px;
+} 
+
+.rightSection .updateProfile-btn  {
+  float: right;
+  /* margin: 15px; */
+  margin-right: 45px;
+  margin-top: 10px;
+}
+
+.cancel-user-btn {
+  margin-left: 10px;
+} 
+
+.updateProfile-btn .update-user-btn,
+.updateProfile-btn .cancel-user-btn {
+  padding: 8px 14px;
+  background: blue;
+  border: none;
+  font-size: 17px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.updateProfile-btn .update-user-btn:hover,
+.updateProfile-btn .cancel-user-btn:hover {
+  background: rgba(0, 0, 255, 0.776);
+}
