@@ -514,6 +514,70 @@ p.checkout-coupon input[type="text"] {
 }
 
 
+/* for edit profile */
+
+@media screen and (max-width : 1250px) {
+  .editProfile-container {
+      width: 1000px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .editProfile-container{
+    width: 880px;
+    height: 125vh;
+  }
+
+  /* .editProfile-container .leftSection {
+    display: inline-block;
+    width: 95%;
+    text-align: center;
+    height: 40%;
+    margin-left: 10px;
+    margin-top: 15px;
+  }
+
+  .editProfile-container .rightSection {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    margin-top: 15px;
+  } */
+
+}
+
+@media screen and (max-width: 960px) {
+
+  .editProfile-container{
+    width: 680px;
+    height: 125vh;
+  }
+
+    .editProfile-container .leftSection {
+    display: inline-block;
+    width: 95%;
+    text-align: center;
+    height: 40%;
+    margin-left: 10px;
+    margin-top: 15px;
+  }
+
+  .editProfile-container .rightSection {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    margin-top: 15px;
+  }
+  
+}
+@media screen and (max-width: 735px) {
+  .editProfile-container{
+    width: 580px;
+    height: 125vh;
+  }
+}
+
+
 
 
 
