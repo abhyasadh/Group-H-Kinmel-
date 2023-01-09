@@ -2483,19 +2483,19 @@ a.shipping-calculator-button:hover {
   padding-left: 10px;
   width: 100%;
 }
-.login-content form input.login-sub {
+.login-content form .login-sub {
   background: #444 none repeat scroll 0 0;
   border: 0 none;
   color: #fff;
   font-weight: 700;
   margin-bottom: 0;
   margin-top: 5px;
-  padding: 0 40px;
+  padding: 11px 40px;
   text-transform: uppercase;
   transition: all 0.3s ease 0s;
   width: inherit;
 }
-.login-content form input.login-sub:hover{background:#FE4847;}
+.login-content form .login-sub:hover{background:#FE4847;}
 .login-lost{}
 .login-lost span{}
 .login-lost span.log-rem{}
