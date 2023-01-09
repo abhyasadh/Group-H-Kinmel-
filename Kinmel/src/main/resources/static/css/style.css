@@ -29,6 +29,8 @@
 	20. four-zero-four
 	21. blog-area
 	22. home-wrapper
+  23. review-page
+  24. edti-profile page
 
 
 
@@ -851,7 +853,7 @@ ul.product-nav li:last-child:before{display:none}
 5. upcoming-product-area
 ---------------------------- */
 .upcoming-product-area {
-  background: rgba(0, 0, 0, 0) url("../img/bg2.jpg") repeat scroll center center / cover ;
+  background: rgba(0, 0, 0, 0) url("img/bg2.jpg") repeat scroll center center / cover ;
 }
 .upcoming-img {
   border: 1px solid #ddd;
@@ -1182,7 +1184,7 @@ ul.footer-contact li i {
 10. testimonial-area
 ---------------------------- */
 .testimonial-area {
-	background: rgba(0, 0, 0, 0) url("../img/bg.jpg") no-repeat scroll center center;
+	background: rgba(0, 0, 0, 0) url("img/bg.jpg") no-repeat scroll center center;
 	padding: 120px 0;
 	background-size: cover;
 }
@@ -1385,7 +1387,7 @@ h3.sidebar-title::before {
 12. breadcrumb-area
 -------------------------------------*/
 .breadcrumb-area {
-  background: rgba(0, 0, 0, 0) url("../img/breadcrumbs.png") no-repeat scroll center top;
+  background: rgba(0, 0, 0, 0) url("..//img/breadcrumbs.png") no-repeat scroll center top;
   padding: 215px 0 135px;
   position:relative
 }
@@ -2926,7 +2928,136 @@ width: 100%;}
 .category-area-3 .button-cart {
   clear: inherit;
 }
-.category-area-3 .button-top a:hover,.category-area-3 .button-cart button:hover {
+.category-area-3 .button-top a:hover,.category-area-3 .button-cart button:hover {}
+
+/* -------------------------
+9. footer
+---------------------------- */
+.footer-top {
+	background: #2d2d2d none repeat scroll 0 0;
+	border-bottom: 1px solid #5b5b5b;
+	padding: 55px 0;
+}
+.footer-logo {
+  text-align: center;
+}
+.footer-logo img {
+  margin-bottom: 15px;
+}
+.footer-logo p {
+  color: #d5d5d5;
+}
+.footer-top-area {
+  background: #2d2d2d none repeat scroll 0 0;
+  padding: 50px 0;
+}
+.footer-widget{}
+.footer-widget h3 {
+	color: #fff;
+	display: block;
+	font-size: 16px;
+	font-weight: 600;
+	padding-bottom: 20px;
+	text-transform: uppercase;
+	line-height: 11px;
+	margin-bottom: 8px;
+}
+ul.footer-menu{}
+ul.footer-menu li {}
+ul.footer-menu li a {
+  color: #d5d5d5;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 40px;
+  border-bottom: 1px solid #5b5b5b;
+}
+ul.footer-menu li:last-child a{border: 0}
+ul.footer-menu li:last-child a{padding-bottom:0;}
+ul.footer-menu li a:hover {
+  color: #fe4847;
+}
+ul.footer-menu li a::before {
+  content: "";
+  display: inline-block;
+  font-family: fontawesome;
+  margin-right: 8px;
+  position: relative;
+  top: 0;
+}
+.footer-widget img{}
+.footer-widget p {
+  color: #d5d5d5;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 25px;
+  margin-top: 22px;
+}
+.widget-icon{}
+.widget-icon a {
+  color: #d5d5d5;
+  display: inline-block;
+  font-size: 14px;
+  margin-right: 8px;
+  position: relative;
+  text-align: center;
+}
+.widget-icon a:hover{color:#EB3B60;}
+.widget-icon a i{}
+ul.footer-contact{}
+ul.footer-contact li {
+  clear: both;
+  display: inline-block;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  color: #d5d5d5;
+}
+ul.footer-contact li i {
+  border-radius: 0;
+  color: #d5d5d5;
+  float: left;
+  font-size: 16px;
+  height: 34px;
+  line-height: 23px;
+  margin-right: 8px;
+  text-align: center;
+  width: 32px;
+}
+.footer-bottom-area {
+  background: #212121;
+  padding: 20px 0;
+}
+.copyright{}
+.copyright p {
+  color: #d5d5d5;
+  margin: 0;
+  margin-top: 4px;
+}
+.copyright p a {
+  color: #fe4847;
+}
+.copyright p a:hover{text-decoration:underline}
+.payment-img {
+  float: right;
+}
+.payment-img img{}
+.product-tag {
+  margin-top: 27px;
+}
+.product-tag ul{}
+.product-tag ul li {
+  float: left;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+.product-tag ul li a {
+  border: 1px solid #d5d5d5;
+  color: #d5d5d5;
+  display: block;
+  padding: 5px 15px;
+  text-transform: capitalize;
+}
+.product-tag ul li a:hover {
   background: #fe4847 none repeat scroll 0 0;
   border-color: #fe4847;
   color: #fff;
@@ -3185,4 +3316,344 @@ width: 100%;}
 .category-area-2{}
 .category-area-2 .product-curosel .col-md-12 .single-product:last-child {
   margin-top: 0px;
+}
+
+
+/* 23. review page */
+
+p {
+  margin: 0;
+}
+.review-container {
+  display: grid;
+  background-color: rgb(220, 218, 218);
+  width: 70%;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.review-container .review-heading {
+  text-transform: capitalize;
+  font-weight: bold;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.review-container .customer-say {
+  font-size: 17px;
+  font-weight: bold;
+  color: black;
+  margin: auto;
+  padding: 10px 13px;
+  background-color: gray;
+  margin-top: 10px;
+}
+.first-review ,
+.second-review, .third-review, .fourth-review,
+.fifth-review{
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  margin-top: 20px;
+  width: 80%;
+  margin-left: 7%;
+}
+
+.col-1 img {
+  width: 70px;
+  height: 70px;
+  border-radius: 45px;
+}
+
+.col-2{
+  margin: 0;
+}
+
+.col-2 .name {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 3px;
+}
+
+.col-2 .id {
+  color: rgb(86, 85, 85);
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+
+
+
+
+.review_rating-heading {
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 50px;
+}
+
+.review-rating-container{
+  position: relative;
+  width: 400px;
+  background: #111;
+  padding: 20px 30px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 15px;
+}
+.review-rating-container .post{
+  display: none;
+}
+.review-rating-container .text{
+  font-size: 25px;
+  color: #666;
+  font-weight: 500;
+  margin-top: 15px;
+}
+.review-rating-container .edit,
+.review-rating-container .delete{
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.delete {
+  margin-right: 40px;
+}
+.review-rating-container .edit:hover,
+.review-rating-container .delete:hover{
+  text-decoration: underline;
+}
+.review-rating-container .star-widget input{
+  display: none;
+}
+.star-widget label{
+  font-size: 40px;
+  color: #444;
+  padding: 10px;
+  float: right;
+  transition: all 0.2s ease;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+  color: #fd4;
+}
+input:checked ~ label{
+  color: #fd4;
+}
+input#rate-5:checked ~ label{
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+}
+
+.review-rating-container form{
+  display: none;
+}
+input:checked ~ form{
+  display: block;
+}
+form header{
+  width: 100%;
+  font-size: 25px;
+  color: #fe7;
+  font-weight: 500;
+  margin: 5px 0 20px 0;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+form .textarea{
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+form .textarea textarea{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #eee;
+  border: 1px solid #333;
+  background: #222;
+  padding: 10px;
+  font-size: 17px;
+  resize: none;
+}
+.textarea textarea:focus{
+  border-color: #444;
+}
+form .post-btn{
+  height: 45px;
+  width: 100%;
+  margin: 15px 0;
+}
+form .post-btn button{
+  height: 100%;
+  width: 100%;
+  border: 1px solid #444;
+  outline: none;
+  background: #222;
+  color: #999;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form .post-btn button:hover{
+  background: rgb(220, 23, 23);
+}
+
+
+/* 24. edti profile page */
+
+.editProfile-container {
+  background: rgb(241, 241, 241);
+  margin: auto;
+  width: 85%;
+  height: 75vh;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.editProfile-container .leftSection {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  height: 100%;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+.leftSection .user-profile img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.leftSection .user-name {
+  font-size: 17px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.leftSection .user-email {
+  font-size: 14px;
+  color: rgb(123, 123, 123);
+  margin: 0;
+}
+
+
+.leftSection #file {
+  display: none;
+}
+.leftSection .changePicture {
+  margin-top: 22px;
+  margin-bottom: 16px;
+  
+}
+
+.leftSection .changePicture label {
+  padding: 9px 12px;
+  border: none;
+  background-color: blue;
+  margin: 8px;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+}
+
+
+
+.leftSection .about-user h5 {
+  margin: 0;
+  font-size: 20px;
+  color: blue;
+  text-transform: capitalize;
+
+}
+
+.editProfile-container .rightSection {
+  display: inline-block;
+  width: 67%;
+  vertical-align: top;
+  height: 100%;
+  margin-top: 15px;
+}
+
+
+.rightSection .user-details .right-topSection {
+  display: flex;
+}
+
+.rightSection h5 {
+  margin-left: 22px;
+  font-size: 19px;
+  text-transform: capitalize;
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: blue;
+}
+
+.right-topSection .top-leftSection ,
+.right-topSection .top-rightSection  {
+  width: 42%;
+  margin-right: 10px;
+  margin-left: 23px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.top-leftSection input,
+.top-rightSection input{
+  display: block;
+  width: 100%;
+  border: 2px solid black;
+  padding: 11px 11px;
+  margin-bottom: 7px;
+  border: none;
+  border-radius: 8%;
+  box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.right-topSection label {
+  display: block;
+  padding: 10px 0px;
+  text-transform: capitalize;
+  font-size: 17px;
+} 
+
+.rightSection .updateProfile-btn  {
+  float: right;
+  /* margin: 15px; */
+  margin-right: 45px;
+  margin-top: 10px;
+}
+
+.cancel-user-btn {
+  margin-left: 10px;
+} 
+
+.updateProfile-btn .update-user-btn,
+.updateProfile-btn .cancel-user-btn {
+  padding: 8px 14px;
+  background: blue;
+  border: none;
+  font-size: 17px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.updateProfile-btn .update-user-btn:hover,
+.updateProfile-btn .cancel-user-btn:hover {
+  background: rgba(0, 0, 255, 0.776);
 }

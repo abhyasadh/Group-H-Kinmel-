@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Group-H-Kinmel-.iml" filepath="$PROJECT_DIR$/.idea/Group-H-Kinmel-.iml" />
+<<<<<<< HEAD
+=======
+      <module fileurl="file://$PROJECT_DIR$/Kinmel/Kinmel.iml" filepath="$PROJECT_DIR$/Kinmel/Kinmel.iml" />
+>>>>>>> Edit-Profile
     </modules>
   </component>
 </project>
