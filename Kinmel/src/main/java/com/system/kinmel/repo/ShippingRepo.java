@@ -1,6 +1,7 @@
-package GroupH.Kinmel.Repository;
+package com.system.kinmel.repo;
 
-import GroupH.Kinmel.Entity.Shipping;
+
+import com.system.kinmel.entity.Shipping;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

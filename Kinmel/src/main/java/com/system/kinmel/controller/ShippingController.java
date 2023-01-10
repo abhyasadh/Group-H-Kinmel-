@@ -1,9 +1,7 @@
-package GroupH.Kinmel.Controller;
+package com.system.kinmel.controller;
 
-
-import GroupH.Kinmel.Pojo.ShippingPojo;
-
-import GroupH.Kinmel.Services.Interface.ShippingService;
+import com.system.kinmel.pojo.ShippingPojo;
+import com.system.kinmel.services.ShippingService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -19,19 +17,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ShippingController {
     private final ShippingService shippingService;
 
-
-
-    @GetMapping("/checkout")
-    public String createUser(Model model){
-        model.addAttribute("checkout", new ShippingPojo());
-        return "template/Checkout";
+    @GetMapping("/shipping")
+    public String createShip(Model model){
+        model.addAttribute("shipping", new ShippingPojo());
+        return "Checkout";
     }
 
 
-    @PostMapping("/save")
-    public String saveUser(@Valid ShippingPojo shippingPojo){
+    @PostMapping("/saveShip")
+    public String saveShip(@Valid ShippingPojo shippingPojo){
         shippingService.save(shippingPojo);
-        return "redirect:/profile/list"; //router ko path
+        return "redirect:/"; //router ko path
     }
 
 }

@@ -1,35 +1,35 @@
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Checkout</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Login || Kinmel</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-    <!-- Place favicon.ico in the root directory -->
+	<link rel="shortcut icon" type="image/x-icon" href="../static/img/favicon.ico">
+	<!-- Place favicon.ico in the root directory -->
 
-<!-- all css here -->
-<!-- bootstrap v3.3.6 css -->
-    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
-<!-- animate css -->
-    <link rel="stylesheet" href="../../static/css/animate.css">
-<!-- jquery-ui.min css -->
-    <link rel="stylesheet" href="../../static/css/jquery-ui.min.css">
-<!-- meanmenu css -->
-    <link rel="stylesheet" href="../../static/css/meanmenu.min.css">
-<!-- owl.carousel css -->
-    <link rel="stylesheet" href="../../static/css/owl.carousel.css">
-<!-- nivo-slider css -->
-    <!-- <link rel="stylesheet" href="lib/css/nivo-slider.html"> -->
-<!-- font-awesome css -->
-    <link rel="stylesheet" href="../../static/css/font-awesome.min.css">
-<!-- style css -->
-<link rel="stylesheet" href="../../static/css/style.css">
-<!-- responsive css -->
-    <link rel="stylesheet" href="../../static/css/responsive.css">
-<!-- modernizr js -->
-    <script src="../../static/js/vendor/modernizr-2.8.3.min.js"></script>
+	<!-- all css here -->
+	<!-- bootstrap v3.3.6 css -->
+	<link rel="stylesheet" th:href="@{~/css/bootstrap.min.css}">
+	<!-- animate css -->
+	<link rel="stylesheet" th:href="@{~/css/animate.css}">
+	<!-- jquery-ui.min css -->
+	<link rel="stylesheet" th:href="@{~/css/jquery-ui.min.css}">
+	<!-- meanmenu css -->
+	<link rel="stylesheet" th:href="@{~/css/meanmenu.min.css}">
+	<!-- owl.carousel css -->
+	<link rel="stylesheet" th:href="@{~/css/owl.carousel.css}">
+	<!-- nivo-slider css -->
+	<link rel="stylesheet" th:href="@{~/css/nivo-slider.html}">
+	<!-- font-awesome css -->
+	<link rel="stylesheet" th:href="@{~/css/font-awesome.min.css}">
+	<!-- style css -->
+	<link rel="stylesheet" th:href="@{~/css/style.css}">
+	<!-- responsive css -->
+	<link rel="stylesheet" th:href="@{~/css/responsive.css}">
+	<!-- modernizr js -->
+	<script src="../static/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
 <body>
@@ -279,7 +279,8 @@
 		<div class="checkout-area">
 			<div class="container">
 				<div class="row">
-					<form th:method="post" th:action="@{/checkout/save}" th:object="${checkout}">
+					<form th:method="post" th:action="@{/checkout/saveCheckout}" th:object="${checkout}">
+						<input type="text" hidden th:field = "*{id}">
 						<div class="col-lg-6 col-md-6">
 							<div class="checkbox-form">						
 								<h3>Billing Details</h3>
@@ -287,13 +288,13 @@
 									<div class="col-md-6">
 										<div class="checkout-form-list">
 											<label>First Name <span class="required">*</span></label>										
-											<input type="text" placeholder=""  th:field="*{firstname}" />
+											<input type="text" placeholder=""  th:field="*{firstName}" />
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="checkout-form-list">
 											<label>Last Name <span class="required">*</span></label>										
-											<input type="text" placeholder="" th:field="*{lastname}" />
+											<input type="text" placeholder="" th:field="*{lastName}" />
 										</div>
 									</div>
 									<div class="col-md-12">
@@ -343,18 +344,9 @@
 											<input type="text" placeholder="Phone"  th:field="*{phone}" />
 										</div>
 									</div>
-<!--									<div class="col-md-12">-->
-<!--										<div class="checkout-form-list create-acc">	-->
-<!--											<input id="cbox" type="checkbox" />-->
-<!--											<label>Create an account?</label>-->
-<!--										</div>-->
-<!--										<div id="cbox_info" class="checkout-form-list create-account">-->
-<!--											<p>Create an account by entering the information below. If you are a returning customer please login at the top of the page.</p>-->
-<!--											<label>Account password  <span class="required">*</span></label>-->
-<!--											<input type="password" placeholder="password" />	-->
-<!--										</div>-->
-<!--									</div>								-->
 								</div>
+								<form th:method="post" th:action="@{/checkout/saveShip}" th:object="${shipping}">
+									<input type="text" hidden th:field = "*{id}">
 								<div class="different-address">
 										<div class="ship-different-title">
 											<h3>
@@ -366,7 +358,7 @@
 										<div class="col-md-12">
 											<div class="country-select">
 												<label>Country <span class="required">*</span></label>
-												<select>
+												<select th:field="*{country}" >
 												  <option value="volvo">Nepal</option>
 												  <option value="saab">India</option>
 												  <option value="mercedes">Japan</option>
@@ -381,13 +373,13 @@
 										<div class="col-md-6">
 											<div class="checkout-form-list">
 												<label>First Name <span class="required">*</span></label>										
-												<input type="text" placeholder="" th:field="*{firstname}" />
+												<input type="text" placeholder="" th:field="*{firstName}" />
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="checkout-form-list">
 												<label>Last Name <span class="required">*</span></label>										
-												<input type="text" placeholder="" th:field="*{lastname}"/>
+												<input type="text" placeholder="" th:field="*{lastName}"/>
 											</div>
 										</div>
 										<div class="col-md-12">
@@ -416,7 +408,7 @@
 										<div class="col-md-6">
 											<div class="checkout-form-list">
 												<label>State / County <span class="required">*</span></label>										
-												<input type="text" placeholder=""th:field="*{state}" />
+												<input type="text" placeholder="" th:field="*{state}" />
 											</div>
 										</div>
 										<div class="col-md-6">
@@ -434,7 +426,7 @@
 										<div class="col-md-6">
 											<div class="checkout-form-list">
 												<label>Phone  <span class="required">*</span></label>										
-												<input type="text" placeholder="Phone"th:field="*{phone}" />
+												<input type="text" placeholder="Phone" th:field="*{phone}" />
 											</div>
 										</div>								
 									</div>
@@ -444,7 +436,8 @@
 											<textarea id="checkout-mess" cols="30" rows="10" placeholder="Notes about your order, e.g. special notes for delivery." th:field="*{notes}"></textarea>
 										</div>									
 									</div>
-								</div>													
+								</div>
+								</form>
 							</div>
 						</div>	
 						<div class="col-lg-6 col-md-6">
@@ -542,7 +535,7 @@
 									  </div>
 									</div>								
 									<div class="order-button-payment">
-										<input type="submit" value="Place order" />
+										<button type="submit" value="Place order"></button>
 									</div>
 								</div>
 								<!-- payment section ends here -->

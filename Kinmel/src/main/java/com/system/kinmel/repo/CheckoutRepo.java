@@ -1,6 +1,7 @@
-package GroupH.Kinmel.Repository;
+package com.system.kinmel.repo;
 
-import GroupH.Kinmel.Entity.Checkout;
+
+import com.system.kinmel.entity.Checkout;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

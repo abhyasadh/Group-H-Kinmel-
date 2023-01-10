@@ -1,7 +1,7 @@
-package GroupH.Kinmel.Pojo;
+package com.system.kinmel.pojo;
 
 
-import GroupH.Kinmel.Entity.Shipping;
+import com.system.kinmel.entity.Shipping;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,6 +1,7 @@
-package GroupH.Kinmel.Pojo;
+package com.system.kinmel.pojo;
 
-import GroupH.Kinmel.Entity.Checkout;
+
+import com.system.kinmel.entity.Checkout;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
