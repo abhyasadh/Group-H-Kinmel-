@@ -857,10 +857,14 @@ ul.product-nav li:last-child:before{display:none}
 ---------------------------- */
 .upcoming-product-area {
 <<<<<<< HEAD
+<<<<<<< HEAD
   background: rgba(0, 0, 0, 0) url("img/bg2.jpg") repeat scroll center center / cover ;
 =======
   background: rgba(0, 0, 0, 0) url("../img/bg2.jpg") repeat scroll center center / cover ;
 >>>>>>> Login/Registration
+=======
+  background: rgba(0, 0, 0, 0) url("../img/bg2.jpg") repeat scroll center center / cover ;
+>>>>>>> Checkout
 }
 .upcoming-img {
   border: 1px solid #ddd;
@@ -1192,10 +1196,14 @@ ul.footer-contact li i {
 ---------------------------- */
 .testimonial-area {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	background: rgba(0, 0, 0, 0) url("img/bg.jpg") no-repeat scroll center center;
 =======
 	background: rgba(0, 0, 0, 0) url("../img/bg.jpg") no-repeat scroll center center;
 >>>>>>> Login/Registration
+=======
+	background: rgba(0, 0, 0, 0) url("../img/bg.jpg") no-repeat scroll center center;
+>>>>>>> Checkout
 	padding: 120px 0;
 	background-size: cover;
 }
@@ -2940,6 +2948,7 @@ width: 100%;}
 .category-area-3 .button-cart {
   clear: inherit;
 }
+<<<<<<< HEAD
 .category-area-3 .button-top a:hover,.category-area-3 .button-cart button:hover {}
 
 /* -------------------------
@@ -3338,6 +3347,8 @@ width: 100%;}
 .category-area-3 .button-cart {
   clear: inherit;
 }
+=======
+>>>>>>> Checkout
 .category-area-3 .button-top a:hover,.category-area-3 .button-cart button:hover {
   background: #fe4847 none repeat scroll 0 0;
   border-color: #fe4847;
@@ -3597,6 +3608,7 @@ width: 100%;}
 .category-area-2{}
 .category-area-2 .product-curosel .col-md-12 .single-product:last-child {
   margin-top: 0px;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -3942,3 +3954,6 @@ form .post-btn button:hover{
 =======
 }
 >>>>>>> Login/Registration
+=======
+}
+>>>>>>> Checkout
