@@ -1,4 +1,4 @@
-package GroupH.Kinmel.Entity;
+package com.system.kinmel.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -11,12 +11,18 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "checkout")
-public class Checkout {
+@Table(name = "shipping")
+public class Shipping {
     @Id
     @SequenceGenerator(name = "kinMel_user_seq_gen", sequenceName = "kinMel_user_id_seq", allocationSize = 1)
     @GeneratedValue(generator = "kinMel_user_seq_gen", strategy = GenerationType.SEQUENCE)
     private Integer id;
+
+    @Column(name = "country",nullable = false)
+    private String country;
+
+    @Column(name = "notes",nullable = false)
+    private String notes;
 
     @Column(name = "firstname", nullable = false)
     private String firstname;
