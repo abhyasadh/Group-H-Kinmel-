@@ -2,6 +2,7 @@ package com.system.kinmel.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.web.SecurityFilterChain;
 
 public class SpringSecurityConfig {
@@ -26,4 +27,9 @@ public class SpringSecurityConfig {
         return httpSecurity.build();
 
     }
+    @Bean
+    public WebSecurityCustomizer webSecurityCustomizer(){
+        return (web) -> web.ignoring().anyRequest();
+    }
+
 }
