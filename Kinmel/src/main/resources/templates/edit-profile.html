@@ -450,4 +450,23 @@
   <!-- footer end -->
 
 </body>
+
+<script>
+  const divimg = document.querySelector("user-profile");
+  const img = document.querySelector("#photo");
+  const file = document.querySelector("#file");
+  const changepic = document.querySelector("#changePic");
+
+  file.addEventListener('change', function() {
+    const choosepic = this.files[0];
+
+    if(choosepic) {
+      const reader = new FileReader();
+      reader.addEventListener('load', function() {
+        img.setAttribute('src', reader.result);
+      });
+      reader.readAsDataURL(choosepic);
+    }
+  });
+</script>
 </html>
