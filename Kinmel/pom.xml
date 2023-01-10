@@ -42,7 +42,10 @@
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
 		<dependency>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 70aa709bcca7713ec80733d22ff13132c63590f4
 			<groupId>org.thymeleaf.extras</groupId>
 			<artifactId>thymeleaf-extras-springsecurity6</artifactId>
 		</dependency>
