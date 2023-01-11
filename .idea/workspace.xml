@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f36a57b1-e65d-4ce1-a172-51629a25f21f" name="Changes" comment="" />
+    <list default="true" id="f36a57b1-e65d-4ce1-a172-51629a25f21f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kinmel/src/main/resources/templates/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/Kinmel/src/main/resources/templates/faq.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,11 +48,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/New folder (3)",
+    "last_opened_file_path": "/Users/hangmakandangwa/Desktop/All-project/Group_I_Kinmel/Group-H-Kinmel-",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "vcs.Git",
     "spring.configuration.checksum": "7b00ab7002acbc5a60d1d9830294d0af",
     "vue.rearranger.settings.migration": "true"
   },
@@ -80,6 +84,8 @@
       <workItem from="1672638735196" duration="1223000" />
       <workItem from="1672652141543" duration="9029000" />
       <workItem from="1673325119616" duration="29000" />
+      <workItem from="1674019334306" duration="968000" />
+      <workItem from="1673339742594" duration="699000" />
     </task>
     <servers />
   </component>

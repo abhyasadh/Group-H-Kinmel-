@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faq</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css}">
 
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
@@ -144,7 +144,7 @@ body {
         </h1>
         <main class="accordion">
             <div class="faq-img">
-                <img src="/faq.jpeg" alt="" class="accordion-img">
+                <img alt="" th:src="@{/img/faq.jpeg}" alt="" class="accordion-img">
             </div>
             <div class="content-accordion">
                 <div class="question-answer">
