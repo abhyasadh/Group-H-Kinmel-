@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/Group-H-Kinmel-.iml" filepath="$PROJECT_DIR$/.idea/Group-H-Kinmel-.iml" />
 <<<<<<< HEAD
 =======
       <module fileurl="file://$PROJECT_DIR$/Kinmel/Kinmel.iml" filepath="$PROJECT_DIR$/Kinmel/Kinmel.iml" />
 >>>>>>> Edit-Profile
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/Group-H-Kinmel-1.iml" filepath="$PROJECT_DIR$/.idea/Group-H-Kinmel-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Kinmel/Kinmel.iml" filepath="$PROJECT_DIR$/Kinmel/Kinmel.iml" />
+>>>>>>> Checkout
     </modules>
   </component>
 </project>

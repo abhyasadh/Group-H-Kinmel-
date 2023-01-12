@@ -29,8 +29,11 @@
 	20. four-zero-four
 	21. blog-area
 	22. home-wrapper
+<<<<<<< HEAD
   23. review-page
   24. edti-profile page
+=======
+>>>>>>> Login/Registration
 
 
 
@@ -853,7 +856,15 @@ ul.product-nav li:last-child:before{display:none}
 5. upcoming-product-area
 ---------------------------- */
 .upcoming-product-area {
+<<<<<<< HEAD
+<<<<<<< HEAD
   background: rgba(0, 0, 0, 0) url("img/bg2.jpg") repeat scroll center center / cover ;
+=======
+  background: rgba(0, 0, 0, 0) url("../img/bg2.jpg") repeat scroll center center / cover ;
+>>>>>>> Login/Registration
+=======
+  background: rgba(0, 0, 0, 0) url("../img/bg2.jpg") repeat scroll center center / cover ;
+>>>>>>> Checkout
 }
 .upcoming-img {
   border: 1px solid #ddd;
@@ -1184,7 +1195,15 @@ ul.footer-contact li i {
 10. testimonial-area
 ---------------------------- */
 .testimonial-area {
+<<<<<<< HEAD
+<<<<<<< HEAD
 	background: rgba(0, 0, 0, 0) url("img/bg.jpg") no-repeat scroll center center;
+=======
+	background: rgba(0, 0, 0, 0) url("../img/bg.jpg") no-repeat scroll center center;
+>>>>>>> Login/Registration
+=======
+	background: rgba(0, 0, 0, 0) url("../img/bg.jpg") no-repeat scroll center center;
+>>>>>>> Checkout
 	padding: 120px 0;
 	background-size: cover;
 }
@@ -1387,7 +1406,7 @@ h3.sidebar-title::before {
 12. breadcrumb-area
 -------------------------------------*/
 .breadcrumb-area {
-  background: rgba(0, 0, 0, 0) url("..//img/breadcrumbs.png") no-repeat scroll center top;
+  background: rgba(0, 0, 0, 0) url("../img/breadcrumbs.png") no-repeat scroll center top;
   padding: 215px 0 135px;
   position:relative
 }
@@ -2485,19 +2504,19 @@ a.shipping-calculator-button:hover {
   padding-left: 10px;
   width: 100%;
 }
-.login-content form .login-sub {
+.login-content form input.login-sub {
   background: #444 none repeat scroll 0 0;
   border: 0 none;
   color: #fff;
   font-weight: 700;
   margin-bottom: 0;
   margin-top: 5px;
-  padding: 11px 40px;
+  padding: 0 40px;
   text-transform: uppercase;
   transition: all 0.3s ease 0s;
   width: inherit;
 }
-.login-content form .login-sub:hover{background:#FE4847;}
+.login-content form input.login-sub:hover{background:#FE4847;}
 .login-lost{}
 .login-lost span{}
 .login-lost span.log-rem{}
@@ -2541,6 +2560,7 @@ a.shipping-calculator-button:hover {
 -------------------------------------*/
 .contact-area {
   background: #efefef none repeat scroll 0 0;
+<<<<<<< HEAD
 }
 .contact-form {
 	background: #fff none repeat scroll 0 0;
@@ -2928,6 +2948,7 @@ width: 100%;}
 .category-area-3 .button-cart {
   clear: inherit;
 }
+<<<<<<< HEAD
 .category-area-3 .button-top a:hover,.category-area-3 .button-cart button:hover {}
 
 /* -------------------------
@@ -2937,127 +2958,398 @@ width: 100%;}
 	background: #2d2d2d none repeat scroll 0 0;
 	border-bottom: 1px solid #5b5b5b;
 	padding: 55px 0;
+=======
+>>>>>>> Login/Registration
 }
-.footer-logo {
-  text-align: center;
+.contact-form {
+	background: #fff none repeat scroll 0 0;
+	padding: 30px 30px;
 }
-.footer-logo img {
-  margin-bottom: 15px;
+.message-title > p {
+  margin-bottom: 31px;
 }
-.footer-logo p {
-  color: #d5d5d5;
-}
-.footer-top-area {
-  background: #2d2d2d none repeat scroll 0 0;
-  padding: 50px 0;
-}
-.footer-widget{}
-.footer-widget h3 {
-	color: #fff;
-	display: block;
-	font-size: 16px;
-	font-weight: 600;
-	padding-bottom: 20px;
-	text-transform: uppercase;
-	line-height: 11px;
-	margin-bottom: 8px;
-}
-ul.footer-menu{}
-ul.footer-menu li {}
-ul.footer-menu li a {
-  color: #d5d5d5;
-  display: block;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 40px;
-  border-bottom: 1px solid #5b5b5b;
-}
-ul.footer-menu li:last-child a{border: 0}
-ul.footer-menu li:last-child a{padding-bottom:0;}
-ul.footer-menu li a:hover {
-  color: #fe4847;
-}
-ul.footer-menu li a::before {
-  content: "";
-  display: inline-block;
-  font-family: fontawesome;
-  margin-right: 8px;
-  position: relative;
-  top: 0;
-}
-.footer-widget img{}
-.footer-widget p {
-  color: #d5d5d5;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 25px;
-  margin-top: 22px;
-}
-.widget-icon{}
-.widget-icon a {
-  color: #d5d5d5;
-  display: inline-block;
-  font-size: 14px;
-  margin-right: 8px;
-  position: relative;
-  text-align: center;
-}
-.widget-icon a:hover{color:#EB3B60;}
-.widget-icon a i{}
-ul.footer-contact{}
-ul.footer-contact li {
-  clear: both;
-  display: inline-block;
-  margin-bottom: 15px;
-  padding-bottom: 15px;
-  color: #d5d5d5;
-}
-ul.footer-contact li i {
+.input-filed{}
+.input-filed input {
+  border: 1px solid #e3e3e3;
   border-radius: 0;
-  color: #d5d5d5;
+  box-shadow: none;
+  font-size: 13px;
+  height: 45px;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  width: 100%;
+}
+.contact-textarea{}
+.contact-textarea label{ }
+.contact-textarea textarea {
+  border: 1px solid #e3e3e3;
+  border-radius: 0;
+  font-size: 13px;
+  height: 130px;
+  padding: 10px 15px;
+  width: 100%;
+}
+.contact-textarea > input {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid #e3e3e3;
+  height: 35px;
+  margin-top: 15px;
+  padding: 0 25px;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+}
+.contact-textarea > input:hover{background:#FE4847;border-color:#FE4847;color:#fff}
+.contact-info {
+  background: #fff none repeat scroll 0 0;
+}
+.single-contact {
+  border-bottom: 1px solid #e3e3e3;
+  padding: 38px 25px;
+}
+.contact-icon {
   float: left;
-  font-size: 16px;
-  height: 34px;
-  line-height: 23px;
-  margin-right: 8px;
-  text-align: center;
-  width: 32px;
 }
-.footer-bottom-area {
-  background: #212121;
-  padding: 20px 0;
-}
-.copyright{}
-.copyright p {
-  color: #d5d5d5;
-  margin: 0;
-  margin-top: 4px;
-}
-.copyright p a {
+.contact-icon i {
   color: #fe4847;
+  font-size: 30px;
 }
-.copyright p a:hover{text-decoration:underline}
-.payment-img {
-  float: right;
+.contact-method {
+  margin-left: 45px;
 }
-.payment-img img{}
-.product-tag {
-  margin-top: 27px;
+.contact-method h2, .message-title h1 {
+	color: #242424;
+	font-size: 18px;
+	font-weight: 600;
 }
-.product-tag ul{}
-.product-tag ul li {
-  float: left;
-  margin-bottom: 5px;
-  margin-right: 5px;
-}
-.product-tag ul li a {
-  border: 1px solid #d5d5d5;
-  color: #d5d5d5;
-  display: block;
-  padding: 5px 15px;
+.contact-method span {
   text-transform: capitalize;
 }
-.product-tag ul li a:hover {
+.map-area {
+  padding: 10px;
+  background: #fff;
+  margin-top:30px;
+}
+#googleMap{height:385px}
+/*-----------------------------------
+19. about-area
+-------------------------------------*/
+.about-area{}
+.about-text {
+  margin-top: 30px;
+}
+.about-text h2 {
+  color: #212121;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+.about-text p{}
+.about-text p:last-child {
+  margin: 0;
+}
+.about-text h2::after {
+  background: #212121 none repeat scroll 0 0;
+  content: "";
+  display: block;
+  height: 1px;
+  margin: 5px 0 20px;
+  width: 50px;
+}
+.team-area {
+  background: #f5f5f5 none repeat scroll 0 0;
+}
+.single-team {
+  background: #fff none repeat scroll 0 0;
+  transition: all 0.3s ease 0s;
+}
+.team-img {
+  overflow: hidden;
+  position: relative;
+}
+.team-icon {
+  background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+  bottom: -55px;
+  left: 0;
+  padding: 10px 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  opacity:0;
+  transition: all 0.3s ease 0s;
+}
+.single-team:hover .team-icon{bottom:0;opacity:1}
+.team-icon > a {
+  border: 1px solid #fff;
+  color: #fff;
+  display: inline-block;
+  font-size: 18px;
+  height: 35px;
+  line-height: 32px;
+  margin: 0 3px;
+  transition: all 0.3s ease 0s;
+  width: 35px;
+}
+.team-icon > a:hover{background:#FE4847;border-color:#FE4847}
+.team-info {
+	padding: 15px 0;
+	text-align: center;
+	transition: .3s;
+}
+.team-info h2 {
+	color: #444;
+	font-size: 17px;
+	font-weight: 600;
+	text-transform: capitalize;
+	transition: .3s;
+}
+.team-info span {
+  text-transform: capitalize;
+  transition: .3s;
+}
+.single-team:hover{
+
+}
+
+/*-----------------------------------
+20. four-zero-four
+-------------------------------------*/
+.four-zero-four {
+  padding: 200px 0;
+  text-align: center;
+}
+.four-zero-content{}
+.four-zero-content h1 {
+  color: #333333;
+  font-size: 70px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.four-zero-content h1 span {
+  color: #fe4847;
+}
+.four-zero-content p{}
+.four-zero-content a {
+  background: #333333 none repeat scroll 0 0;
+  color: #fff;
+  display: inline-block;
+  padding: 12px 30px;
+  text-transform: capitalize;
+}
+.four-zero-content a:hover{background:#fe4847;}
+/*-----------------------------------
+21. blog-area
+-------------------------------------*/
+.blog-area{}
+.blog-page-main{}
+.blog-page-main .blog-wrapper{margin-bottom:30px}
+.blog-page-main .blog-wrapper:last-child{margin:0}
+.search-form {
+  margin-top: 13px;
+  position: relative;
+}
+.search-form input {
+  border: 1px solid #ddd;
+  height: 35px;
+  padding: 0 10px;
+  text-transform: capitalize;
+  width: 100%;
+}
+.search-form button {
+  background: #999 none repeat scroll 0 0;
+  border: 0 none;
+  color: #fff;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  transition: all 0.3s ease 0s;
+}
+.search-form button:hover{background:#FE4847}
+.blog-page-main .col-md-6{margin-bottom:30px}
+.blog-page-main .col-md-4{margin-bottom:30px}
+.blog-page-main .col-md-6:nth-last-child(-n+2){margin-bottom:0px}
+.blog-page-main .col-md-4:nth-last-child(-n+3){margin-bottom:0px}
+.blog-pagination {
+  border-top: 1px solid #ddd;
+  margin-top: 31px;
+  overflow: hidden;
+  padding-top: 30px;
+}
+.blog-pagination .shop-breadcrumb {
+  text-align: center;
+  width: 100%;
+}
+blockquote {
+  border-left: 4px solid #fe4847;
+  font-size: 16px;
+  font-style: italic;
+  margin: 0 0 20px 30px;
+  padding: 10px 20px;
+}
+.single-post-comments {
+  margin-top: 40px;
+  max-width: 100%;
+}
+.comments-heading h3,h3.comment-reply-title {
+  border-bottom: 1px solid #e8e8e9;
+  font-size: 18px;
+  margin: 0 0 20px;
+  padding: 0 0 5px;
+  text-transform: uppercase;
+}
+.comments-list ul li{margin-bottom: 25px;}
+.comments-list-img{float: left;
+margin-right: 15px;}
+.comments-list-img img {
+  width: 50px;
+  border: 1px solid #ddd;
+}
+.comments-content-wrap{border: 1px solid #ddd;
+color: #42414f;
+font-size: 12px;
+line-height: 1;
+margin: 0 0 15px 63px;
+padding: 10px;
+position: relative;}
+.comments-content-wrap:before{background: #fff none repeat scroll 0 0;
+border-bottom: 1px solid #ececec;
+border-left: 1px solid #ececec;
+content: "";
+display: block;
+height: 10px;
+left: -5px;
+position: absolute;
+top: 10px;
+transform: rotate(45deg);
+width: 10px;}
+.comments-content-wrap span b{margin-right:5px}
+.comments-content-wrap span a:hover{}
+span.post-time{margin-right:5px}
+.comments-content-wrap p {
+  color: #444;
+  line-height: 18px;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+li.threaded-comments{margin-left:50px}
+.comment-respond {
+  margin-top: 60px;
+}
+span.email-notes{color: #42414f;
+display: block;
+font-size: 12px;
+margin-bottom: 10px;}
+.comment-respond p{margin-bottom: 5px;}
+.comment-respond input[type=text],.comment-respond input[type=email]{background: #fff none repeat scroll 0 0;
+border: 1px solid #e5e5e5;
+border-radius: 0;
+height: 32px;
+margin-bottom: 15px;
+padding: 0 0 0 10px;
+width: 100%;}
+.comment-respond textarea#message{background: #fff none repeat scroll 0 0;
+border: 1px solid #e5e5e5;
+border-radius: 0;
+max-width: 100%;
+padding: 10px;height: 130px;
+width: 100%;}
+.comment-respond input[type="submit"] {
+  background: #252525 none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 0;
+  box-shadow: none;
+  color: #fff;
+  display: inline-block;
+  font-family: Montserrat,Arial,Helvetica,sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 20px;
+  padding: 0 15px;
+  text-shadow: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  white-space: nowrap;
+}
+.comment-respond input[type="submit"]:hover {
+  background: #FE4847;
+}
+.comments-content-wrap a {
+  color: #444;
+}
+.comments-content-wrap a:hover{color:#FE4847}
+.comment-respond .col-md-4{margin:0}
+/*-----------------------------------
+22. home-3-wrapper
+-------------------------------------*/
+.category-area-3 .product-img {
+  float: left;
+  width: 35%;
+}
+.category-area-3 .product-content {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  float: right;
+  width: 65%;
+}
+.category-area-3 .single-product {
+  overflow: hidden;
+}
+.category-area-3 .single-product:last-child{margin-top:20px}
+.category-area-3 .product-content h3 a {
+  color: #373737;
+}
+.category-area-3 .product-content h3 a:hover{
+  color: #FE4847;
+}
+.category-area-3 .price span.old {
+  color: #999;
+  font-size: 13px;
+}
+.category-area-3 .price span {
+  font-size: 17px;
+  font-weight: 700;
+}
+.category-area-3 .product-action {
+  margin-top: 14px;
+  opacity: 1;
+  position: static;
+  visibility: visible;
+}
+.category-area-3 .button-top a {
+	border: 1px solid #ddd;
+	color: #777;
+	float: left;
+	height: 36px;
+	line-height: 35px;
+	margin-right: 6px;
+	margin-top: 0;
+	width: 40px;
+}
+.category-area-3 .button-top {
+  float: left;
+}
+.category-area-3 .button-cart button i {
+  margin-right: 0;
+}
+.category-area-3 .button-cart button {
+  border: 1px solid #ddd;
+  color: #777;
+  height: 36px;
+  line-height: 32px;
+  margin-top: 0;
+  padding: 0;
+  text-align: center;
+  width: 40px;
+}
+.category-area-3 .button-cart {
+  clear: inherit;
+}
+=======
+>>>>>>> Checkout
+.category-area-3 .button-top a:hover,.category-area-3 .button-cart button:hover {
   background: #fe4847 none repeat scroll 0 0;
   border-color: #fe4847;
   color: #fff;
@@ -3316,6 +3608,8 @@ width: 100%;}
 .category-area-2{}
 .category-area-2 .product-curosel .col-md-12 .single-product:last-child {
   margin-top: 0px;
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 
@@ -3657,3 +3951,9 @@ form .post-btn button:hover{
 .updateProfile-btn .cancel-user-btn:hover {
   background: rgba(0, 0, 255, 0.776);
 }
+=======
+}
+>>>>>>> Login/Registration
+=======
+}
+>>>>>>> Checkout

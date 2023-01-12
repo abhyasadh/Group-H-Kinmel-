@@ -2,6 +2,7 @@
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <data-source source="LOCAL" name="projectmgmtsystem@localhost" uuid="57ee920b-49bd-4b15-9b6e-3a85ecaa4c45">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
@@ -14,6 +15,13 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/main_kinmel</jdbc-url>
 >>>>>>> Edit-Profile
+=======
+    <data-source source="LOCAL" name="kinmel@localhost" uuid="9ad01778-a7e0-4f59-a285-a145015abbef">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/kinmel</jdbc-url>
+>>>>>>> Checkout
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

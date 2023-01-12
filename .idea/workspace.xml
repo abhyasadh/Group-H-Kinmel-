@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f36a57b1-e65d-4ce1-a172-51629a25f21f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_8_0_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kinmel/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kinmel/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kinmel/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Kinmel/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kinmel/src/main/resources/template/ProfileCreation.html" beforeDir="false" afterPath="$PROJECT_DIR$/Kinmel/src/main/resources/template/ProfileCreation.html" afterDir="false" />
-    </list>
+    <list default="true" id="f36a57b1-e65d-4ce1-a172-51629a25f21f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +45,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/acer/OneDrive/Documents/SEM-3 (all project)/KINMEL (Group-H project)/Group-H-Kinmel-",
+    "last_opened_file_path": "D:/New folder (3)",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -89,6 +79,7 @@
       <workItem from="1672638304174" duration="299000" />
       <workItem from="1672638735196" duration="1223000" />
       <workItem from="1672652141543" duration="9029000" />
+      <workItem from="1673325119616" duration="29000" />
     </task>
     <servers />
   </component>

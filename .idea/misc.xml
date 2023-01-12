@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
 <<<<<<< HEAD
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" project-jdk-name="18" project-jdk-type="JavaSDK" />
 =======
+=======
+>>>>>>> Checkout
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -11,5 +14,8 @@
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="corretto-17" project-jdk-type="JavaSDK" />
+<<<<<<< HEAD
 >>>>>>> Edit-Profile
+=======
+>>>>>>> Checkout
 </project>
