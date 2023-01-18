@@ -24,7 +24,7 @@ public class HomeController {
 
     private final ProductService productService;
 
-    @GetMapping("/")
+    @GetMapping("/dashboard")
     public String getHomePage(Model model) {
         List<Product> products = productService.fetchAll();
         model.addAttribute("products", products);
@@ -36,9 +36,9 @@ public class HomeController {
         model.addAttribute("product",new ProductPojo());
         return "add_product";}
 
-    @PostMapping("/save")
-    public String SaveUser(@Valid ProductPojo productPojo, @RequestParam("productImage") MultipartFile ProductImage){
-        productService.saveUser(productPojo, ProductImage);
-        return "redirect:/";
-    }
+//    @PostMapping("/save")
+//    public String SaveUser(@Valid ProductPojo productPojo, @RequestParam("productImage") MultipartFile ProductImage){
+//        productService.saveUser(productPojo, ProductImage);
+//        return "redirect:/";
+//    }
 }

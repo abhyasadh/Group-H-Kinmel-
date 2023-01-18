@@ -1,4 +1,4 @@
-<html lang="en" xmlns:th="http://www.thymleaf.org">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -6,30 +6,30 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" type="image/x-icon" href="../static/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{~/img/favicon.ico}">
     <!-- Place favicon.ico in the root directory -->
 
 <!-- all css here -->
 <!-- bootstrap v3.3.6 css -->
-    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{~/css/bootstrap.min.css}">
 <!-- animate css -->
-    <link rel="stylesheet" href="../static/css/animate.css">
+    <link rel="stylesheet" th:href="@{~/css/animate.css}">
 <!-- jquery-ui.min css -->
-    <link rel="stylesheet" href="../static/css/jquery-ui.min.css">
+    <link rel="stylesheet" th:href="@{~/css/jquery-ui.min.css}">
 <!-- meanmenu css -->
-    <link rel="stylesheet" href="../static/css/meanmenu.min.css">
+    <link rel="stylesheet" th:href="@{~/css/meanmenu.min.css}">
 <!-- owl.carousel css -->
-    <link rel="stylesheet" href="../static/css/owl.carousel.css">
+    <link rel="stylesheet" th:href="@{~/css/owl.carousel.css}">
 <!-- nivo-slider css -->
     <link rel="stylesheet" href="lib/css/nivo-slider.html">
 <!-- font-awesome css -->
-    <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+    <link rel="stylesheet" th:href="@{~/css/font-awesome.min.css}">
 <!-- style css -->
-<link rel="stylesheet" href="../static/css/style.css">
+<link rel="stylesheet" th:href="@{~/css/style.css}">
 <!-- responsive css -->
-    <link rel="stylesheet" href="../static/css/responsive.css">
+    <link rel="stylesheet" th:href="@{~/css/responsive.css}">
 <!-- modernizr js -->
-    <script src="../static/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script th:src="@{~/js/vendor/modernizr-2.8.3.min.js}"></script>
 </head>
 
 <body>
@@ -42,7 +42,7 @@
         <div class="row">
           <div class="col-md-2 col-sm-4 col-xs-5">
             <div class="logo">
-              <a href="index.html"><img src="../static/img/logo-white-text.png" alt="" /></a>
+              <a href="index.html"><img th:src="@{~/img/logo-white-text.png}" alt="" /></a>
             </div>
           </div>
           <div class="col-md-8 hidden-xs hidden-sm">
@@ -95,7 +95,7 @@
                       </div>
                       <div class="mega-right">
                         <span class="mega-menu-img">
-                          <a href="shop.html"><img alt="" src="img/1.jpg"></a>
+                          <a href="shop.html"><img alt="" th:src="@{~img/1.jpg}"></a>
                         </span>
                       </div>
                     </div>										
@@ -124,7 +124,7 @@
                         <a href="shop.html">nail set </a>
                       </span>
                       <span class="mega-menu-img">
-                        <a href="shop.html"><img alt="" src="img/1.jpg"></a>
+                        <a href="shop.html"><img alt="" th:src="@{~img/1.jpg}"></a>
                       </span>
                     </div>											
                   </li>
@@ -145,7 +145,7 @@
               <ul>
                 <li>
                   <div class="cart-img">
-                    <a href="#"><img alt="" src="../static/img/cart/1.jpg"></a>
+                    <a href="#"><img alt="" th:src="@{~/img/cart/1.jpg}"></a>
                   </div>
                   <div class="cart-info">
                     <h4><a href="#">Vestibulum suscipit</a></h4>
@@ -157,7 +157,7 @@
                 </li>
                 <li>
                   <div class="cart-img">
-                    <a href="#"><img alt="" src="../static/img/cart/1.jpg"></a>
+                    <a href="#"><img alt="" th:src="@{~/img/cart/1.jpg}"></a>
                   </div>
                   <div class="cart-info">
                     <h4><a href="#">Vestibulum suscipit</a></h4>
@@ -232,7 +232,7 @@
 							<div class="social-sign">
 								<a href="#" style="background-color: #00a1f1;"><i class="fa fa-google-plus"></i> Sign in with Google</a>
 							</div>
-							<form th:action="@{/login}" th:object="${loginUser}" method="post">
+							<form th:action="@{/login}" th:method="post">
 								<label>Email Address</label>
 								<input type="text" name="email"/>
 								<label>Password</label>
@@ -250,11 +250,11 @@
 						<div class="login-content login-margin">
 							<h2 class="login-title">create a new account</h2>
 							<p>Create Your Own Kinmel Account.</p>
-							<form action="#">
+							<form th:method="post" th:action="@{/save}" th:object="${user}">
 								<label>Email Address</label>
-								<input type="text" />
+								<input type="text" th:field="*{email}"/>
 								<label>Password</label>
-								<input type="password" />
+								<input type="password" th:field="*{password}"/>
 								<label>Confirm Password</label>
 								<input type="password" />
 								<button class="login-sub" type="submit">Signup</button>
@@ -416,18 +416,18 @@
 		<!-- jquery latest version -->
 		<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../static/js/vendor/jquery-1.12.0.min.js"></script>
 		<!-- bootstrap js -->
-        <script src="../static/js/bootstrap.min.js"></script>
+        <script th:src="@{~/js/bootstrap.min.js}"></script>
 		<!-- owl.carousel js -->
-        <script src="../static/js/owl.carousel.min.js"></script>
+        <script th:src="@{~/js/owl.carousel.min.js}"></script>
 		<!-- meanmenu js -->
-        <script src="../static/js/jquery.meanmenu.js"></script>
+        <script th:src="@{~/js/jquery.meanmenu.js}"></script>
 		<!-- jquery-ui js -->
-        <script src="../static/js/jquery-ui.min.js"></script>
+        <script th:src="@{~/js/jquery-ui.min.js}"></script>
 		<!-- wow js -->
-        <script src="../static/js/wow.min.js"></script>
+        <script th:src="@{~/js/wow.min.js}"></script>
 		<!-- plugins js -->
-        <script src="../static/js/plugins.js"></script>
+        <script th:src="@{~/js/plugins.js}"></script>
 		<!-- main js -->
-        <script src="../static/js/main.js"></script>
+        <script th:src="@{~/js/main.js}"></script>
 </body>
 </html>
