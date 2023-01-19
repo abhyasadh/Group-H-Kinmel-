@@ -25,7 +25,7 @@ public class ProductPojo {
 
     private String product_color;
 
-    private String product_category;
+    private Integer product_category;
 
     private String
             product_image;
@@ -38,8 +38,8 @@ public class ProductPojo {
         this.product_description=product.getProduct_description();
         this.product_size=product.getProduct_size();
         this.product_color=product.getProduct_color();
-        this.product_category=product.getProduct_category();
         this.product_image=product.getProduct_image();
+        this.product_category=product.getCategory().getId();
 
     }
 }
