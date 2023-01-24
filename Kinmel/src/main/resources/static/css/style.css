@@ -853,7 +853,7 @@ ul.product-nav li:last-child:before{display:none}
 5. upcoming-product-area
 ---------------------------- */
 .upcoming-product-area {
-  background: rgba(0, 0, 0, 0) url("img/bg2.jpg") repeat scroll center center / cover ;
+  background: rgba(0, 0, 0, 0) url("../img/bg2.jpg") repeat scroll center center / cover ;
 }
 .upcoming-img {
   border: 1px solid #ddd;

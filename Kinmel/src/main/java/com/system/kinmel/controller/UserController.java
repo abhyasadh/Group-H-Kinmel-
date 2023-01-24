@@ -33,4 +33,12 @@ public class UserController {
         userService.saveUser(userPojo);
         return "redirect:/login";
     }
+
+    @GetMapping("/logout")
+    public String logout(Authentication authentication){
+        if (authentication.isAuthenticated()) {
+            SecurityContextHolder.clearContext();
+        }
+        return "/ProfileCreation";
+    }
 }
