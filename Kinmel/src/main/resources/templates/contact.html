@@ -1,0 +1,165 @@
+﻿<html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Contact || Kinmel</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" type="image/x-icon" th:href="@{~/img/favicon.ico}">
+
+	<!-- bootstrap v3.3.6 css -->
+	<link rel="stylesheet" th:href="@{~/css/bootstrap.min.css}">
+	<!-- animate css -->
+	<link rel="stylesheet" th:href="@{~/css/animate.css}">
+	<!-- jquery-ui.min css -->
+	<link rel="stylesheet" th:href="@{~/css/jquery-ui.min.css}">
+	<!-- meanmenu css -->
+	<link rel="stylesheet" th:href="@{~/css/meanmenu.min.css}">
+	<!-- owl.carousel css -->
+	<link rel="stylesheet" th:href="@{~/css/owl.carousel.css}">
+	<!-- slick css -->
+	<link rel="stylesheet" th:href="@{~/css/slick.css}">
+	<!-- font-awesome css -->
+	<link rel="stylesheet" th:href="@{~/css/font-awesome.min.css}">
+	<!-- style css -->
+	<link rel="stylesheet" th:href="@{~/css/style.css}">
+	<!-- responsive css -->
+	<link rel="stylesheet" th:href="@{~/css/responsive.css}">
+	<!-- modernizr js -->
+	<script th:src="@{~/js/vendor/modernizr-2.8.3.min.js}"></script>
+</head>
+
+<body>
+
+<header class="header-pos">
+
+	<div th:replace="~{fragments/header-bottom.html :: header-bottom-area}"></div>
+
+	<div th:replace="~{fragments/mobile-menu.html :: mobile-menu}"></div>
+
+</header>
+
+<div th:replace="~{fragments/breadcrumb-area.html :: breadcrumb-area}"></div>
+		<!-- contact-area start -->
+		<div class="contact-area pad-60">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8">
+						<div class="contact-form">
+							<div class="message-title">
+								<h1>Drop us a message</h1>
+								<p>We have a great team for supporting our customers. Fill the form to get Great support.</p>
+							</div>
+							<div class="row">
+								<form action="https://themepure.net/template/pabna/pabna/mail.php" method="POST">			
+									<div class="input-filed">
+										<div class="col-md-6">
+											<input name="name" type="text" placeholder="Your Name"/>
+										</div>
+										<div class="col-md-6">
+											<input name="email" type="text" placeholder="Your Email"/>
+										</div>
+										<div class="col-md-12">
+											<input name="subject" type="text" placeholder="Your Subject"/>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="contact-textarea">
+											<textarea name="message" id="Message" cols="30" rows="10" placeholder="Message"></textarea>
+											<input type="submit" value="submit"/>
+										</div>								
+									</div>
+								</form>						
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="contact-info">
+							<div class="single-contact">
+								<div class="contact-icon">
+									<i class="fa fa-phone"></i>
+								</div>
+								<div class="contact-method">
+									<h2>+977 9800000000</h2>
+									<span>Call us Today</span>
+								</div>
+							</div>
+							<div class="single-contact">
+								<div class="contact-icon">
+									<i class="fa fa-envelope"></i>
+								</div>
+								<div class="contact-method">
+									<h2>kinmel@gmail.com</h2>
+									<span>get in touch with email</span>
+								</div>
+							</div>
+							<div class="single-contact">
+								<div class="contact-icon">
+									<i class="fa fa-map-marker"></i>
+								</div>
+								<div class="contact-method">
+									<h2>Softwarica College, Dillibazar, Kathmandu</h2>
+									<span>Visit Us</span>
+								</div>
+							</div>
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+		<!-- contact-area end -->
+<!-- footer start -->
+<footer>
+	<div th:replace="~{fragments/footer.html :: footer-top}"></div>
+	<div th:replace="~{fragments/footer.html :: footer-top-area}"></div>
+	<div th:replace="~{fragments/footer.html :: footer-bottom-area}"></div>
+</footer>
+<!-- footer end -->
+		
+
+
+<!-- Modal -->
+<div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="productModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        Marley tried to convince her but she was not interestedMarley tried to convince her but she was not interestedMarley tried to convince her but she was not interestedMarley tried to convince her but she was not interestedMarley tried to convince her but she was not interestedMarley tried to convince her but she was not interestedMarley tried to convince her but she was not interestedMarley tried to convince her but she was not interestedMarley tried to convince her but she was not interestedMarley tried to convince her but she was not interestedMarley tried to convince her but she was not interestedMarley tried to convince her but she was not interestedMarley tried to convince her but she was not interestedMarley tried to convince her but she was not interested
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- jquery latest version -->
+<script data-cfasync="false" th:src="@{../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js}"></script><script th:src="@{/js/vendor/jquery-1.12.0.min.js}"></script>
+<!-- bootstrap js -->
+<script th:src="@{~/js/bootstrap.min.js}"></script>
+<!-- owl.carousel js -->
+<script th:src="@{~/js/owl.carousel.min.js}"></script>
+<!-- meanmenu js -->
+<script th:src="@{~/js/jquery.meanmenu.js}"></script>
+<!-- jquery-ui js -->
+<script th:src="@{~/js/jquery-ui.min.js}"></script>
+<!-- wow js -->
+<script th:src="@{~/js/wow.min.js}"></script>
+<!-- plugins js -->
+<script th:src="@{~/js/plugins.js}"></script>
+<!-- main js -->
+<script th:src="@{~/js/main.js}"></script>
+
+<script>
+	let breadcrumb=document.getElementsByClassName("breadcrumb-area").item(0);
+	breadcrumb.getElementsByTagName("h1").item(0).innerText="Contact Us";
+	breadcrumb.getElementsByTagName("li").item(1).innerText="Contact Us";
+</script>
+    </body>
+
+</html>

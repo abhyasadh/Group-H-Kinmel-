@@ -6,255 +6,48 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="shortcut icon" type="image/x-icon" href="../static/img/favicon.ico">
-	<!-- Place favicon.ico in the root directory -->
+	  <link rel="shortcut icon" type="image/x-icon" th:href="@{~/img/favicon.ico}">
 
-	<!-- all css here -->
-	<!-- bootstrap v3.3.6 css -->
-	<link rel="stylesheet" th:href="@{~/css/bootstrap.min.css}">
-	<!-- animate css -->
-	<link rel="stylesheet" th:href="@{~/css/animate.css}">
-	<!-- jquery-ui.min css -->
-	<link rel="stylesheet" th:href="@{~/css/jquery-ui.min.css}">
-	<!-- meanmenu css -->
-	<link rel="stylesheet" th:href="@{~/css/meanmenu.min.css}">
-	<!-- owl.carousel css -->
-	<link rel="stylesheet" th:href="@{~/css/owl.carousel.css}">
-	<!-- nivo-slider css -->
-	<link rel="stylesheet" th:href="@{~/css/nivo-slider.html}">
-	<!-- font-awesome css -->
-	<link rel="stylesheet" th:href="@{~/css/font-awesome.min.css}">
-	<!-- style css -->
-	<link rel="stylesheet" th:href="@{~/css/style.css}">
-	<!-- responsive css -->
-	<link rel="stylesheet" th:href="@{~/css/responsive.css}">
-	<!-- modernizr js -->
-	<script src="../static/js/vendor/modernizr-2.8.3.min.js"></script>
+	  <!-- bootstrap v3.3.6 css -->
+	  <link rel="stylesheet" th:href="@{~/css/bootstrap.min.css}">
+	  <!-- animate css -->
+	  <link rel="stylesheet" th:href="@{~/css/animate.css}">
+	  <!-- jquery-ui.min css -->
+	  <link rel="stylesheet" th:href="@{~/css/jquery-ui.min.css}">
+	  <!-- meanmenu css -->
+	  <link rel="stylesheet" th:href="@{~/css/meanmenu.min.css}">
+	  <!-- owl.carousel css -->
+	  <link rel="stylesheet" th:href="@{~/css/owl.carousel.css}">
+	  <!-- slick css -->
+	  <link rel="stylesheet" th:href="@{~/css/slick.css}">
+	  <!-- font-awesome css -->
+	  <link rel="stylesheet" th:href="@{~/css/font-awesome.min.css}">
+	  <!-- style css -->
+	  <link rel="stylesheet" th:href="@{~/css/style.css}">
+	  <!-- responsive css -->
+	  <link rel="stylesheet" th:href="@{~/css/responsive.css}">
+	  <!-- modernizr js -->
+	  <script th:src="@{~/js/vendor/modernizr-2.8.3.min.js}"></script>
+
 </head>
 
 <body>
-  	<!-- header start -->
+
     <header class="header-pos">
-			<!-- header-bottom-area start -->
-  <div class="header-bottom-area">
-    <div class="container">
-      <div class="inner-container">
-        <div class="row">
-          <div class="col-md-2 col-sm-4 col-xs-5">
-            <div class="logo">
-              <a href="index.html"><img src="../../static/img/logo-white-text.png" alt="" /></a>
-            </div>
-          </div>
-          <div class="col-md-8 hidden-xs hidden-sm">
-            <div class="main-menu">
-              <nav>
-                <ul>
-                  <li><a href="index.html">home</a>
-                  </li>
-                  <li><a href="about.html">about</a></li>
-                  <li><a href="blog.html">blog</a></li>
-                  <li class="static"><a href="shop.html">shop</a>
-                    <div class="mega-menu">
-                      <div class="mega-left">
-                        <span>
-                          <a href="shop.html" class="mega-title">WOMEN CLOTH </a>
-                          <a href="shop.html">casual shirt</a>
-                          <a href="shop.html">rikke t-shirt</a>
-                          <a href="shop.html">mia top </a>
-                          <a href="shop.html">muscle tee </a>
-                        </span>
-                        <span>
-                          <a href="shop.html" class="mega-title">MEN CLOTH </a>
-                          <a href="shop.html">casual shirt</a>
-                          <a href="shop.html">rikke t-shirt</a>
-                          <a href="shop.html">mia top </a>
-                          <a href="shop.html">muscle tee </a>
-                        </span>
-                        <span>
-                          <a href="shop.html" class="mega-title">WOMEN JEWELRY </a>
-                          <a href="shop.html">necklace </a>
-                          <a href="shop.html">chunky short striped </a>
-                          <a href="shop.html">samhar cuff</a>
-                          <a href="shop.html">nail set </a>
-                        </span>
-                        <span>
-                          <a href="shop.html" class="mega-title">WOMEN JEWELRY </a>
-                          <a href="shop.html">necklace </a>
-                          <a href="shop.html">chunky short striped </a>
-                          <a href="shop.html">samhar cuff</a>
-                          <a href="shop.html">nail set </a>
-                        </span>
-                        <span>
-                          <a href="shop.html" class="mega-title">WOMEN JEWELRY </a>
-                          <a href="shop.html">necklace </a>
-                          <a href="shop.html">chunky short striped </a>
-                          <a href="shop.html">samhar cuff</a>
-                          <a href="shop.html">nail set </a>
-                        </span>
-                      </div>
-                      <div class="mega-right">
-                        <span class="mega-menu-img">
-                          <a href="shop.html"><img alt="" src="img/1.jpg"></a>
-                        </span>
-                      </div>
-                    </div>										
-                  </li>
-                  <li><a href="shop.html">cloth</a>
-                    <div class="mega-menu mega-menu-2">											
-                      <span>
-                        <a href="shop.html" class="mega-title">WOMEN CLOTH </a>
-                        <a href="shop.html">casual shirt</a>
-                        <a href="shop.html">rikke t-shirt</a>
-                        <a href="shop.html">mia top </a>
-                        <a href="shop.html">muscle tee </a>
-                      </span>
-                      <span>
-                        <a href="shop.html" class="mega-title">MEN CLOTH </a>
-                        <a href="shop.html">casual shirt</a>
-                        <a href="shop.html">rikke t-shirt</a>
-                        <a href="shop.html">mia top </a>
-                        <a href="shop.html">muscle tee </a>
-                      </span>
-                      <span>
-                        <a href="shop.html" class="mega-title">WOMEN JEWELRY </a>
-                        <a href="shop.html">necklace </a>
-                        <a href="shop.html">chunky short striped </a>
-                        <a href="shop.html">samhar cuff</a>
-                        <a href="shop.html">nail set </a>
-                      </span>
-                      <span class="mega-menu-img">
-                        <a href="shop.html"><img alt="" src="img/1.jpg"></a>
-                      </span>
-                    </div>											
-                  </li>
-              										
-                  <li><a href="contact.html">contact</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-          <div class="col-md-2 col-sm-8 col-xs-7 header-right">
-            <div class="my-cart">
-              <div class="total-cart">
-                <a href="cart.html">
-                  <i class="fa fa-shopping-cart"></i>
-                  <span>2</span>
-                </a>								
-              </div>
-              <ul>
-                <li>
-                  <div class="cart-img">
-                    <a href="#"><img alt="" src="img/cart/1.jpg"></a>
-                  </div>
-                  <div class="cart-info">
-                    <h4><a href="#">Vestibulum suscipit</a></h4>
-                    <span>Rs165.00 <span>x 1</span></span>
-                  </div>
-                  <div class="del-icon">
-                    <i class="fa fa-times-circle"></i>
-                  </div>
-                </li>
-                <li>
-                  <div class="cart-img">
-                    <a href="#"><img alt="" src="img/cart/1.jpg"></a>
-                  </div>
-                  <div class="cart-info">
-                    <h4><a href="#">Vestibulum suscipit</a></h4>
-                    <span>Rs165.00 <span>x 1</span></span>
-                  </div>
-                  <div class="del-icon">
-                    <i class="fa fa-times-circle"></i>
-                  </div>
-                </li>
-                <li class="cart-border">
-                  <div class="subtotal-text">Subtotal: </div>
-                  <div class="subtotal-price">Rs300.00</div>
-                </li>
-                <li>
-                  <a class="cart-button" href="checkout.html">view cart</a>
-                  <a class="checkout" href="checkout.html">checkout</a>
-                </li>
-              </ul>
-            </div>
-            <div class="user-meta">
-              <a href="#"><i class="fa fa-cog"></i></a>
-              <ul>
-                <li><a href="#">My Account</a></li>
-                <li><a href="#">Wish list</a></li>
-                <li><a href="#">Checkout</a></li>
-                <li><a href="#">Testimonial</a></li>
-                <li><a href="#">Log in</a></li>
-              </ul>								
-            </div>
-            <div class="header-search">
-              <i class="fa fa-search"></i>
-              <div class="header-form">
-                <form action="#">
-                  <input type="text" placeholder="search" />
-                  <button><i class="fa fa-search"></i></button>
-                </form>
-              </div>
-            </div>							
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+		<div th:replace="~{fragments/header-bottom.html :: header-bottom-area}"></div>
+
+		<div th:replace="~{fragments/mobile-menu.html :: mobile-menu}"></div>
+
     </header>
 
-     <!-- header end -->
-		<!-- breadcrumb-area start -->
-		<div class="breadcrumb-area">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="breadcrumb-list">
-							<h1>Checkout</h1>							
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-    <!-- breadcrumb-area end -->
+	<div th:replace="~{fragments/breadcrumb-area.html :: breadcrumb-area}"></div>
 
     <!-- coupon-area start -->
 		<div class="coupon-area">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6">
-						<div class="coupon-accordion">
-							<!-- ACCORDION START -->
-							<h3>Returning customer? <span id="showlogin">Click here to login</span></h3>
-							<div id="checkout-login" class="coupon-content">
-								<div class="coupon-info">
-									<p class="coupon-text">Quisque gravida turpis sit amet nulla posuere lacinia. Cras sed est sit amet ipsum luctus.</p>
-									<form action="#">
-										<p class="form-row-first">
-											<label>Username or email <span class="required">*</span></label>
-											<input type="text" />
-										</p>
-										<p class="form-row-last">
-											<label>Password  <span class="required">*</span></label>
-											<input type="text" />
-										</p>
-										<p class="form-row">					
-											<input type="submit" value="Login" />
-											<label>
-												<input type="checkbox" />
-												 Remember me 
-											</label>
-										</p>
-										<p class="lost-password">
-											<a href="#">Lost your password?</a>
-										</p>
-									</form>
-								</div>
-							</div>
-							<!-- ACCORDION END -->						
-						</div>
-					</div>
-					<div class="col-md-6">
+					<div class="col-md-12">
 						<div class="coupon-accordion">	
 							<!-- ACCORDION START -->
 							<h3>Have a coupon? <span id="showcoupon">Click here to enter your code</span></h3>
@@ -509,7 +302,7 @@
 										<div class="panel-heading" role="tab" id="headingTwo">
 										  <h4 class="panel-title">
 											<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-											  <img src="../../static/img/Untitled.png" alt="">
+											  <img th:src="@{~/img/Untitled.png}" alt="">
 											</a>
 										  </h4>
 										</div>
@@ -547,147 +340,35 @@
 			</div>
 		</div>
 		<!-- checkout-area end -->
-		
-		
-		 <!-- footer start -->
-		 <footer>
-			<div class="footer-top">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="footer-logo">
-								<img src="../../static/img/logo-white-text.png" alt="" />
-								<p> Kinmel is the platform that you are bound to visit for your clothing needs. <br />It is our topmost priority to make sure that the customers are satisfied. </p>								<div class="widget-icon">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-google-plus"></i></a>
-									<a href="#"><i class="fa fa-vimeo-square"></i></a>
-									<a href="#"><i class="fa fa-instagram"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- footer-top-area start -->
-			<div class="footer-top-area">
-				<div class="container">
-					<div class="row"> 
-						<!-- footer-widget start -->
-						 <div class="col-lg-3 col-md-3 col-sm-4">
-							<div class="footer-widget">
-								<h3>CONTACT US</h3>
-								<ul class="footer-contact">
-									<li>
-										<i class="fa fa-map-marker"> </i>
-										Addresss: Softwarica College, Dillibazar, Kathmandu
-									</li>
-									<li>
-										<i class="fa fa-envelope"> </i>	
-										Email: <a href="#" class="__cf_email__" data-cfemail="">kinmel@gmail.com</a>
-									</li>
-									<li>
-										<i class="fa fa-phone"> </i>
-										Phone: +977 9800000000
-									</li>
-								</ul>
-							</div>
-						</div>
-						<!-- footer-widget end -->					
-						<!-- footer-widget start -->
-						 <div class="col-lg-3 col-md-3 hidden-sm">
-							<div class="footer-widget">
-								<h3>My account</h3>
-								<ul class="footer-menu">
-									<li><a href="#">Order Status</a></li>
-									<li><a href="#">Register</a></li>
-									<li><a href="#">Sign-up</a></li>
-									<li><a href="#">My Wishlist</a></li>
-									<li><a href="#">Payment Options</a></li>
-								</ul>
-							</div>
-						</div> 
-						<!-- footer-widget end -->
-						<!-- footer-widget start -->
-						<div class="col-lg-3 col-md-3 col-sm-4">
-							<div class="footer-widget">
-								<h3>about us</h3>
-								<ul class="footer-menu">
-									<li><a href="#">Delivery</a></li>
-									<li><a href="#">Payment</a></li>
-									<li><a href="#">Return Policy</a></li>
-									<li><a href="#">About Us</a></li>
-									<li><a href="#">Contact Us</a></li>
-								</ul>
-							</div>
-						</div>
-						<!-- footer-widget end -->
-						<!-- footer-widget start -->
-						<div class="col-lg-3 col-md-3 col-sm-4">
-							<div class="footer-widget">
-								<h3>Product tags</h3>
-								<div class="product-tag">
-									<ul>
-										<li><a href="#">Top</a></li>
-										<li><a href="#">Fashion</a></li>
-										<li><a href="#">Collection</a></li>
-										<li><a href="#">Women</a></li>
-										<li><a href="#">men</a></li>
-										<li><a href="#">gallery</a></li>
-										<li><a href="#">new</a></li>
-										<li><a href="#">Collection men</a></li>
-										<li><a href="#">Top</a></li>
-										<li><a href="#">Fashion</a></li>
-										<li><a href="#">Collection</a></li>										
-										<li><a href="#">best</a></li>
-										<li><a href="shop.html">cloth</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<!-- footer-widget end -->						
-					 </div>
-				</div>
-			</div> 
-			<!-- footer-top-area end -->
-			<!-- footer-bottom-area start -->
-			 <div class="footer-bottom-area">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-6 col-md-6 col-sm-6">
-							<div class="copyright">
-								<p>Copyright © <a href="#">Kinmel</a>. All Rights Reserved</p>
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-6 col-sm-6">
-							<div class="payment-img">
-								<img src="img/payment.png" alt="" />
-							</div>
-						</div>
-					</div>
-				</div>
-			</div> 
-			<!-- footer-bottom-area end -->			
-		</footer>
-		<!-- footer end -->
+	<!-- footer start -->
+	<footer>
+		<div th:replace="~{fragments/footer.html :: footer-top}"></div>
+		<div th:replace="~{fragments/footer.html :: footer-top-area}"></div>
+		<div th:replace="~{fragments/footer.html :: footer-bottom-area}"></div>
+	</footer>
+	<!-- footer end -->
 
-				<!-- all js here -->
-		<!-- jquery latest version -->
-		<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../../static/js/vendor/jquery-1.12.0.min.js"></script>
-		<!-- bootstrap js -->
-        <script src="../../static/js/bootstrap.min.js"></script>
-		<!-- owl.carousel js -->
-        <script src="../../static/js/owl.carousel.min.js"></script>
-		<!-- meanmenu js -->
-        <script src="../../static/js/jquery.meanmenu.js"></script>
-		<!-- jquery-ui js -->
-        <script src="../../static/js/jquery-ui.min.js"></script>
-		<!-- wow js -->
-        <script src="../../static/js/wow.min.js"></script>
-		<!-- plugins js -->
-        <script src="../../static/js/plugins.js"></script>
-		<!-- main js -->
-        <script src="../../static/js/main.js"></script>
+	<!-- jquery latest version -->
+	<script data-cfasync="false" th:src="@{../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js}"></script><script th:src="@{/js/vendor/jquery-1.12.0.min.js}"></script>
+	<!-- bootstrap js -->
+	<script th:src="@{~/js/bootstrap.min.js}"></script>
+	<!-- owl.carousel js -->
+	<script th:src="@{~/js/owl.carousel.min.js}"></script>
+	<!-- meanmenu js -->
+	<script th:src="@{~/js/jquery.meanmenu.js}"></script>
+	<!-- jquery-ui js -->
+	<script th:src="@{~/js/jquery-ui.min.js}"></script>
+	<!-- wow js -->
+	<script th:src="@{~/js/wow.min.js}"></script>
+	<!-- plugins js -->
+	<script th:src="@{~/js/plugins.js}"></script>
+	<!-- main js -->
+	<script th:src="@{~/js/main.js}"></script>
     
 </body>
+  <script>
+	  let breadcrumb=document.getElementsByClassName("breadcrumb-area").item(0);
+	  breadcrumb.getElementsByTagName("h1").item(0).innerText="Checkout";
+	  breadcrumb.getElementsByTagName("li").item(1).innerText="Checkout";
+  </script>
 </html>
