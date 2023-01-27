@@ -32,7 +32,6 @@ public class CartController {
         Integer id = userService.findByEmail(principal.getName()).getId();
         List<Cart> list = cartService.fetchAll(id);
         model.addAttribute("cartItems", list);
-
         return "/cart";
     }
 

@@ -67,13 +67,16 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <td class="product-remove"><a href="#">×</a></td>
-                  <td class="product-thumbnail"><a href="#"><img src="../static/img/cart/1.jpg" alt="" /></a></td>
-                  <td class="product-name"><a href="#">Clothing 1</a></td>
-                  <td class="product-price"><span class="amount">Rs.125.00</span></td>
+                <tr th:each="item:${wishlistItems}">
+                  <td class="product-remove"><a th:href="@{~/wishlist/remove/}+${item.id}">×</a></td>
+                  <td class="product-thumbnail"><img th:src="'data:image/png;base64,'+${item.productImageBase64}" alt="" /></td>
+                  <td class="product-name"><a th:href="@{~/product/}+${item.id}" th:text="${item.product_name}">Clothing 1</a></td>
+                  <td class="product-price"><span class="amount" th:text="${item.product_price}"></span></td>
                   <td class="product-stock-status"><span class="wishlist-in-stock">In Stock</span></td>
-                  <td class="product-add-to-cart"><a href="#"> Add to Cart</a></td>
+                  <td class="product-add-to-cart"><a href="#">Add to Cart</a></td>
+                </tr>
+                <tr th:if="${wishlistItems.isEmpty()}">
+                  <td colspan="6">Your wishlist is empty!</td>
                 </tr>
                 </tbody>
               </table>
@@ -92,12 +95,30 @@
     <div th:replace="~{fragments/footer.html :: footer-bottom-area}"></div>
   </footer>
 <!-- footer end -->
-</body>
+
+<!-- jquery latest version -->
+<script data-cfasync="false" th:src="@{../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js}"></script><script th:src="@{/js/vendor/jquery-1.12.0.min.js}"></script>
+<!-- bootstrap js -->
+<script th:src="@{~/js/bootstrap.min.js}"></script>
+<!-- owl.carousel js -->
+<script th:src="@{~/js/owl.carousel.min.js}"></script>
+<!-- meanmenu js -->
+<script th:src="@{~/js/jquery.meanmenu.js}"></script>
+<!-- jquery-ui js -->
+<script th:src="@{~/js/jquery-ui.min.js}"></script>
+<!-- wow js -->
+<script th:src="@{~/js/wow.min.js}"></script>
+<!-- plugins js -->
+<script th:src="@{~/js/plugins.js}"></script>
+<!-- main js -->
+<script th:src="@{~/js/main.js}"></script>
 
 <script>
   let breadcrumb=document.getElementsByClassName("breadcrumb-area").item(0);
   breadcrumb.getElementsByTagName("h1").item(0).innerText="Wishlist";
   breadcrumb.getElementsByTagName("li").item(1).innerText="Wishlist";
 </script>
+
+</body>
 
 </html>
