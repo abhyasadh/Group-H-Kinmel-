@@ -858,6 +858,7 @@ ul.product-nav li:last-child:before{display:none}
 .upcoming-product-area {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   background: rgba(0, 0, 0, 0) url("img/bg2.jpg") repeat scroll center center / cover ;
 =======
   background: rgba(0, 0, 0, 0) url("../img/bg2.jpg") repeat scroll center center / cover ;
@@ -865,6 +866,9 @@ ul.product-nav li:last-child:before{display:none}
 =======
   background: rgba(0, 0, 0, 0) url("../img/bg2.jpg") repeat scroll center center / cover ;
 >>>>>>> Checkout
+=======
+  background: rgba(0, 0, 0, 0) url("../img/bg2.jpg") repeat scroll center center / cover ;
+>>>>>>> userProfile
 }
 .upcoming-img {
   border: 1px solid #ddd;
@@ -1290,7 +1294,7 @@ ul.footer-contact li i {
 }
 .price_slider_amount > input[type="submit"] {
   background: #252525 none repeat scroll 0 0;
-  border-color: #cccccc #cccccc #cccccc -moz-use-text-color;
+  border-color: #cccccc #cccccc #cccccc;
   border-image: none;
   border-style: solid solid solid none;
   border-width: 0;
@@ -2948,19 +2952,7 @@ width: 100%;}
 .category-area-3 .button-cart {
   clear: inherit;
 }
-<<<<<<< HEAD
-.category-area-3 .button-top a:hover,.category-area-3 .button-cart button:hover {}
 
-/* -------------------------
-9. footer
----------------------------- */
-.footer-top {
-	background: #2d2d2d none repeat scroll 0 0;
-	border-bottom: 1px solid #5b5b5b;
-	padding: 55px 0;
-=======
->>>>>>> Login/Registration
-}
 .contact-form {
 	background: #fff none repeat scroll 0 0;
 	padding: 30px 30px;
@@ -3347,8 +3339,6 @@ width: 100%;}
 .category-area-3 .button-cart {
   clear: inherit;
 }
-=======
->>>>>>> Checkout
 .category-area-3 .button-top a:hover,.category-area-3 .button-cart button:hover {
   background: #fe4847 none repeat scroll 0 0;
   border-color: #fe4847;
@@ -3951,9 +3941,3 @@ form .post-btn button:hover{
 .updateProfile-btn .cancel-user-btn:hover {
   background: rgba(0, 0, 255, 0.776);
 }
-=======
-}
->>>>>>> Login/Registration
-=======
-}
->>>>>>> Checkout

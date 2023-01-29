@@ -6,277 +6,45 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" type="image/x-icon" href="../static/img/favicon.ico">
-    <!-- Place favicon.ico in the root directory -->
+	<link rel="shortcut icon" type="image/x-icon" th:href="@{~/img/favicon.ico}">
 
-<!-- all css here -->
-<!-- bootstrap v3.3.6 css -->
-    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
-<!-- animate css -->
-    <link rel="stylesheet" href="../static/css/animate.css">
-<!-- jquery-ui.min css -->
-    <link rel="stylesheet" href="../static/css/jquery-ui.min.css">
-<!-- meanmenu css -->
-    <link rel="stylesheet" href="../static/css/meanmenu.min.css">
-<!-- owl.carousel css -->
-    <link rel="stylesheet" href="../static/css/owl.carousel.css">
-<!-- nivo-slider css -->
-    <link rel="stylesheet" href="../static/lib/css/nivo-slider.html">
-<!-- font-awesome css -->
-    <link rel="stylesheet" href="../static/css/font-awesome.min.css">
-<!-- style css -->
-<link rel="stylesheet" href="../static/css/style.css">
-<!-- responsive css -->
-    <link rel="stylesheet" href="../static/css/responsive.css">
-<!-- modernizr js -->
-    <script src="../static/js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
+	<!-- bootstrap v3.3.6 css -->
+	<link rel="stylesheet" th:href="@{~/css/bootstrap.min.css}">
+	<!-- animate css -->
+	<link rel="stylesheet" th:href="@{~/css/animate.css}">
+	<!-- jquery-ui.min css -->
+	<link rel="stylesheet" th:href="@{~/css/jquery-ui.min.css}">
+	<!-- meanmenu css -->
+	<link rel="stylesheet" th:href="@{~/css/meanmenu.min.css}">
+	<!-- owl.carousel css -->
+	<link rel="stylesheet" th:href="@{~/css/owl.carousel.css}">
+	<!-- slick css -->
+	<link rel="stylesheet" th:href="@{~/css/slick.css}">
+	<!-- font-awesome css -->
+	<link rel="stylesheet" th:href="@{~/css/font-awesome.min.css}">
+	<!-- style css -->
+	<link rel="stylesheet" th:href="@{~/css/style.css}">
+	<!-- responsive css -->
+	<link rel="stylesheet" th:href="@{~/css/responsive.css}">
+	<!-- modernizr js -->
+	<script th:src="@{~/js/vendor/modernizr-2.8.3.min.js}"></script>
+</head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         <!-- Add your site or application content here -->
-		
-		<!-- header start -->
-        <header class="header-pos">
-			<!-- header-bottom-area start -->
-			<div class="header-bottom-area">
-				<div class="container">
-					<div class="inner-container">
-						<div class="row">
-							<div class="col-md-2 col-sm-4 col-xs-5">
-								<div class="logo">
-									<a href="index.html"><img src="../static/img/logo-white-text.png" alt="" /></a>
-								</div>
-							</div>
-							<div class="col-md-8 hidden-xs hidden-sm">
-								<div class="main-menu">
-									<nav>
-										<ul>
-											<li><a href="index.html">home</a>
-											</li>
-											<li><a href="about.html">about</a></li>
-											<li><a href="blog.html">blog</a></li>
-											<li class="static"><a href="shop.html">shop</a>
-												<div class="mega-menu">
-													<div class="mega-left">
-														<span>
-															<a href="shop.html" class="mega-title">WOMEN CLOTH </a>
-															<a href="shop.html">casual shirt</a>
-															<a href="shop.html">rikke t-shirt</a>
-															<a href="shop.html">mia top </a>
-															<a href="shop.html">muscle tee </a>
-														</span>
-														<span>
-															<a href="shop.html" class="mega-title">MEN CLOTH </a>
-															<a href="shop.html">casual shirt</a>
-															<a href="shop.html">rikke t-shirt</a>
-															<a href="shop.html">mia top </a>
-															<a href="shop.html">muscle tee </a>
-														</span>
-														<span>
-															<a href="shop.html" class="mega-title">WOMEN JEWELRY </a>
-															<a href="shop.html">necklace </a>
-															<a href="shop.html">chunky short striped </a>
-															<a href="shop.html">samhar cuff</a>
-															<a href="shop.html">nail set </a>
-														</span>
-														<span>
-															<a href="shop.html" class="mega-title">WOMEN JEWELRY </a>
-															<a href="shop.html">necklace </a>
-															<a href="shop.html">chunky short striped </a>
-															<a href="shop.html">samhar cuff</a>
-															<a href="shop.html">nail set </a>
-														</span>
-														<span>
-															<a href="shop.html" class="mega-title">WOMEN JEWELRY </a>
-															<a href="shop.html">necklace </a>
-															<a href="shop.html">chunky short striped </a>
-															<a href="shop.html">samhar cuff</a>
-															<a href="shop.html">nail set </a>
-														</span>
-													</div>
-													<div class="mega-right">
-														<span class="mega-menu-img">
-															<a href="shop.html"><img alt="" src="img/1.jpg"></a>
-														</span>
-													</div>
-												</div>										
-											</li>
-											<li><a href="shop.html">cloth</a>
-												<div class="mega-menu mega-menu-2">											
-													<span>
-														<a href="shop.html" class="mega-title">WOMEN CLOTH </a>
-														<a href="shop.html">casual shirt</a>
-														<a href="shop.html">rikke t-shirt</a>
-														<a href="shop.html">mia top </a>
-														<a href="shop.html">muscle tee </a>
-													</span>
-													<span>
-														<a href="shop.html" class="mega-title">MEN CLOTH </a>
-														<a href="shop.html">casual shirt</a>
-														<a href="shop.html">rikke t-shirt</a>
-														<a href="shop.html">mia top </a>
-														<a href="shop.html">muscle tee </a>
-													</span>
-													<span>
-														<a href="shop.html" class="mega-title">WOMEN JEWELRY </a>
-														<a href="shop.html">necklace </a>
-														<a href="shop.html">chunky short striped </a>
-														<a href="shop.html">samhar cuff</a>
-														<a href="shop.html">nail set </a>
-													</span>
-													<span class="mega-menu-img">
-														<a href="shop.html"><img alt="" src="../static/img/1.jpg"></a>
-													</span>
-												</div>											
-											</li>											
-											<li><a href="contact.html">contact</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-							<div class="col-md-2 col-sm-8 col-xs-7 header-right">
-								<div class="my-cart">
-									<div class="total-cart">
-										<a href="cart.html">
-											<i class="fa fa-shopping-cart"  style="margin-top: 7px;"></i>
-											<span>2</span>
-										</a>								
-									</div>
-									<ul>
-										<li>
-											<div class="cart-img">
-												<a href="#"><img alt="" src="../static/img/cart/1.jpg"></a>
-											</div>
-											<div class="cart-info">
-												<h4><a href="#">Vestibulum suscipit</a></h4>
-												<span>Rs.165.00 <span>x 1</span></span>
-											</div>
-											<div class="del-icon">
-												<i class="fa fa-times-circle"></i>
-											</div>
-										</li>
-										<li>
-											<div class="cart-img">
-												<a href="#"><img alt="" src="../static/img/cart/1.jpg"></a>
-											</div>
-											<div class="cart-info">
-												<h4><a href="#">Vestibulum suscipit</a></h4>
-												<span>Rs.165.00 <span>x 1</span></span>
-											</div>
-											<div class="del-icon">
-												<i class="fa fa-times-circle"></i>
-											</div>
-										</li>
-										<li class="cart-border">
-											<div class="subtotal-text">Subtotal: </div>
-											<div class="subtotal-price">Rs.300.00</div>
-										</li>
-										<li>
-											<a class="cart-button" href="checkout.html">view cart</a>
-											<a class="checkout" href="checkout.html">checkout</a>
-										</li>
-									</ul>
-								</div>
-								<div class="user-meta">
-									<a href="#"><i class="fa fa-cog"></i></a>
-									<ul>
-										<li><a href="#">My Account</a></li>
-										<li><a href="#">Wish list</a></li>
-										<li><a href="#">Checkout</a></li>
-										<li><a href="#">Testimonial</a></li>
-										<li><a href="#">Log in</a></li>
-									</ul>								
-								</div>
-								<div class="header-search">
-									<i class="fa fa-search"></i>
-									<div class="header-form">
-										<form action="#">
-											<input type="text" placeholder="search" />
-											<button><i class="fa fa-search"></i></button>
-										</form>
-									</div>
-								</div>							
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- header-bottom-area end -->
-			<!-- mobile-menu-area start -->
-			<div class="mobile-menu-area visible-xs visible-sm">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="mobile-menu">
-								<nav id="dropdown">
-									<ul>
-										<li><a href="index.html">Home</a>
-										</li>
-										<li><a href="about.html">About</a></li>
-										<li><a href="blog.html">blog</a></li>
-										<li><a href="shop.html">Shop</a>
-											<ul>
-												<li><a href="#">WOMEN CLOTH</a>
-													<ul>
-														<li><a href="shop.html">casual shirt</a></li>
-														<li><a href="shop.html">rikke t-shirt</a></li>
-														<li><a href="shop.html">mia top </a></li>
-														<li><a href="shop.html">muscle tee</a></li>
-													</ul>
-												</li>
-												<li><a href="#">MEN CLOTH</a>
-													<ul>
-														<li><a href="shop.html">casual shirt</a></li>
-														<li><a href="shop.html">rikke t-shirt</a></li>
-														<li><a href="shop.html">mia top </a></li>
-														<li><a href="shop.html">muscle tee</a></li>
-													</ul>
-												</li>
-												<li><a href="#">WOMEN JEWELRY</a>
-													<ul>
-														<li><a href="shop.html">necklace </a></li>
-														<li><a href="shop.html">chunky short striped</a></li>
-														<li><a href="shop.html">samhar cuff </a></li>
-														<li><a href="shop.html">nail set</a></li>
-													</ul>
-												</li>											
-											</ul>
-										</li>
-										<li><a href="shop.html">Footwear </a></li>
-										<li><a href="#">Pages</a>
-										</li>
-										<li><a href="contact.html">Contact</a></li>
-									</ul>
-								</nav>
-							</div>					
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- mobile-menu-area end -->				
+		<header class="header-pos">
+
+			<div th:replace="~{fragments/header-bottom.html :: header-bottom-area}"></div>
+
+			<div th:replace="~{fragments/mobile-menu.html :: mobile-menu}"></div>
+
 		</header>
-		<!-- header end -->
-		<!-- breadcrumb-area start -->
-		<div class="breadcrumb-area">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="breadcrumb-list">
-							<h1>Product Details</h1>
-							<ul>
-								<li><a href="index.html">home</a> <span class="divider">|</span></li>
-								<li><a href="shop.html">Category</a> <span class="divider">|</span></li>
-								<li>Product details</li>
-							</ul>							
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- breadcrumb-area end -->
+
+		<div th:replace="~{fragments/breadcrumb-area.html :: breadcrumb-area}"></div>
+
 		<!-- shop-area start -->
 		<div class="shop-area">
 			<div class="container">
@@ -930,29 +698,33 @@
 			</div>
 			<!-- END Modal -->
 		</div>
-		<!-- END QUICKVIEW PRODUCT -->	
+		<!-- END QUICKVIEW PRODUCT -->
 
-		<!-- all js here -->
 		<!-- jquery latest version -->
-        <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../static/js/vendor/jquery-1.12.0.min.js"></script>
+		<script data-cfasync="false" th:src="@{../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js}"></script><script th:src="@{/js/vendor/jquery-1.12.0.min.js}"></script>
 		<!-- bootstrap js -->
-        <script src="../static/js/bootstrap.min.js"></script>
+		<script th:src="@{~/js/bootstrap.min.js}"></script>
 		<!-- owl.carousel js -->
-        <script src="../static/js/owl.carousel.min.js"></script>
+		<script th:src="@{~/js/owl.carousel.min.js}"></script>
 		<!-- meanmenu js -->
-        <script src="../static/js/jquery.meanmenu.js"></script>
+		<script th:src="@{~/js/jquery.meanmenu.js}"></script>
 		<!-- jquery-ui js -->
-        <script src="../static/js/jquery-ui.min.js"></script>
-		<!-- elevateZoom js -->
-        <script src="../static/js/jquery.elevateZoom-3.0.8.min.js"></script>
+		<script th:src="@{~/js/jquery-ui.min.js}"></script>
 		<!-- wow js -->
-        <script src="../static/js/wow.min.js"></script>
+		<script th:src="@{~/js/wow.min.js}"></script>
+		<!-- plugins js -->
+		<script th:src="@{~/js/plugins.js}"></script>
+		<!-- main js -->
+		<script th:src="@{~/js/main.js}"></script>
 		<script>
 			$(".zoom").elevateZoom();
 		</script>
-		<!-- plugins js -->
-        <script src="../static/js/plugins.js"></script>
-		<!-- main js -->
-        <script src="../static/js/main.js"></script>
+
+		<script>
+			let breadcrumb=document.getElementsByClassName("breadcrumb-area").item(0);
+			breadcrumb.getElementsByTagName("h1").item(0).innerText="Product Details";
+			breadcrumb.getElementsByTagName("li").item(1).innerText="Category | Product Details";
+		</script>
     </body>
+
 </html>

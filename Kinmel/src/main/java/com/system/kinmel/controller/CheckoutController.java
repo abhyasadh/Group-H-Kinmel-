@@ -1,34 +1,25 @@
 package com.system.kinmel.controller;
 
-import com.system.kinmel.pojo.CheckoutPojo;
-import com.system.kinmel.services.CheckoutService;
-import jakarta.validation.Valid;
+import com.system.kinmel.entity.Cart;
+import com.system.kinmel.services.CartService;
+import com.system.kinmel.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-
+import java.security.Principal;
+import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("/checkout")
 public class CheckoutController {
-
-    private final CheckoutService checkoutService;
-
+    private final UserService userService;
+    private final CartService cartService;
     @GetMapping("/checkout")
-    public String createCheckout(Model model){
-        model.addAttribute("checkout", new CheckoutPojo());
-        return "Checkout";
+    public String displayWishlist(Principal principal, Model model){
+        Integer id = userService.findByEmail(principal.getName()).getId();
+        List<Cart> list = cartService.fetchAll(id);
+        model.addAttribute("cartItems", list);
+        return "/Checkout";
     }
-    @PostMapping("/saveCheckout")
-    public String saveCheckout(@Valid CheckoutPojo checkoutPojo){
-        checkoutService.save(checkoutPojo);
-        return "redirect:/"; //router ko path
-    }
-
-
 }
