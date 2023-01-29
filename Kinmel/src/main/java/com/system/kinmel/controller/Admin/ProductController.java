@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -31,8 +32,8 @@ public class ProductController {
 
     }
 
-    @GetMapping("/saveProduct")
-    public String saveProduct(@Valid ProductPojo productPojo, @RequestParam("productImage")MultipartFile ProductImage) throws Exception {
+    @PostMapping("/saveProduct")
+    public String saveProduct(@Valid ProductPojo productPojo, @RequestParam("product_image")MultipartFile ProductImage) throws Exception {
         productService.saveProduct(productPojo,ProductImage);
         return "redirect:/";
     }
