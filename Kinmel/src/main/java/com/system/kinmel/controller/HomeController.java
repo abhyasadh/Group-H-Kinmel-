@@ -33,6 +33,7 @@ public class HomeController {
         return "homepage";
     }
 
+
     @GetMapping("/add")
     public String createUser(Model model){
         model.addAttribute("product",new ProductPojo());
@@ -50,9 +51,10 @@ public class HomeController {
     }
 
 
-//    @PostMapping("/save")
-//    public String SaveUser(@Valid ProductPojo productPojo, @RequestParam("productImage") MultipartFile ProductImage){
-//        productService.saveUser(productPojo, ProductImage);
-//        return "redirect:/";
-//    }
+    @PostMapping("/save")
+    public String SaveUser(@Valid ProductPojo productPojo, @RequestParam("productImage") MultipartFile ProductImage){
+        productService.saveUser(productPojo, ProductImage);
+        return "redirect:/";
+    }
+
 }
