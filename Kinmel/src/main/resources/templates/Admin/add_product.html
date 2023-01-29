@@ -7,6 +7,7 @@
     <link rel="stylesheet" th:href="@{~/css/bootstrap.min.css}">
     <link rel="stylesheet" th:href="@{~/css/main.css}">
     <link rel="stylesheet" th:href="@{~/css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{~/js/vendor/dropify/css/dropify.min.css}">
 
 </head>
 <body>
@@ -41,37 +42,53 @@
                     <div class="card">
 
                         <div class="body">
-                            <form id="basic-form" method="post" novalidate>
-                                <div class="form-group col-lg-8 col-md-12">
+                            <form id="basic-form" method="post" novalidate th:method="post" th:action="@{/admin/saveProduct}" enctype="multipart/form-data">
+                                <div class="form-group col-lg-6 col-md-12">
                                     <label>Product Name</label>
-                                    <input type="text" class="form-control col-lg-5 col-md-12" required>
+                                    <input type="text" class="form-control col-lg-5 col-md-12" required name="product_name">
                                 </div>
-                                <div class="form-group col-md-12 col-lg-4">
+
+                                <div class="form-group col-md-12 col-lg-3">
                                     <label>Product Price</label>
-                                    <input type="Number" class="form-control" required>
+                                    <input type="Number" class="form-control" required name="product_price">
                                 </div>
+
+                                <div class="form-group col-md-12 col-lg-3">
+                                    <label>Product Category</label>
+                                        <select id="single-selection" name="product_category" class="multiselect multiselect-custom form-control">
+                                            <th:block th:each="category : ${categories}">
+                                                <option th:value="${category.id}" th:text="${category.category_name}"></option>
+                                            </th:block>
+                                        </select>
+
+
+                                </div>
+
                                 <div class="form-group col-md-12 col-lg-4">
                                     <label>Product Quantity</label>
-                                    <input type="Number" class="form-control" required>
+                                    <input type="Number" class="form-control" required name="product_quantity">
                                 </div>
                                 <div class="form-group col-md-12 col-lg-4">
                                     <label>Product Size</label>
-                                    <input type="Number" class="form-control" required>
+                                    <input type="text" class="form-control" required name="product_size">
                                 </div>
                                 <div class="form-group col-md-12 col-lg-4">
-                                    <label>Product Quantity</label>
-                                    <input type="Number" class="form-control" required>
+                                    <label>Product Color</label>
+                                    <input type="text" class="form-control" required name="product_color">
                                 </div>
-                                <div class="form-group">
-                                    <label>Product Image</label>
-                                    <input type="File" class="form-control" required>
-                                </div>
-                                <div class="form-group">
+                                <div class="form-group col-lg-6 col-md-12">
                                     <label>Description</label>
-                                    <textarea class="form-control" rows="5" cols="30" required></textarea>
+                                    <textarea class="form-control" rows="5" cols="30" required name="product_description"></textarea>
+                                </div>
+                                <div class="form-group col-md-12 col-lg-6">
+
+                                    <label>Product Image</label>
+                                    <input type="file" class="dropify" data-allowed-file-extensions="jpg png" name="product_image">
+
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">Validate</button>
+
+                                <button type="submit" class="btn btn-primary">Add</button>
                             </form>
                         </div>
                     </div>
@@ -80,20 +97,35 @@
             </div>
         </div>
     </div>
-</div>
 
-<script src="assets/bundles/libscripts.bundle.js"></script>
-<script src="assets/bundles/vendorscripts.bundle.js"></script>
-<script src="../assets/vendor/bootstrap-multiselect/bootstrap-multiselect.js"></script>
-<script src="../assets/vendor/parsleyjs/js/parsley.min.js"></script>
-<script src="assets/bundles/mainscripts.bundle.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <script th:src="@{~/js/vendor/dropify/js/dropify.min.js}"></script>
+
 <script>
     $(function() {
-        // validation needs name of the element
-        $('#food').multiselect();
+        "use strict";
+        $('.dropify').dropify();
 
-        // initialize after multiselect
-        $('#basic-form').parsley();
+        var drEvent = $('#dropify-event').dropify();
+        drEvent.on('dropify.beforeClear', function(event, element) {
+            return confirm("Do you really want to delete \"" + element.file.name + "\" ?");
+        });
+
+        drEvent.on('dropify.afterClear', function(event, element) {
+            alert('File deleted');
+        });
+
+        $('.dropify-fr').dropify({
+            messages: {
+                default: 'Glissez-déposez un fichier ici ou cliquez',
+                replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
+                remove: 'Supprimer',
+                error: 'Désolé, le fichier trop volumineux'
+            }
+        });
     });
 </script>
 </body>
