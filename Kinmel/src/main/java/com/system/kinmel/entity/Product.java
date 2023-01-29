@@ -40,13 +40,18 @@ public class Product {
     @Column(nullable = false,name = "product_color")
     private String product_color;
 
-    @Column(nullable = false,name = "product_category")
-    private String product_category;
+
 
     @Column(name = "product_image",nullable = false)
     private String product_image;
 
 
+
+
+    
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "product_category", nullable = false,referencedColumnName = "id", foreignKey = @ForeignKey(name = "product_category_name"))
+    private Category category;
 
 
 }

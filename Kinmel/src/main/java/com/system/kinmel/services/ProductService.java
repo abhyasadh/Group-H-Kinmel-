@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface ProductService {
 
-    String saveUser(ProductPojo productPojo, MultipartFile ProductImage);
+    String saveProduct(ProductPojo productPojo, MultipartFile ProductImage) throws Exception;
     List<Product> fetchAll();
 }

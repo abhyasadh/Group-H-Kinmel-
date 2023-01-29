@@ -1,0 +1,50 @@
+<div th:fragment="topnav" >
+
+  <nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-left">
+        <div class="navbar-btn">
+          <a th:href="@{~/admin}"><img th:src="@{~/img/logo-white-text.png}" alt="Logo" class="img-fluid logo"></a>
+          <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+        </div>
+        <a href="javascript:void(0);" class="icon-menu btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a>
+      </div>
+
+    </div>
+  </nav>
+
+</div>
+
+<div th:fragment="sidenav">
+  <div id="left-sidebar" class="sidebar">
+    <div class="navbar-brand">
+      <a th:href="@{~/admin}"><img th:src="@{~/img/logo-white-text.png}" alt="Logo" class="img-fluid logo"></a>
+      <button type="button" class="btn-toggle-offcanvas btn btn-sm btn-default float-right"><i class="lnr lnr-menu fa fa-chevron-circle-left"></i></button>
+    </div>
+    <div class="sidebar-scroll">
+      <div class="user-account">
+        <div class="user_div">
+          <img src="" class="user-photo" alt="User Profile Picture">
+        </div>
+        <div class="dropdown">
+          <span>Welcome,</span>
+          <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Christy Wert</strong></a>
+          <ul class="dropdown-menu dropdown-menu-right account">
+            <li><a href="page-profile.html"><i class="icon-user"></i>My Profile</a></li>
+            <li class="divider"></li>
+            <li><a href="page-login.html"><i class="icon-power"></i>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+      <nav id="left-sidebar-nav" class="sidebar-nav">
+        <ul id="main-menu" class="metismenu">
+          <li><a href="index.html"><i class="icon-home"></i><span>Dashboard</span></a></li>
+          <li><a href="app-inbox.html"><i class="icon-pencil"></i><span>Add Product</span></a></li>
+          <li><a href="app-chat.html"><i class="icon-list"></i><span>Board</span></a></li>
+          <li><a href="app-chat.html"><i class="icon-bag"></i><span>Orders</span></a></li>
+          <li><a href="app-chat.html"><i class="icon-user"></i><span>Customers</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
