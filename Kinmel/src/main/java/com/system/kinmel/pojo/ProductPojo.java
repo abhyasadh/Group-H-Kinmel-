@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.web.multipart.MultipartFile;
 
 @Getter
 @Setter
@@ -27,7 +28,7 @@ public class ProductPojo {
 
     private Integer product_category;
 
-    private String
+    private MultipartFile
             product_image;
 
     public ProductPojo(Product product){
@@ -38,7 +39,6 @@ public class ProductPojo {
         this.product_description=product.getProduct_description();
         this.product_size=product.getProduct_size();
         this.product_color=product.getProduct_color();
-        this.product_image=product.getProduct_image();
         this.product_category=product.getCategory().getId();
 
     }
