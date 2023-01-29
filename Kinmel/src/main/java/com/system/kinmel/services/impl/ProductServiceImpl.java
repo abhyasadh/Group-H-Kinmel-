@@ -23,6 +23,9 @@ public class ProductServiceImpl implements ProductService {
     private final ProductRepo productRepo;
     private final CategoryRepo categoryRepo;
 
+    public static String UPLOAD_DIRECTORY = System.getProperty("user.dir") + "/kinmelfile";
+
+
     @Override
     public String saveProduct(ProductPojo productPojo,MultipartFile ProductImage) throws Exception {
 
@@ -34,14 +37,17 @@ public class ProductServiceImpl implements ProductService {
         product.setCategory(category);
         product.setProduct_color(productPojo.getProduct_color());
 
-        String UPLOAD_DIRECTORY = System.getProperty("user.dir") + "/kinmelfile";
-        StringBuilder fileNames = new StringBuilder();
-        Path fileNameAndPath = Paths.get(UPLOAD_DIRECTORY, ProductImage.getOriginalFilename());
-        fileNames.append(ProductImage.getOriginalFilename());
-        Files.write(fileNameAndPath, ProductImage.getBytes());
+        if(productPojo.getProduct_image()!=null){
+            StringBuilder fileNames = new StringBuilder();
+            System.out.println(UPLOAD_DIRECTORY);
+            Path fileNameAndPath = Paths.get(UPLOAD_DIRECTORY, productPojo.getProduct_image().getOriginalFilename());
+            fileNames.append(productPojo.getProduct_image().getOriginalFilename());
+            Files.write(fileNameAndPath, productPojo.getProduct_image().getBytes());
 
-        String ImageUrl = fileNames.toString();
-        product.setProduct_image(ImageUrl);
+            product.setProduct_image(productPojo.getProduct_image().getOriginalFilename());
+        }
+
+
         product.setProduct_description(productPojo.getProduct_description());
         product.setProduct_price(productPojo.getProduct_price());
         product.setProduct_quantity(productPojo.getProduct_quantity());
