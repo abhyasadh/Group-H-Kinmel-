@@ -1,5 +1,7 @@
 package com.system.kinmel.pojo;
 
+import com.system.kinmel.entity.Billing;
+import com.system.kinmel.entity.Shipping;
 import com.system.kinmel.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,9 +19,15 @@ public class UserPojo {
 
     private String password;
 
+    private Shipping shipping;
+
+    private Billing billing;
+
     public UserPojo(User user) {
         this.id = user.getId();
         this.email = user.getEmail();
         this.password = user.getPassword();
+        this.shipping = user.getShippingId();
+        this.billing = user.getBillingId();
     }
 }

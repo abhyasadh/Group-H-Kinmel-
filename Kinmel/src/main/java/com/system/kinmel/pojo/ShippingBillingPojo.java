@@ -1,6 +1,7 @@
 package com.system.kinmel.pojo;
 
 
+import com.system.kinmel.entity.Billing;
 import com.system.kinmel.entity.Shipping;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,7 +13,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class ShippingPojo {
+public class ShippingBillingPojo {
 
     private Integer id;
     private String address;
@@ -28,7 +29,7 @@ public class ShippingPojo {
     private String country;
     private String notes;
 
-    public ShippingPojo(Shipping shipping) {
+    public ShippingBillingPojo(Shipping shipping) {
         this.id= shipping.getId();
         this.address= shipping.getAddress();
         this.apartment= shipping.getApartment();
@@ -42,7 +43,22 @@ public class ShippingPojo {
         this.town= shipping.getTown();
         this.country=shipping.getCountry();
         this.notes=shipping.getNotes();
+    }
 
+    public ShippingBillingPojo(Billing billing) {
+        this.id= billing.getId();
+        this.address= billing.getAddress();
+        this.apartment= billing.getApartment();
+        this.company_name= billing.getCompanyName();
+        this.email= billing.getEmail();
+        this.firstName= billing.getFirstname();
+        this.lastName= billing.getLastname();
+        this.phone= billing.getPhone();
+        this.postal= billing.getPostal();
+        this.state= billing.getState();
+        this.town= billing.getTown();
+        this.country=billing.getCountry();
+        this.notes=billing.getNotes();
     }
 
 }

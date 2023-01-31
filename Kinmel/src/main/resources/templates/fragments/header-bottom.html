@@ -14,83 +14,9 @@
                 <li><a th:href="@{~/dashboard}">home</a>
 
                 </li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="blog.html">blog</a></li>
-                <li class="static"><a href="shop.html">shop</a>
-                  <div class="mega-menu">
-                    <div class="mega-left">
-                        <span>
-                            <a href="shop.html" class="mega-title">WOMEN CLOTH </a>
-                            <a href="shop.html">casual shirt</a>
-                            <a href="shop.html">rikke t-shirt</a>
-                            <a href="shop.html">mia top </a>
-                            <a href="shop.html">muscle tee </a>
-                        </span>
-                      <span>
-                            <a href="shop.html" class="mega-title">MEN CLOTH </a>
-                            <a href="shop.html">casual shirt</a>
-                            <a href="shop.html">rikke t-shirt</a>
-                            <a href="shop.html">mia top </a>
-                            <a href="shop.html">muscle tee </a>
-                        </span>
-                      <span>
-                            <a href="shop.html" class="mega-title">WOMEN JEWELRY </a>
-                            <a href="shop.html">necklace </a>
-                            <a href="shop.html">chunky short striped </a>
-                            <a href="shop.html">samhar cuff</a>
-                            <a href="shop.html">nail set </a>
-                        </span>
-                      <span>
-                            <a href="shop.html" class="mega-title">WOMEN JEWELRY </a>
-                            <a href="shop.html">necklace </a>
-                            <a href="shop.html">chunky short striped </a>
-                            <a href="shop.html">samhar cuff</a>
-                            <a href="shop.html">nail set </a>
-                        </span>
-                      <span>
-                            <a href="shop.html" class="mega-title">WOMEN JEWELRY </a>
-                            <a href="shop.html">necklace </a>
-                            <a href="shop.html">chunky short striped </a>
-                            <a href="shop.html">samhar cuff</a>
-                            <a href="shop.html">nail set </a>
-                        </span>
-                    </div>
-                    <div class="mega-right">
-                        <span class="mega-menu-img">
-                            <a href="shop.html"><img alt="" src="../static/img/1.jpg"></a>
-                        </span>
-                    </div>
-                  </div>
-                </li>
-                <li><a href="shop.html">cloth</a>
-                  <div class="mega-menu mega-menu-2">
-                    <span>
-                        <a href="shop.html" class="mega-title">WOMEN CLOTH </a>
-                        <a href="shop.html">casual shirt</a>
-                        <a href="shop.html">rikke t-shirt</a>
-                        <a href="shop.html">mia top </a>
-                        <a href="shop.html">muscle tee </a>
-                    </span>
-                    <span>
-                        <a href="shop.html" class="mega-title">MEN CLOTH </a>
-                        <a href="shop.html">casual shirt</a>
-                        <a href="shop.html">rikke t-shirt</a>
-                        <a href="shop.html">mia top </a>
-                        <a href="shop.html">muscle tee </a>
-                    </span>
-                    <span>
-                        <a href="shop.html" class="mega-title">WOMEN JEWELRY </a>
-                        <a href="shop.html">necklace </a>
-                        <a href="shop.html">chunky short striped </a>
-                        <a href="shop.html">samhar cuff</a>
-                        <a href="shop.html">nail set </a>
-                    </span>
-                    <span class="mega-menu-img">
-                        <a href="shop.html"><img alt="" src="../static/img/1.jpg"></a>
-                    </span>
-                  </div>
-                </li>
-
+                <li><a th:href="@{~/about}">about</a></li>
+                <li><a th:href="@{~/blogs}">blog</a></li>
+                <li><a th:href="@{~/shop}">shop</a></li>
                 <li><a th:href="@{~/contact}">contact</a></li>
               </ul>
             </nav>
@@ -129,8 +55,8 @@
             <ul>
               <li><a href="#">My Account</a></li>
               <li><a th:href="@{/wishlist}">Wishlist</a></li>
-              <li><a th:href="@{/checkout}">Checkout</a></li>
-              <li><a href="#">Testimonial</a></li>
+              <li th:if="${!cartItems.isEmpty()}"><a th:href="@{/checkout}">Checkout</a></li>
+              <li><a th:href="@{~/about}">Testimonial</a></li>
               <li><a th:href="@{/logout}">Logout</a></li>
             </ul>
           </div>
@@ -138,7 +64,63 @@
             <i class="fa fa-search" style="margin-top: 0px;"></i>
             <div class="header-form">
               <form action="#">
-                <input type="text" placeholder="search" />
+                <input type="text" placeholder="Search" />
+                <button><i class="fa fa-search" style="margin-top: 0px;"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="header-bottom-area" th:fragment="header-bottom-area-404">
+  <div class="container">
+    <div class="inner-container">
+      <div class="row">
+        <div class="col-md-2 col-sm-4 col-xs-5">
+          <div class="logo">
+            <a th:href="@{~/dashboard}"><img th:src="@{~/img/logo-white-text.png}" alt="" /></a>
+          </div>
+        </div>
+        <div class="col-md-8 hidden-xs hidden-sm">
+          <div class="main-menu">
+            <nav>
+              <ul>
+                <li><a th:href="@{~/dashboard}">home</a>
+
+                </li>
+                <li><a th:href="@{~/about}">about</a></li>
+                <li><a th:href="@{~/blogs}">blog</a></li>
+                <li><a th:href="@{~/shop}">shop</a></li>
+                <li><a th:href="@{~/contact}">contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-8 col-xs-7 header-right">
+          <div class="my-cart">
+            <div class="total-cart">
+              <a th:href="@{/cart}">
+                <i class="fa fa-shopping-cart" style="margin-top: 7px;"></i>
+              </a>
+            </div>
+          </div>
+          <div class="user-meta">
+            <a href="#"><i class="fa fa-cog" style="margin-top: 0;"></i></a>
+            <ul>
+              <li><a href="#">My Account</a></li>
+              <li><a th:href="@{~/wishlist}">Wishlist</a></li>
+              <li><a th:href="@{~/about}">Testimonial</a></li>
+              <li><a th:href="@{~/logout}">Logout</a></li>
+            </ul>
+          </div>
+          <div class="header-search">
+            <i class="fa fa-search" style="margin-top: 0px;"></i>
+            <div class="header-form">
+              <form action="#">
+                <input type="text" placeholder="Search" />
                 <button><i class="fa fa-search" style="margin-top: 0px;"></i></button>
               </form>
             </div>

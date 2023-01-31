@@ -35,7 +35,7 @@ public class ProfileCreationController {
     @GetMapping("/ProfileCreation")
     public String createUser(Model model){
         model.addAttribute("user", new ProfileCreationPojo());
-        return ("ProfileCreation");
+        return ("profile-creation");
     }
 
     @PostMapping("/save")

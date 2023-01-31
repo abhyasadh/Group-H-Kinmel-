@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Login || Kinmel</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" type="image/x-icon" th:href="@{~/img/favicon.ico}">
+
+	<!-- bootstrap v3.3.6 css -->
+	<link rel="stylesheet" th:href="@{~/css/bootstrap.min.css}">
+	<!-- animate css -->
+	<link rel="stylesheet" th:href="@{~/css/animate.css}">
+	<!-- jquery-ui.min css -->
+	<link rel="stylesheet" th:href="@{~/css/jquery-ui.min.css}">
+	<!-- meanmenu css -->
+	<link rel="stylesheet" th:href="@{~/css/meanmenu.min.css}">
+	<!-- owl.carousel css -->
+	<link rel="stylesheet" th:href="@{~/css/owl.carousel.css}">
+	<!-- slick css -->
+	<link rel="stylesheet" th:href="@{~/css/slick.css}">
+	<!-- font-awesome css -->
+	<link rel="stylesheet" th:href="@{~/css/font-awesome.min.css}">
+	<!-- style css -->
+	<link rel="stylesheet" th:href="@{~/css/style.css}">
+	<!-- responsive css -->
+	<link rel="stylesheet" th:href="@{~/css/responsive.css}">
+	<!-- modernizr js -->
+	<script th:src="@{~/js/vendor/modernizr-2.8.3.min.js}"></script>
+
+</head>
+
+<body>
+<header class="header-pos">
+
+	<div th:replace="~{fragments/header-bottom.html :: header-bottom-area-login}"></div>
+
+</header>
+<!-- header end -->
+
+<div th:replace="~{fragments/breadcrumb-area.html :: breadcrumb-area}"></div>
+
+<!-- login-area start -->
+<div class="login-area">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="login-content">
+					<h2 class="login-title">Login</h2>
+					<p>Hello, Welcome to Your Account.</p>
+					<form th:action="@{/login}" th:method="post">
+						<label>Email Address</label>
+						<input type="text" name="email"/>
+						<label>Password</label>
+						<input type="password" name="password" />
+						<div class="login-lost">
+									<span class="forgot-login">
+										<a href="#">Forgot your Password?</a>
+									</span>
+						</div>
+						<button class="login-sub" type="submit">Login</button>
+					</form>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="login-content login-margin">
+					<h2 class="login-title">create a new account</h2>
+					<p>Create Your Own Kinmel Account.</p>
+					<form th:method="post" th:action="@{/save}" th:object="${user}">
+						<label>Email Address</label>
+						<input type="text" th:field="*{email}"/>
+						<label>Password</label>
+						<input type="password" th:field="*{password}"/>
+						<label>Confirm Password</label>
+						<input type="password" />
+						<button class="login-sub" type="submit">Signup</button>
+					</form>
+					<div class="sign-up-today">
+						<h2 class="login-title">sign up today and you'll be able to:</h2>
+						<ul>
+							<li>
+										<span>
+											<i class="fa fa-check-square-o"></i>
+											<span>Speed Your Way Through the Checkout</span>
+										</span>
+							</li>
+							<li>
+										<span>
+											<i class="fa fa-check-square-o"></i>
+											<span>Track Your Order Easily</span>
+										</span>
+							</li>
+							<li>
+										<span>
+											<i class="fa fa-check-square-o"></i>
+											<span>Keep a Record of All Your Purchases</span>
+										</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- footer start -->
+<footer>
+	<div th:replace="~{fragments/footer.html :: footer-top}"></div>
+	<div th:replace="~{fragments/footer.html :: footer-top-area}"></div>
+	<div th:replace="~{fragments/footer.html :: footer-bottom-area}"></div>
+</footer>
+<!-- footer end -->
+<!-- jquery latest version -->
+<script data-cfasync="false" th:src="@{../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js}"></script><script th:src="@{/js/vendor/jquery-1.12.0.min.js}"></script>
+<!-- bootstrap js -->
+<script th:src="@{~/js/bootstrap.min.js}"></script>
+<!-- owl.carousel js -->
+<script th:src="@{~/js/owl.carousel.min.js}"></script>
+<!-- meanmenu js -->
+<script th:src="@{~/js/jquery.meanmenu.js}"></script>
+<!-- jquery-ui js -->
+<script th:src="@{~/js/jquery-ui.min.js}"></script>
+<!-- wow js -->
+<script th:src="@{~/js/wow.min.js}"></script>
+<!-- plugins js -->
+<script th:src="@{~/js/plugins.js}"></script>
+<!-- main js -->
+<script th:src="@{~/js/main.js}"></script>
+
+<script>
+	let breadcrumb=document.getElementsByClassName("breadcrumb-area").item(0);
+	breadcrumb.getElementsByTagName("h1").item(0).innerText="Login / Signup";
+	breadcrumb.getElementsByTagName("li").item(0).innerText="";
+</script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>404 || Kinmel</title>
+        <title>Blog || Kinmel</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -34,35 +34,47 @@
 
 <header class="header-pos">
 
-	<div th:replace="~{fragments/header-bottom.html :: header-bottom-area-404}"></div>
+	<div th:replace="~{fragments/header-bottom.html :: header-bottom-area}"></div>
 
 	<div th:replace="~{fragments/mobile-menu.html :: mobile-menu}"></div>
 
 </header>
 
-	<div th:replace="~{fragments/breadcrumb-area.html :: breadcrumb-area}"></div>
-
-		<div class="four-zero-four">
+<div th:replace="~{fragments/breadcrumb-area.html :: breadcrumb-area}"></div>
+		<!-- blog-area start -->
+		<div class="blog-area pad-60">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12">
-						<div class="four-zero-content">
-							<h1><span>404</span> not found!</h1>
-							<p>The page you are looking for is not found! Please check the url again. </p>
-							<a th:href="@{/dashboard}">back to home page</a>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="blog-page-main">
+
+							<div class="blog-wrapper">
+								<div class="blog-img">
+									<a href="single-blog.html"><img src="img/blog/4.jpg" alt="" /></a>
+								</div>
+								<div class="blog-content">
+									<h3><a href="single-blog.html">Lorem ipsum dolor sit</a></h3>
+									<div class="blog-meta">
+										<span class="blog-date">Jan 28,2023</span>
+										<span class="blog-author">By <a href="#">Abhyas Adhikari</a></span>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in .....</p>
+								</div>
+							</div>
+
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
-	<!-- footer start -->
-	<footer>
-		<div th:replace="~{fragments/footer.html :: footer-top}"></div>
-		<div th:replace="~{fragments/footer.html :: footer-top-area}"></div>
-		<div th:replace="~{fragments/footer.html :: footer-bottom-area}"></div>
-	</footer>
-	<!-- footer end -->
+		<!-- blog-area end -->
+<!-- footer start -->
+<footer>
+	<div th:replace="~{fragments/footer.html :: footer-top}"></div>
+	<div th:replace="~{fragments/footer.html :: footer-top-area}"></div>
+	<div th:replace="~{fragments/footer.html :: footer-bottom-area}"></div>
+</footer>
+<!-- footer end -->
 
 <!-- jquery latest version -->
 <script data-cfasync="false" th:src="@{../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js}"></script><script th:src="@{/js/vendor/jquery-1.12.0.min.js}"></script>
@@ -83,8 +95,9 @@
 
 <script>
 	let breadcrumb=document.getElementsByClassName("breadcrumb-area").item(0);
-	breadcrumb.getElementsByTagName("h1").item(0).innerText="404 Not Found";
-	breadcrumb.getElementsByTagName("li").item(1).innerText="404 Error";
+	breadcrumb.getElementsByTagName("h1").item(0).innerText="Blog";
+	breadcrumb.getElementsByTagName("li").item(1).innerText="Blog";
 </script>
     </body>
+
 </html>

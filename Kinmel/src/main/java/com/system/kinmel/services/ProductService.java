@@ -10,4 +10,5 @@ public interface ProductService {
 
     String saveUser(ProductPojo productPojo, MultipartFile ProductImage);
     List<Product> fetchAll();
+    Product getSingle(Integer id);
 }

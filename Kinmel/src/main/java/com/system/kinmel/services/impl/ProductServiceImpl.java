@@ -42,6 +42,11 @@ public class ProductServiceImpl implements ProductService {
         return productRepo.findAll();
     }
 
+    @Override
+    public Product getSingle(Integer id) {
+        return productRepo.findById(id).orElseThrow();
+    }
+
     private String saveImage(MultipartFile imageFile) {
         String fileName = imageFile.getOriginalFilename();
 

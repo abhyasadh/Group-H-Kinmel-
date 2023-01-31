@@ -1,5 +1,6 @@
 package com.system.kinmel.pojo;
 
+import com.system.kinmel.entity.Category;
 import com.system.kinmel.entity.Product;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -25,7 +26,7 @@ public class ProductPojo {
 
     private String product_color;
 
-    private String product_category;
+    private Category product_category;
 
     private String
             product_image;

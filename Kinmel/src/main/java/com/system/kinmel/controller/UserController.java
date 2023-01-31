@@ -23,7 +23,7 @@ public class UserController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication == null || authentication instanceof AnonymousAuthenticationToken) {
             model.addAttribute("user", new UserPojo());
-            return "ProfileCreation";
+            return "profile-creation";
         }
         return "redirect:/dashboard";
     }
@@ -39,6 +39,6 @@ public class UserController {
         if (authentication.isAuthenticated()) {
             SecurityContextHolder.clearContext();
         }
-        return "/ProfileCreation";
+        return "profile-creation";
     }
 }
