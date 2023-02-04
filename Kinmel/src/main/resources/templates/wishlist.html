@@ -69,11 +69,11 @@
                 <tbody>
                 <tr th:each="item:${wishlistItems}">
                   <td class="product-remove"><a th:href="@{~/wishlist/remove/}+${item.id}">×</a></td>
-                  <td class="product-thumbnail"><img th:src="'data:image/png;base64,'+${item.productImageBase64}" alt="" /></td>
-                  <td class="product-name"><a th:href="@{~/product/}+${item.id}" th:text="${item.product_name}">Clothing 1</a></td>
-                  <td class="product-price"><span class="amount" th:text="${item.product_price}"></span></td>
+                  <td class="product-thumbnail"><img th:src="'data:image/png;base64,'+${item.product.product_image}" alt="" /></td>
+                  <td class="product-name"><a th:href="@{~/product/}+${item.id}" th:text="${item.product.product_name}">Clothing 1</a></td>
+                  <td class="product-price"><span class="amount" th:text="'Rs.'+${item.product.product_price}+'/-'"></span></td>
                   <td class="product-stock-status"><span class="wishlist-in-stock">In Stock</span></td>
-                  <td class="product-add-to-cart"><a href="#">Add to Cart</a></td>
+                  <td class="product-add-to-cart"><a th:href="@{~/cart/add/}+${item.product.id}">Add to Cart</a></td>
                 </tr>
                 <tr th:if="${wishlistItems.isEmpty()}">
                   <td colspan="6">Your wishlist is empty!</td>

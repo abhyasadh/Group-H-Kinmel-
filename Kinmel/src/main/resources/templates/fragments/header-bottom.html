@@ -33,19 +33,19 @@
             <ul th:if="${!cartItems.isEmpty()}">
               <li th:each="items:${cartItems}">
                 <div class="cart-img">
-                  <a href="#"><img alt="" th:src="'data:image/png;base64,'+${items.productImageBase64}"></a>
+                  <a href="#"><img alt="" th:src="'data:image/png;base64,'+${items.product.product_image}"></a>
                 </div>
                 <div class="cart-info">
-                  <h4><a th:href="@{~/product/}+${cartProduct.id}" th:text="${item.product_name}">Product - 1</a></h4>
-                  <span th:text="${cartProduct.product_price}+'x'+${cartProduct.quantity}"></span>
+                  <h4><a th:href="@{~/product/}+${items.product.id}" th:text="${items.product.product_name}"></a></h4>
+                  <span th:text="'Rs.'+${items.product.product_price}+' x '+${items.quantity}"></span>
                 </div>
               </li>
               <li class="cart-border">
                 <div class="subtotal-text">Subtotal: </div>
-                <div class="subtotal-price"></div>
+                <div class="subtotal-price" th:text="'Rs.'+${total}+'/-'"></div>
               </li>
               <li>
-                <a class="cart-button" th:href="@{/checkout}">view cart</a>
+                <a class="cart-button" th:href="@{/cart}">view cart</a>
                 <a class="checkout" th:href="@{/checkout}">checkout</a>
               </li>
             </ul>

@@ -12,51 +12,53 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
+@RequestMapping("/cart")
 public class CartController {
     private final CartService cartService;
 
     private final UserService userService;
 
-    @GetMapping("/cart")
-    public String displayCart(Principal principal, Model model){
+    @GetMapping()
+    public String displayCart(Principal principal, Model model, CartPojo cartPojo){
         Integer id = userService.findByEmail(principal.getName()).getId();
         List<Cart> list = cartService.fetchAll(id);
+
+        double total = 0.0;
+        for(Cart totalCalc:list){
+            total += totalCalc.getQuantity()*totalCalc.getProduct().getProduct_price();
+        }
+
+        model.addAttribute("total", total);
+        model.addAttribute("cart", cartPojo);
         model.addAttribute("cartItems", list);
+
         return "/cart";
     }
 
-    @PostMapping("/addToCart")
-    public String saveToCart(@Valid CartPojo cartPojo){
-        cartService.saveToCart(cartPojo);
+    @GetMapping("/add/{id}")
+    public String saveToCart(@PathVariable Integer id, Principal principal){
+        cartService.saveToCart(id, principal);
+        return "redirect:/shop";
+    }
+
+    @PostMapping("/updateQuantity/{id}")
+    public String updateQuantity(@Valid CartPojo cartPojo){
+        Cart cart = cartService.fetchOne(cartPojo.getId());
+        cart.setQuantity(cartPojo.getQuantity());
+        cartService.updateQuantity(cart);
         return "redirect:/cart";
     }
 
-    @PostMapping("/updateQuantity")
-    public String updateQuantity(@Valid CartPojo cartPojo, Principal principal){
-        Integer userId = userService.findByEmail(principal.getName()).getId();
-        List<Cart> cart = cartService.fetchAll(userId);
-
-        for (Cart i:cart){
-            cartService.updateQuantity(cartPojo.getQuantity(), userId, cartPojo.getId());
-        }
-
-        return "redirect:/cart";
-    }
-
-    @DeleteMapping("/deleteCart/{id}")
-    public String deleteWishlistItem(@PathVariable("id") Integer id, Principal principal){
-        User user = userService.findByEmail(principal.getName());
-        cartService.deleteFromCart(user.getId(), id);
+    @GetMapping("/remove/{id}")
+    public String deleteCartItem(@PathVariable("id") Integer id){
+        cartService.deleteFromCart(id);
         return "redirect:/cart";
     }
 }

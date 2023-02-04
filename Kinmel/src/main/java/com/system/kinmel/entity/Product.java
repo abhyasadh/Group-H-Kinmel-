@@ -2,12 +2,9 @@ package com.system.kinmel.entity;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
-
+@Builder
 @Entity
 @Getter
 @Setter
@@ -41,7 +38,7 @@ public class Product {
     private String product_color;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "category_id",
+    @JoinColumn(name = "product_category",
             referencedColumnName = "id",
             foreignKey = @ForeignKey(name = "FK_categoryId"))
     private Category product_category;
@@ -49,7 +46,8 @@ public class Product {
     @Column(name = "product_image",nullable = false)
     private String product_image;
 
-
+    @Transient
+    private String product_imageBase64;
 
 
 }

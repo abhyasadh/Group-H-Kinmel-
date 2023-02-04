@@ -16,8 +16,4 @@ public interface CartRepo extends JpaRepository<Cart, Integer> {
 
     @Query(value = "SELECT * FROM cart WHERE user_id = ?1", nativeQuery = true)
     Optional<List<Cart>> fetchAll(Integer userId);
-    @Query(value = "UPDATE cart SET quantity =?1 WHERE user_id = ?2 AND product_id = ?3", nativeQuery = true)
-    void updateQuantity(Integer quantity, Integer userId, Integer productId);
-    @Query(value = "DELETE * FROM cart WHERE user_id = ?1, product_id = ?2", nativeQuery = true)
-    void deleteCartById(Integer userId, Integer productId);
 }

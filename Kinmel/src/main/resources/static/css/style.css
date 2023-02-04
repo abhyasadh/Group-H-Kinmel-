@@ -466,7 +466,6 @@ header{
     float: left;
     font-size: 15px;
     font-weight: 600;
-    text-transform: uppercase;
 }
 .subtotal-price {
     float: right;
@@ -753,6 +752,7 @@ img.secondary-img {
     height: 36px;
     line-height: 35px;
     margin-top: 5px;
+    padding-top: 11px;
     text-align: center;
     width: 40px;
 }
@@ -1759,23 +1759,10 @@ ul.pro-details-tab li a {
 }
 .product-comments .product-comments-content {
     border: 1px solid #ddd;
-    margin-left: 97px;
     padding: 10px;
     position: relative;
 }
-.product-comments .product-comments-content::before {
-    background: #fff none repeat scroll 0 0;
-    border-bottom: 1px solid #e5e5e5;
-    border-left: 1px solid #e5e5e5;
-    content: "";
-    display: block;
-    height: 10px;
-    left: -6px;
-    position: absolute;
-    top: 10px;
-    transform: rotate(45deg);
-    width: 10px;
-}
+
 .product-comments .product-comments-content p{font-size: 16px;}
 .product-comments .product-comments-content p strong {
     text-transform: uppercase;
@@ -2142,7 +2129,7 @@ p.checkout-coupon input[type=submit]{background: #333 none repeat scroll 0 0;
 .panel-title > a {
     display: block;
 }
-.order-button-payment input {
+.order-button-payment button {
     background: #232323 none repeat scroll 0 0;
     border: medium none;
     color: #fff;
@@ -2155,7 +2142,7 @@ p.checkout-coupon input[type=submit]{background: #333 none repeat scroll 0 0;
     transition: all 0.3s ease 0s;
     width: 100%;
 }
-.order-button-payment input:hover {
+.order-button-payment button:hover {
     background: #fe4847 none repeat scroll 0 0;
 }
 /*---------------------------
@@ -2205,7 +2192,7 @@ p.checkout-coupon input[type=submit]{background: #333 none repeat scroll 0 0;
     height: 40px;
     padding: 0 5px 0 10px;
     text-align: center;
-    width: 60px;
+    width: 75px;
 }
 .table-content table td.product-subtotal {
     font-size: 14px;
@@ -2327,7 +2314,6 @@ p.checkout-coupon input[type=submit]{background: #333 none repeat scroll 0 0;
     font-weight: bold;
     margin-left: 5px;
     text-align: right;
-    text-transform: uppercase;
 }
 .cart_totals table td ul#shipping_method {
     list-style: outside none none;
@@ -2355,7 +2341,6 @@ a.shipping-calculator-button:hover {
 }
 .cart_totals table tr.order-total th, .cart_totals table tr.order-total .amount {
     font-size: 20px;
-    text-transform: uppercase;
     white-space: nowrap;
 }
 .wc-proceed-to-checkout a {

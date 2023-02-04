@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -17,5 +18,10 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public List<Category> fetchAll() {
         return categoryRepo.findAll();
+    }
+
+    @Override
+    public Optional<Category> findById(Integer id) {
+        return categoryRepo.findById(id);
     }
 }

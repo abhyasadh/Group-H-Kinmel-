@@ -4,14 +4,17 @@ import com.system.kinmel.entity.Cart;
 import com.system.kinmel.entity.Wishlist;
 import com.system.kinmel.pojo.CartPojo;
 
+import java.security.Principal;
 import java.util.List;
 
 public interface CartService {
-    String saveToCart(CartPojo cartPojo);
+    String saveToCart(Integer id, Principal principal);
 
-    String deleteFromCart(Integer userId, Integer productId);
+    String deleteFromCart(Integer id);
 
-    String updateQuantity(Integer quantity, Integer userId, Integer productId);
+    String updateQuantity(Cart cart);
 
     List<Cart> fetchAll(Integer id);
+
+    Cart fetchOne(Integer id);
 }

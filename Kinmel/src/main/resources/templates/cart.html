@@ -1,4 +1,4 @@
-﻿<html>
+﻿<html xmlns="http://www.w3.org/1999/html">
 
 <head>
         <meta charset="utf-8">
@@ -62,24 +62,28 @@
 									</thead>
 									<tbody>
 										<tr th:each="cartProduct:${cartItems}">
-											<td class="product-thumbnail"><img th:src="'data:image/png;base64,'+${cartProduct.productImageBase64}" alt="" /></td>
-											<td class="product-name"><a th:href="@{~/product/}+${cartProduct.id}" th:text="${cartProduct.product_name}"></a></td>
-											<td class="product-price"><span class="amount" th:text="${cartProduct.product_price}"></span></td>
-											<td class="product-quantity"><input type="number" th:value="${cartProduct.quantity}" /></td>
-											<td class="product-subtotal"></td>
+											<td class="product-thumbnail"><img th:src="'data:image/png;base64,'+${cartProduct.product.product_image}" alt="" /></td>
+											<td class="product-name"><a th:href="@{~/product/}+${cartProduct.product.id}" th:text="${cartProduct.product.product_name}"></a></td>
+											<td class="product-price"><span class="amount" th:text="'Rs.'+${cartProduct.product.product_price}+'/-'"></span></td>
+											<td class="product-quantity">
+												<form></form>
+												<form th:method="post" th:action="@{~/cart/updateQuantity/}+${cartProduct.id}" th:object="${cart}" style="display: flex; flex-direction: column; gap: 5px; align-items: center">
+													<input type="number" min="1" name="quantity" th:value="${cartProduct.quantity}"/>
+													<button type="submit" style="background: #252525 none repeat scroll 0 0; border: medium none; color: #fff; display: inline-block; float: bottom; font-size: 12px; font-weight: 700; height: 40px; line-height: 40px; padding: 0 15px; text-transform: uppercase; transition: all 0.3s ease 0s;">Update</button>
+												</form>
+											</td>
+											<td class="product-subtotal" th:text="'Rs.'+${cartProduct.product.product_price}*${cartProduct.quantity}+'/-'"></td>
 											<td class="product-remove"><a th:href="@{~/cart/remove/}+${cartProduct.id}"><i class="fa fa-times"></i></a></td>
 										</tr>
 										<tr th:if="${cartItems.isEmpty()}">
 											<td colspan="6">Your cart is empty!</td>
 										</tr>
-
 									</tbody>
 								</table>
 							</div>
 							<div class="row">
 								<div class="col-md-8 col-sm-7 col-xs-12">
 									<div class="buttons-cart">
-										<input type="submit" th:if="${!cartItems.isEmpty()}" value="Update Cart"/>
 										<a th:href="@{/dashboard}">Continue Shopping</a>
 									</div>
 								</div>
@@ -90,22 +94,22 @@
 											<tbody>
 												<tr class="cart-subtotal">
 													<th>Subtotal</th>
-													<td><span class="amount">£215.00</span></td>
+													<td><span class="amount" th:text="'Rs.'+${total}+'/-'"></span></td>
 												</tr>
 												<tr class="shipping">
 													<th>Shipping</th>
-													<td><span class="amount">£7.00</span></td>
+													<td><span class="amount">Rs.80.0/-</span></td>
 												</tr>
 												<tr class="order-total">
 													<th>Total</th>
 													<td>
-														<strong><span class="amount">£215.00</span></strong>
+														<strong><span class="amount" th:text="'Rs.'+(${total}+80)+'/-'"></span></strong>
 													</td>
 												</tr>											
 											</tbody>
 										</table>
 										<div class="wc-proceed-to-checkout">
-											<a href="#">Proceed to Checkout</a>
+											<a th:href="@{~/checkout}">Proceed to Checkout</a>
 										</div>
 									</div>
 								</div>

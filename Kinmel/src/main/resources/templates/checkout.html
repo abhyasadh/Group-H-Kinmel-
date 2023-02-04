@@ -2,7 +2,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Login || Kinmel</title>
+	<title>Checkout || Kinmel</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -73,7 +73,7 @@
 			<div class="container">
 				<div class="row">
 					<form th:method="post" th:action="@{/checkout/saveCheckout}" th:object="${checkout}">
-						<input type="text" hidden th:field = "*{id}">
+						<input type="text" hidden>
 						<div class="col-lg-6 col-md-6">
 							<div class="checkbox-form">						
 								<h3>Billing Details</h3>
@@ -81,65 +81,64 @@
 									<div class="col-md-6">
 										<div class="checkout-form-list">
 											<label>First Name <span class="required">*</span></label>										
-											<input type="text" placeholder=""  th:field="*{firstName}" />
+											<input type="text" placeholder=""/>
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="checkout-form-list">
 											<label>Last Name <span class="required">*</span></label>										
-											<input type="text" placeholder="" th:field="*{lastName}" />
+											<input type="text" placeholder=""/>
 										</div>
 									</div>
 									<div class="col-md-12">
 										<div class="checkout-form-list">
 											<label>Company Name</label>
-											<input type="text" placeholder=""  th:field="*{company_name}" />
+											<input type="text" placeholder=""/>
 										</div>
 									</div>
 									<div class="col-md-12">
 										<div class="checkout-form-list">
 											<label>Address <span class="required">*</span></label>
-											<input type="text" placeholder="Street address"  th:field="*{address}" />
+											<input type="text" placeholder="Street address"/>
 										</div>
 									</div>
 									<div class="col-md-12">
 										<div class="checkout-form-list">									
-											<input type="text" placeholder="Apartment, suite, unit etc. (optional)"  th:field="*{apartment}" />
+											<input type="text" placeholder="Apartment, suite, unit etc. (optional)"/>
 										</div>
 									</div>
 									<div class="col-md-12">
 										<div class="checkout-form-list">
 											<label>Town / City <span class="required">*</span></label>
-											<input type="text" placeholder="Town / City"  th:field="*{town}"/>
+											<input type="text" placeholder="Town / City"/>
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="checkout-form-list">
 											<label>State <span class="required">*</span></label>										
-											<input type="text" placeholder=""  th:field="*{state}" />
+											<input type="text" placeholder=""/>
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="checkout-form-list">
 											<label>Postcode / Zip <span class="required">*</span></label>										
-											<input type="text" placeholder="Postcode / Zip"  th:field="*{postal}" />
+											<input type="text" placeholder="Postcode / Zip"/>
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="checkout-form-list">
 											<label>Email Address <span class="required">*</span></label>										
-											<input type="email" placeholder=""  th:field="*{email}" />
+											<input type="email" placeholder=""/>
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="checkout-form-list">
 											<label>Phone  <span class="required">*</span></label>										
-											<input type="text" placeholder="Phone"  th:field="*{phone}" />
+											<input type="text" placeholder="Phone"/>
 										</div>
 									</div>
 								</div>
 								<form th:method="post" th:action="@{/checkout/saveShip}" th:object="${shipping}">
-									<input type="text" hidden th:field = "*{id}">
 								<div class="different-address">
 										<div class="ship-different-title">
 											<h3>
@@ -151,82 +150,82 @@
 										<div class="col-md-12">
 											<div class="country-select">
 												<label>Country <span class="required">*</span></label>
-												<select th:field="*{country}" >
-												  <option value="volvo">Nepal</option>
-												  <option value="saab">India</option>
-												  <option value="mercedes">Japan</option>
-												  <option value="audi">China</option>
-												  <option value="audi2">United States</option>
-												  <option value="audi3">Bahrain</option>
-												  <option value="audi4">Colombia</option>
-												  <option value="audi5">Australia</option>
-												</select> 										
+												<select>
+												  <option value="Nepal">Nepal</option>
+												  <option value="India">India</option>
+												  <option value="Japan">Japan</option>
+												  <option value="China">China</option>
+												  <option value="US">United States</option>
+												  <option value="Bahrain">Bahrain</option>
+												  <option value="Colombia">Colombia</option>
+												  <option value="Australia">Australia</option>
+												</select>
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="checkout-form-list">
 												<label>First Name <span class="required">*</span></label>										
-												<input type="text" placeholder="" th:field="*{firstName}" />
+												<input type="text" placeholder=""/>
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="checkout-form-list">
 												<label>Last Name <span class="required">*</span></label>										
-												<input type="text" placeholder="" th:field="*{lastName}"/>
+												<input type="text" placeholder=""/>
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="checkout-form-list">
 												<label>Company Name</label>
-												<input type="text" placeholder="" th:field="*{company_name}"/>
+												<input type="text" placeholder=""/>
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="checkout-form-list">
 												<label>Address <span class="required">*</span></label>
-												<input type="text" placeholder="Street address" th:field="*{address}" />
+												<input type="text" placeholder="Street address" />
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="checkout-form-list">									
-												<input type="text" placeholder="Apartment, suite, unit etc. (optional)" th:field="*{apartment}" />
+												<input type="text" placeholder="Apartment, suite, unit etc. (optional)" />
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="checkout-form-list">
 												<label>Town / City <span class="required">*</span></label>
-												<input type="text" placeholder="Town / City" th:field="*{town}"/>
+												<input type="text" placeholder="Town / City"/>
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="checkout-form-list">
 												<label>State / County <span class="required">*</span></label>										
-												<input type="text" placeholder="" th:field="*{state}" />
+												<input type="text" placeholder="" />
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="checkout-form-list">
 												<label>Postcode / Zip <span class="required">*</span></label>										
-												<input type="text" placeholder="Postcode / Zip" th:field="*{postal}"/>
+												<input type="text" placeholder="Postcode / Zip"/>
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="checkout-form-list">
 												<label>Email Address <span class="required">*</span></label>										
-												<input type="email" placeholder="" th:field="*{email}"/>
+												<input type="email" placeholder="Email"/>
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="checkout-form-list">
 												<label>Phone  <span class="required">*</span></label>										
-												<input type="text" placeholder="Phone" th:field="*{phone}" />
+												<input type="text" placeholder="Phone" />
 											</div>
 										</div>								
 									</div>
 									<div class="order-notes">
 										<div class="checkout-form-list">
 											<label>Order Notes</label>
-											<textarea id="checkout-mess" cols="30" rows="10" placeholder="Notes about your order, e.g. special notes for delivery." th:field="*{notes}"></textarea>
+											<textarea id="checkout-mess" cols="30" rows="10" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
 										</div>									
 									</div>
 								</div>
@@ -240,54 +239,34 @@
 									<table>
 										<thead>
 											<tr>
-												<th class="product-name">Product</th>
-												<th class="product-total">Total</th>
+												<th class="product-name"><strong>Product</strong></th>
+												<th class="product-total"><strong>Total</strong></th>
 											</tr>							
 										</thead>
 										<tbody>
-											<tr class="cart_item">
-												<td class="product-name">
-													Vestibulum suscipit <strong class="product-quantity"> × 1</strong>
+											<tr class="cart_item" th:each="items:${cartItems}">
+												<td class="product-name" th:text="${items.product.product_name}">
+													<strong class="product-quantity" th:text="' × '+${items.quantity}"></strong>
 												</td>
 												<td class="product-total">
-													<span class="amount">Rs0.00</span>
-												</td>
-											</tr>
-											<tr class="cart_item">
-												<td class="product-name">
-													Vestibulum dictum magna	<strong class="product-quantity"> × 1</strong>
-												</td>
-												<td class="product-total">
-													<span class="amount">Rs0.00</span>
+													<span class="amount" th:text="'Rs.'+(${items.product.product_price}*${items.quantity})+'/-'"></span>
 												</td>
 											</tr>
 										</tbody>
 										<tfoot>
 											<tr class="cart-subtotal">
-												<th>Cart Subtotal</th>
-												<td><span class="amount">Rs0.00</span></td>
+												<th><strong>Cart Subtotal</strong></th>
+												<td><span class="amount" th:text="'Rs.'+${total}+'/-'"></span></td>
 											</tr>
 											<tr class="shipping">
-												<th>Shipping</th>
+												<th><strong>Shipping</strong></th>
 												<td>
-													<ul>
-														<li>
-															<input type="radio" />
-															<label>
-																Flat Rate: <span class="amount">Rs0.00</span>
-															</label>
-														</li>
-														<li>
-															<input type="radio" />
-															<label>Shipping:</label>
-														</li>
-														<li></li>
-													</ul>
+													Rs.80/-
 												</td>
 											</tr>
 											<tr class="order-total">
 												<th>Order Total</th>
-												<td><strong><span class="amount">Rs0.00</span></strong>
+												<td><strong><span class="amount" th:text="'Rs.'+(${total}+80)+'/-'"></span></strong>
 												</td>
 											</tr>								
 										</tfoot>
@@ -297,18 +276,31 @@
 								<!--  payment section starts -->
 								<div class="payment-method">
 									<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-									  
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab" id="headingOne">
+												<h4 class="panel-title">
+													<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+														eSewa
+													</a>
+												</h4>
+											</div>
+											<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+												<div class="panel-body">
+													<img th:src="@{~/img/payment/esewa.jpg}" alt="esewa qr">
+												</div>
+											</div>
+										</div>
 									  <div class="panel panel-default">
 										<div class="panel-heading" role="tab" id="headingTwo">
 										  <h4 class="panel-title">
 											<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-											  <img th:src="@{~/img/Untitled.png}" alt="">
+											  Khalti
 											</a>
 										  </h4>
 										</div>
 										<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 										  <div class="panel-body">
-											 <p>Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+											 <img th:src="@{~/img/payment/khalti.jpg}" alt="khalti qr">
 										  </div>
 										</div>
 									  </div>
@@ -316,19 +308,19 @@
 										<div class="panel-heading" role="tab" id="headingThree">
 										  <h4 class="panel-title">
 											<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-											  E-Sewa/Khalti
+											  IME Pay
 											</a>
 										  </h4>
 										</div>
 										<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 										  <div class="panel-body">
-											<p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.</p>
+											<img th:src="@{~/img/payment/ime.jpg}" alt="ime qr">
 										  </div>
 										</div>
 									  </div>
 									</div>								
 									<div class="order-button-payment">
-										<button type="submit" value="Place order"></button>
+										<button type="submit">Place Order</button>
 									</div>
 								</div>
 								<!-- payment section ends here -->
