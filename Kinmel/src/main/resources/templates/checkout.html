@@ -72,7 +72,7 @@
 		<div class="checkout-area">
 			<div class="container">
 				<div class="row">
-					<form th:method="post" th:action="@{/checkout/saveCheckout}" th:object="${checkout}">
+					<form th:method="post" th:action="@{/checkout/confirm}" th:object="${checkout}">
 						<input type="text" hidden>
 						<div class="col-lg-6 col-md-6">
 							<div class="checkbox-form">						
@@ -81,155 +81,138 @@
 									<div class="col-md-6">
 										<div class="checkout-form-list">
 											<label>First Name <span class="required">*</span></label>										
-											<input type="text" placeholder=""/>
+											<input type="text" placeholder="" name="billingFirstName"/>
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="checkout-form-list">
 											<label>Last Name <span class="required">*</span></label>										
-											<input type="text" placeholder=""/>
+											<input type="text" placeholder="" name="billingLastName"/>
 										</div>
 									</div>
 									<div class="col-md-12">
 										<div class="checkout-form-list">
 											<label>Company Name</label>
-											<input type="text" placeholder=""/>
+											<input type="text" placeholder="" name="billingCompany_name"/>
 										</div>
 									</div>
 									<div class="col-md-12">
 										<div class="checkout-form-list">
 											<label>Address <span class="required">*</span></label>
-											<input type="text" placeholder="Street address"/>
+											<input type="text" placeholder="Street address" name="billingAddress"/>
 										</div>
 									</div>
 									<div class="col-md-12">
 										<div class="checkout-form-list">									
-											<input type="text" placeholder="Apartment, suite, unit etc. (optional)"/>
+											<input type="text" placeholder="Apartment, suite, unit etc. (optional)" name="billingApartment"/>
 										</div>
 									</div>
 									<div class="col-md-12">
 										<div class="checkout-form-list">
 											<label>Town / City <span class="required">*</span></label>
-											<input type="text" placeholder="Town / City"/>
+											<input type="text" placeholder="Town / City" name="billingTown"/>
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="checkout-form-list">
 											<label>State <span class="required">*</span></label>										
-											<input type="text" placeholder=""/>
+											<input type="text" placeholder="" name="billingState"/>
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="checkout-form-list">
 											<label>Postcode / Zip <span class="required">*</span></label>										
-											<input type="text" placeholder="Postcode / Zip"/>
+											<input type="text" placeholder="Postcode / Zip" name="billingPostal"/>
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="checkout-form-list">
 											<label>Email Address <span class="required">*</span></label>										
-											<input type="email" placeholder=""/>
+											<input type="email" placeholder="" name="billingEmail"/>
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="checkout-form-list">
 											<label>Phone  <span class="required">*</span></label>										
-											<input type="text" placeholder="Phone"/>
+											<input type="text" placeholder="Phone" name="billingPhone"/>
 										</div>
 									</div>
 								</div>
-								<form th:method="post" th:action="@{/checkout/saveShip}" th:object="${shipping}">
 								<div class="different-address">
 										<div class="ship-different-title">
 											<h3>
 												<label>Ship to a different address?</label>
-												<input id="ship-box" type="checkbox" />
+												<input id="ship-box" type="checkbox" name="differentShipping"/>
 											</h3>
 										</div>
 									<div id="ship-box-info" class="row">
-										<div class="col-md-12">
-											<div class="country-select">
-												<label>Country <span class="required">*</span></label>
-												<select>
-												  <option value="Nepal">Nepal</option>
-												  <option value="India">India</option>
-												  <option value="Japan">Japan</option>
-												  <option value="China">China</option>
-												  <option value="US">United States</option>
-												  <option value="Bahrain">Bahrain</option>
-												  <option value="Colombia">Colombia</option>
-												  <option value="Australia">Australia</option>
-												</select>
-											</div>
-										</div>
 										<div class="col-md-6">
 											<div class="checkout-form-list">
 												<label>First Name <span class="required">*</span></label>										
-												<input type="text" placeholder=""/>
+												<input type="text" placeholder="" name="shippingFirstName"/>
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="checkout-form-list">
 												<label>Last Name <span class="required">*</span></label>										
-												<input type="text" placeholder=""/>
+												<input type="text" placeholder="" name="shippingLastName"/>
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="checkout-form-list">
 												<label>Company Name</label>
-												<input type="text" placeholder=""/>
+												<input type="text" placeholder="" name="shippingCompany_name"/>
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="checkout-form-list">
 												<label>Address <span class="required">*</span></label>
-												<input type="text" placeholder="Street address" />
+												<input type="text" placeholder="Street address" name="shippingAddress"/>
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="checkout-form-list">									
-												<input type="text" placeholder="Apartment, suite, unit etc. (optional)" />
+												<input type="text" placeholder="Apartment, suite, unit etc. (optional)" name="shippingApartment"/>
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="checkout-form-list">
 												<label>Town / City <span class="required">*</span></label>
-												<input type="text" placeholder="Town / City"/>
+												<input type="text" placeholder="Town / City" name="shippingTown"/>
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="checkout-form-list">
 												<label>State / County <span class="required">*</span></label>										
-												<input type="text" placeholder="" />
+												<input type="text" placeholder="" name="shippingState"/>
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="checkout-form-list">
 												<label>Postcode / Zip <span class="required">*</span></label>										
-												<input type="text" placeholder="Postcode / Zip"/>
+												<input type="text" placeholder="Postcode / Zip" name="shippingPostal"/>
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="checkout-form-list">
 												<label>Email Address <span class="required">*</span></label>										
-												<input type="email" placeholder="Email"/>
+												<input type="email" placeholder="Email" name="shippingEmail"/>
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="checkout-form-list">
 												<label>Phone  <span class="required">*</span></label>										
-												<input type="text" placeholder="Phone" />
+												<input type="text" placeholder="Phone" name="shippingPhone"/>
 											</div>
 										</div>								
 									</div>
 									<div class="order-notes">
 										<div class="checkout-form-list">
 											<label>Order Notes</label>
-											<textarea id="checkout-mess" cols="30" rows="10" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+											<textarea id="checkout-mess" cols="30" rows="10" placeholder="Notes about your order, e.g. special notes for delivery." name="notes"></textarea>
 										</div>									
 									</div>
 								</div>
-								</form>
 							</div>
 						</div>	
 						<div class="col-lg-6 col-md-6">
@@ -245,10 +228,10 @@
 										</thead>
 										<tbody>
 											<tr class="cart_item" th:each="items:${cartItems}">
-												<td class="product-name" th:text="${items.product.product_name}">
+												<td class="product-name" th:text="${items.product.product_name}" th:if="${items.product.product_quantity>items.quantity}">
 													<strong class="product-quantity" th:text="' × '+${items.quantity}"></strong>
 												</td>
-												<td class="product-total">
+												<td class="product-total" th:if="${items.product.product_quantity>items.quantity}">
 													<span class="amount" th:text="'Rs.'+(${items.product.product_price}*${items.quantity})+'/-'"></span>
 												</td>
 											</tr>

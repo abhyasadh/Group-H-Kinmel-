@@ -16,5 +16,11 @@ public interface CartService {
 
     List<Cart> fetchAll(Integer id);
 
+    List<Cart> fetchAvailable(Integer id);
+
     Cart fetchOne(Integer id);
+
+    String checkout(Integer id, CartPojo pojo, List<Cart> itemsToPurchase);
+
+    String updateProduct(double quantity, Integer id);
 }

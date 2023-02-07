@@ -2,10 +2,12 @@ package com.system.kinmel.services.impl;
 
 import com.system.kinmel.entity.Cart;
 import com.system.kinmel.entity.Product;
+import com.system.kinmel.entity.Sale;
 import com.system.kinmel.entity.Wishlist;
 import com.system.kinmel.pojo.CartPojo;
 import com.system.kinmel.pojo.WishlistPojo;
 import com.system.kinmel.repo.ProductRepo;
+import com.system.kinmel.repo.SaleRepo;
 import com.system.kinmel.repo.UserRepo;
 import com.system.kinmel.repo.WishlistRepo;
 import com.system.kinmel.services.WishlistService;
@@ -25,6 +27,8 @@ public class WishlistServiceImpl implements WishlistService {
     private final UserRepo userRepo;
 
     private final ProductRepo productRepo;
+
+    private final SaleRepo saleRepo;
 
     @Override
     public String saveToWishlist(Integer id, Principal principal) {
@@ -54,9 +58,19 @@ public class WishlistServiceImpl implements WishlistService {
                     .product_color(wishlist.getProduct().getProduct_color())
                     .product_name(wishlist.getProduct().getProduct_name())
                     .product_description(wishlist.getProduct().getProduct_description())
-                    .product_price(wishlist.getProduct().getProduct_price())
+                    .product_price(discountedPrice(wishlist.getProduct()))
                     .build());
         }
         return allItems;
+    }
+
+    public Double discountedPrice(Product product){
+        List<Sale> sales = saleRepo.saleProducts();
+        for (Sale sale : sales) {
+            if (sale.getProduct().getId().equals(product.getId())) {
+                return product.getProduct_price() - sale.getDiscountPercent()/100 * product.getProduct_price();
+            }
+        }
+        return product.getProduct_price();
     }
 }

@@ -1,9 +1,6 @@
 package com.system.kinmel.controller;
 
-import com.system.kinmel.entity.Cart;
-import com.system.kinmel.entity.Category;
-import com.system.kinmel.entity.Product;
-import com.system.kinmel.entity.Review;
+import com.system.kinmel.entity.*;
 import com.system.kinmel.pojo.ProductPojo;
 import com.system.kinmel.pojo.ReviewPojo;
 import com.system.kinmel.services.*;
@@ -15,10 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.security.Principal;
 import java.sql.Date;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 @Controller
 @RequiredArgsConstructor
@@ -29,6 +23,7 @@ public class HomeController {
     private final CartService cartService;
     private final CategoryService categoryService;
     private final ReviewService reviewService;
+    private final SaleService saleService;
 
     @GetMapping("/dashboard")
     public String getHomePage(Model model, Principal principal) {
@@ -36,13 +31,39 @@ public class HomeController {
         model.addAttribute("products", products);
 
         Integer id = userService.findByEmail(principal.getName()).getId();
-
         List<Cart> list = cartService.fetchAll(id);
 
         double total = 0.0;
         for(Cart totalCalc:list){
-            total += totalCalc.getQuantity()*totalCalc.getProduct().getProduct_price();
+            if (totalCalc.getProduct().getProduct_quantity()>0) total += totalCalc.getQuantity()*totalCalc.getProduct().getProduct_price();
         }
+
+        List<Sale> salesList = saleService.getSales();
+        model.addAttribute("sales", salesList);
+
+        List<Product> newProducts = productService.fetchNew();
+        model.addAttribute("newProducts", newProducts);
+
+        Map<Integer, Double> newDiscount = productService.comparePrice(newProducts);
+        model.addAttribute("newDiscount", newDiscount);
+
+        List<Product> trendingProducts = productService.trending();
+        model.addAttribute("trending", trendingProducts);
+
+        Map<Integer, Double> trendingProductsDiscount = productService.comparePrice(trendingProducts);
+        model.addAttribute("trendingProductsDiscount", trendingProductsDiscount);
+
+        List<Product> mostPopular = productService.mostPopular();
+        model.addAttribute("popular", mostPopular);
+
+        Map<Integer, Double> popularDiscount = productService.comparePrice(trendingProducts);
+        model.addAttribute("popularDiscount", popularDiscount);
+
+        List<Product> bestSeller = productService.bestSeller();
+        model.addAttribute("seller", bestSeller);
+
+        Map<Integer, Double> sellerDiscount = productService.comparePrice(bestSeller);
+        model.addAttribute("sellerDiscount", sellerDiscount);
 
         model.addAttribute("total", total);
         model.addAttribute("cartItems", list);
@@ -65,7 +86,7 @@ public class HomeController {
 
         double total = 0.0;
         for(Cart totalCalc:list){
-            total += totalCalc.getQuantity()*totalCalc.getProduct().getProduct_price();
+            if (totalCalc.getProduct().getProduct_quantity()>0) total += totalCalc.getQuantity()*totalCalc.getProduct().getProduct_price();
         }
 
         model.addAttribute("total", total);
@@ -82,7 +103,7 @@ public class HomeController {
         List<Cart> list = cartService.fetchAll(id);
         double total = 0.0;
         for(Cart totalCalc:list){
-            total += totalCalc.getQuantity()*totalCalc.getProduct().getProduct_price();
+            if (totalCalc.getProduct().getProduct_quantity()>0) total += totalCalc.getQuantity()*totalCalc.getProduct().getProduct_price();
         }
 
         model.addAttribute("total", total);
@@ -99,7 +120,7 @@ public class HomeController {
         List<Cart> list = cartService.fetchAll(id);
         double total = 0.0;
         for(Cart totalCalc:list){
-            total += totalCalc.getQuantity()*totalCalc.getProduct().getProduct_price();
+            if (totalCalc.getProduct().getProduct_quantity()>0) total += totalCalc.getQuantity()*totalCalc.getProduct().getProduct_price();
         }
 
         model.addAttribute("total", total);
@@ -116,7 +137,7 @@ public class HomeController {
         List<Cart> list = cartService.fetchAll(id);
         double total = 0.0;
         for(Cart totalCalc:list){
-            total += totalCalc.getQuantity()*totalCalc.getProduct().getProduct_price();
+            if (totalCalc.getProduct().getProduct_quantity()>0) total += totalCalc.getQuantity()*totalCalc.getProduct().getProduct_price();
         }
 
         model.addAttribute("total", total);
@@ -124,6 +145,8 @@ public class HomeController {
 
         List<Product> products = productService.fetchAll();
         model.addAttribute("products", products);
+
+        Map<Integer, Double> discount = productService.comparePrice(products);
 
         List<Category> categories = categoryService.fetchAll();
         model.addAttribute("categories", categories);
@@ -139,7 +162,7 @@ public class HomeController {
         List<Cart> list = cartService.fetchAll(id);
         double total = 0.0;
         for(Cart totalCalc:list){
-            total += totalCalc.getQuantity()*totalCalc.getProduct().getProduct_price();
+            if (totalCalc.getProduct().getProduct_quantity()>0) total += totalCalc.getQuantity()*totalCalc.getProduct().getProduct_price();
         }
 
         model.addAttribute("total", total);
@@ -150,6 +173,8 @@ public class HomeController {
 
         List<Product> products = productService.fetchByCategory(categoryId);
         model.addAttribute("products", products);
+
+        Map<Integer, Double> discount = productService.comparePrice(products);
 
         List<Category> categories = categoryService.fetchAll();
         model.addAttribute("categories", categories);
@@ -165,7 +190,7 @@ public class HomeController {
         List<Cart> list = cartService.fetchAll(id);
         double total = 0.0;
         for(Cart totalCalc:list){
-            total += totalCalc.getQuantity()*totalCalc.getProduct().getProduct_price();
+            if (totalCalc.getProduct().getProduct_quantity()>0) total += totalCalc.getQuantity()*totalCalc.getProduct().getProduct_price();
         }
 
         model.addAttribute("id", id);
@@ -190,6 +215,7 @@ public class HomeController {
         model.addAttribute("average", average);
 
         List<Product> related = productService.fetchByCategory(product.getProduct_category().getId());
+        Map<Integer, Double> discount = productService.comparePrice(related);
 
         List<Product> getFour = new ArrayList<>(4);
         for (int i=0; i<related.size()&&i<4; i++){
@@ -205,11 +231,4 @@ public class HomeController {
 
         return "/product-details";
     }
-
-
-//    @PostMapping("/save")
-//    public String SaveUser(@Valid ProductPojo productPojo, @RequestParam("productImage") MultipartFile ProductImage){
-//        productService.saveUser(productPojo, ProductImage);
-//        return "redirect:/";
-//    }
 }

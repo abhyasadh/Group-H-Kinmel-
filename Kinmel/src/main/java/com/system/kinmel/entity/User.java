@@ -31,18 +31,6 @@ public class User implements UserDetails {
     @Column(nullable = false)
     private String password;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "shipping_id",
-            referencedColumnName = "id",
-            foreignKey = @ForeignKey(name = "FK_shippingId"))
-    private Shipping shippingId;
-
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "billing_id",
-            referencedColumnName = "id",
-            foreignKey = @ForeignKey(name = "FK_billingId"))
-    private Billing billingId;
-
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

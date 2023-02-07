@@ -1,8 +1,11 @@
 package com.system.kinmel.services.impl;
 
 import com.system.kinmel.entity.Product;
+import com.system.kinmel.entity.Sale;
 import com.system.kinmel.pojo.ProductPojo;
+import com.system.kinmel.repo.CartRepo;
 import com.system.kinmel.repo.ProductRepo;
+import com.system.kinmel.repo.SaleRepo;
 import com.system.kinmel.services.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -12,10 +15,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Base64;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -23,7 +23,8 @@ import java.util.stream.Stream;
 @RequiredArgsConstructor
 public class ProductServiceImpl implements ProductService {
     private final ProductRepo productRepo;
-
+    private final CartRepo cartRepo;
+    private final SaleRepo saleRepo;
     public static String UPLOAD_DIRECTORY = System.getProperty("user.dir") + "\\images\\product\\";
 
 
@@ -79,6 +80,44 @@ public class ProductServiceImpl implements ProductService {
         return listMapping(productRepo.findByProduct_category(id));
     }
 
+    @Override
+    public List<Product> fetchNew() {
+        return listMapping(productRepo.findNew());
+    }
+
+    @Override
+    public List<Product> trending() {
+        List<Product> trendingItems = new ArrayList<>();
+        for (Integer i : cartRepo.fetchTrending().orElseThrow()){
+            trendingItems.add(productRepo.findById(i).orElseThrow());
+        }
+        return listMapping(trendingItems);
+    }
+
+    @Override
+    public List<Product> mostPopular() {
+        List<Product> mostPopular = new ArrayList<>();
+        for (Integer i : cartRepo.most().orElseThrow()){
+            mostPopular.add(productRepo.findById(i).orElseThrow());
+        }
+        return listMapping(mostPopular);
+    }
+
+    @Override
+    public List<Product> bestSeller() {
+        List<Product> seller = new ArrayList<>();
+        for (Integer i : cartRepo.best().orElseThrow()){
+            seller.add(productRepo.findById(i).orElseThrow());
+        }
+        return listMapping(seller);
+    }
+
+    public void updateQuantity(){
+        
+    }
+
+
+
     public List<Product> listMapping(List<Product> list){
         Stream<Product> allProductsWithImage=list.stream().map(product ->
                 Product.builder()
@@ -92,9 +131,23 @@ public class ProductServiceImpl implements ProductService {
                         .product_description(product.getProduct_description())
                         .product_price(product.getProduct_price())
                         .build()
-        );
+                );
         list = allProductsWithImage.toList();
         return new ArrayList<>(list);
+    }
+
+    public Map<Integer, Double> comparePrice(List<Product> products){
+        List<Sale> comparePrice = saleRepo.saleProducts();
+        Map<Integer, Double> priceDiscount = new HashMap<>();
+
+        for (Product product : products) {
+            for (Sale sale : comparePrice) {
+                if (Objects.equals(product.getId(), sale.getProduct().getId())) {
+                    priceDiscount.put(product.getId(), sale.getDiscountPercent());
+                }
+            }
+        }
+        return priceDiscount;
     }
 
     public static String getImageBase64(String fileName) {

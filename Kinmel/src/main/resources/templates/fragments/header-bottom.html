@@ -37,7 +37,8 @@
                 </div>
                 <div class="cart-info">
                   <h4><a th:href="@{~/product/}+${items.product.id}" th:text="${items.product.product_name}"></a></h4>
-                  <span th:text="'Rs.'+${items.product.product_price}+' x '+${items.quantity}"></span>
+                  <span th:text="'Rs.'+${items.product.product_price}+' x '+${items.quantity}" th:if="${items.product.product_quantity}>0"></span>
+                  <span th:if="${items.product.product_quantity}==0">Out of Stock</span>
                 </div>
               </li>
               <li class="cart-border">

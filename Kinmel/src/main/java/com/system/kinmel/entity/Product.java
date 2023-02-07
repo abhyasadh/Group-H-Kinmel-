@@ -3,6 +3,7 @@ package com.system.kinmel.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import java.sql.Date;
 
 @Builder
 @Entity
@@ -49,5 +50,6 @@ public class Product {
     @Transient
     private String product_imageBase64;
 
-
+    @Column
+    private Date date;
 }

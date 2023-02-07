@@ -32,7 +32,7 @@ public class CartController {
 
         double total = 0.0;
         for(Cart totalCalc:list){
-            total += totalCalc.getQuantity()*totalCalc.getProduct().getProduct_price();
+            if (totalCalc.getProduct().getProduct_quantity()>0) total += totalCalc.getQuantity()*totalCalc.getProduct().getProduct_price();
         }
 
         model.addAttribute("total", total);

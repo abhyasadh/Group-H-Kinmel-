@@ -67,10 +67,11 @@
 											<td class="product-price"><span class="amount" th:text="'Rs.'+${cartProduct.product.product_price}+'/-'"></span></td>
 											<td class="product-quantity">
 												<form></form>
-												<form th:method="post" th:action="@{~/cart/updateQuantity/}+${cartProduct.id}" th:object="${cart}" style="display: flex; flex-direction: column; gap: 5px; align-items: center">
-													<input type="number" min="1" name="quantity" th:value="${cartProduct.quantity}"/>
+												<form th:method="post" th:action="@{~/cart/updateQuantity/}+${cartProduct.id}" th:object="${cart}" style="display: flex; flex-direction: column; gap: 5px; align-items: center" th:if="${cartProduct.product.product_quantity}>0">
+													<input type="number" min="1" th:max="${cartProduct.product.product_quantity}" name="quantity" th:value="${cartProduct.quantity}"/>
 													<button type="submit" style="background: #252525 none repeat scroll 0 0; border: medium none; color: #fff; display: inline-block; float: bottom; font-size: 12px; font-weight: 700; height: 40px; line-height: 40px; padding: 0 15px; text-transform: uppercase; transition: all 0.3s ease 0s;">Update</button>
 												</form>
+												<span th:if="${cartProduct.product.product_quantity}==0">Out of Stock</span>
 											</td>
 											<td class="product-subtotal" th:text="'Rs.'+${cartProduct.product.product_price}*${cartProduct.quantity}+'/-'"></td>
 											<td class="product-remove"><a th:href="@{~/cart/remove/}+${cartProduct.id}"><i class="fa fa-times"></i></a></td>
