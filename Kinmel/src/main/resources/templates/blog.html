@@ -1,0 +1,103 @@
+﻿<html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Blog || Kinmel</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" type="image/x-icon" th:href="@{~/img/favicon.ico}">
+
+	<!-- bootstrap v3.3.6 css -->
+	<link rel="stylesheet" th:href="@{~/css/bootstrap.min.css}">
+	<!-- animate css -->
+	<link rel="stylesheet" th:href="@{~/css/animate.css}">
+	<!-- jquery-ui.min css -->
+	<link rel="stylesheet" th:href="@{~/css/jquery-ui.min.css}">
+	<!-- meanmenu css -->
+	<link rel="stylesheet" th:href="@{~/css/meanmenu.min.css}">
+	<!-- owl.carousel css -->
+	<link rel="stylesheet" th:href="@{~/css/owl.carousel.css}">
+	<!-- slick css -->
+	<link rel="stylesheet" th:href="@{~/css/slick.css}">
+	<!-- font-awesome css -->
+	<link rel="stylesheet" th:href="@{~/css/font-awesome.min.css}">
+	<!-- style css -->
+	<link rel="stylesheet" th:href="@{~/css/style.css}">
+	<!-- responsive css -->
+	<link rel="stylesheet" th:href="@{~/css/responsive.css}">
+	<!-- modernizr js -->
+	<script th:src="@{~/js/vendor/modernizr-2.8.3.min.js}"></script>
+</head>
+
+<body>
+
+<header class="header-pos">
+
+	<div th:replace="~{fragments/header-bottom.html :: header-bottom-area}"></div>
+
+	<div th:replace="~{fragments/mobile-menu.html :: mobile-menu}"></div>
+
+</header>
+
+<div th:replace="~{fragments/breadcrumb-area.html :: breadcrumb-area}"></div>
+		<!-- blog-area start -->
+		<div class="blog-area pad-60">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="blog-page-main">
+
+							<div class="blog-wrapper">
+								<div class="blog-img">
+									<a href="single-blog.html"><img src="img/blog/4.jpg" alt="" /></a>
+								</div>
+								<div class="blog-content">
+									<h3><a href="single-blog.html">Lorem ipsum dolor sit</a></h3>
+									<div class="blog-meta">
+										<span class="blog-date">Jan 28,2023</span>
+										<span class="blog-author">By <a href="#">Abhyas Adhikari</a></span>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in .....</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- blog-area end -->
+<!-- footer start -->
+<footer>
+	<div th:replace="~{fragments/footer.html :: footer-top}"></div>
+	<div th:replace="~{fragments/footer.html :: footer-top-area}"></div>
+	<div th:replace="~{fragments/footer.html :: footer-bottom-area}"></div>
+</footer>
+<!-- footer end -->
+
+<!-- jquery latest version -->
+<script data-cfasync="false" th:src="@{../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js}"></script><script th:src="@{/js/vendor/jquery-1.12.0.min.js}"></script>
+<!-- bootstrap js -->
+<script th:src="@{~/js/bootstrap.min.js}"></script>
+<!-- owl.carousel js -->
+<script th:src="@{~/js/owl.carousel.min.js}"></script>
+<!-- meanmenu js -->
+<script th:src="@{~/js/jquery.meanmenu.js}"></script>
+<!-- jquery-ui js -->
+<script th:src="@{~/js/jquery-ui.min.js}"></script>
+<!-- wow js -->
+<script th:src="@{~/js/wow.min.js}"></script>
+<!-- plugins js -->
+<script th:src="@{~/js/plugins.js}"></script>
+<!-- main js -->
+<script th:src="@{~/js/main.js}"></script>
+
+<script>
+	let breadcrumb=document.getElementsByClassName("breadcrumb-area").item(0);
+	breadcrumb.getElementsByTagName("h1").item(0).innerText="Blog";
+	breadcrumb.getElementsByTagName("li").item(1).innerText="Blog";
+</script>
+    </body>
+
+</html>

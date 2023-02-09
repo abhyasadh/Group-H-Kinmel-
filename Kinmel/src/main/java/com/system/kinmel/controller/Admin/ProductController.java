@@ -26,15 +26,15 @@ public class ProductController {
 
     @GetMapping("/addproduct")
     public String getaddProduct(Model model){
-        List<Category> categories = categoryService.findAll();
+        List<Category> categories = categoryService.fetchAll();
         model.addAttribute("categories",categories);
         return "Admin/add_product";
 
     }
 
     @PostMapping("/saveProduct")
-    public String saveProduct(@Valid ProductPojo productPojo, @RequestParam("product_image")MultipartFile ProductImage) throws Exception {
-        productService.saveProduct(productPojo,ProductImage);
+    public String saveProduct(@Valid ProductPojo productPojo) throws Exception {
+        productService.saveProduct(productPojo);
         return "redirect:/";
     }
 }

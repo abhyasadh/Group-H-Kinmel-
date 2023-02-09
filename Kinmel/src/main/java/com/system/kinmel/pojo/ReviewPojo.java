@@ -16,22 +16,18 @@ import java.util.Date;
 @AllArgsConstructor
 public class ReviewPojo {
     private Integer id;
-    private Product product;
-    private User user;
+    private Integer product;
+    private Integer user;
     private Integer rate;
     private String review;
     private String date;
-    private String reply;
-    private String replyDate;
 
     public ReviewPojo(Review reviews) {
         this.id = reviews.getId();
-        this.product = reviews.getProduct();
-        this.user = reviews.getUser();
+        this.product = reviews.getProduct().getId();
+        this.user = reviews.getUser().getId();
         this.rate = reviews.getRate();
         this.review = reviews.getReview();
-        this.date = reviews.getDate();
-        this.reply = reviews.getReply();
-        this.replyDate = reviews.getReplyDate();
+        this.date = String.valueOf(reviews.getDate());
     }
 }

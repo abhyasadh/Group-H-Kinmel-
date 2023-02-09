@@ -7,9 +7,9 @@ import java.security.Principal;
 import java.util.List;
 
 public interface WishlistService {
-    String saveToWishlist(WishlistPojo wishlistPojo);
+    String saveToWishlist(Integer id, Principal principal);
 
-    String deleteFromWishlist(Integer userId, Integer productId);
+    String deleteFromWishlist(Integer id);
 
     List<Wishlist> fetchAll(Integer id);
 }
