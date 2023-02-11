@@ -33,5 +33,72 @@ public class Cart {
             foreignKey = @ForeignKey(name = "FK_userId"))
     private User user;
 
+    @Column
     private Integer quantity;
+
+    @Column(columnDefinition = "varchar(255) default 'Added'")
+    private String status;
+
+    @Column
+    private String billingAddress;
+
+    @Column
+    private String billingApartment;
+
+    @Column
+    private String billingCompany_name;
+
+    @Column
+    private String billingEmail;
+
+    @Column
+    private String billingFirstName;
+
+    @Column
+    private String billingLastName;
+
+    @Column
+    private String billingPhone;
+
+    @Column
+    private String billingPostal;
+
+    @Column
+    private String billingState;
+
+    @Column
+    private String billingTown;
+
+    @Column
+    private String notes;
+
+    @Column
+    private String shippingAddress;
+
+    @Column
+    private String shippingApartment;
+
+    @Column
+    private String shippingCompany_name;
+
+    @Column
+    private String shippingEmail;
+
+    @Column
+    private String shippingFirstName;
+
+    @Column
+    private String shippingLastName;
+
+    @Column
+    private String shippingPhone;
+
+    @Column
+    private String shippingPostal;
+
+    @Column
+    private String shippingState;
+
+    @Column
+    private String shippingTown;
 }

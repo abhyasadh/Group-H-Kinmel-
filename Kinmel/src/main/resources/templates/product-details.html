@@ -1,0 +1,256 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Product Details || Kinmel</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" type="image/x-icon" th:href="@{~/img/favicon.ico}">
+
+	<!-- bootstrap v3.3.6 css -->
+	<link rel="stylesheet" th:href="@{~/css/bootstrap.min.css}">
+	<!-- animate css -->
+	<link rel="stylesheet" th:href="@{~/css/animate.css}">
+	<!-- jquery-ui.min css -->
+	<link rel="stylesheet" th:href="@{~/css/jquery-ui.min.css}">
+	<!-- meanmenu css -->
+	<link rel="stylesheet" th:href="@{~/css/meanmenu.min.css}">
+	<!-- owl.carousel css -->
+	<link rel="stylesheet" th:href="@{~/css/owl.carousel.css}">
+	<!-- slick css -->
+	<link rel="stylesheet" th:href="@{~/css/slick.css}">
+	<!-- font-awesome css -->
+	<link rel="stylesheet" th:href="@{~/css/font-awesome.min.css}">
+	<!-- style css -->
+	<link rel="stylesheet" th:href="@{~/css/style.css}">
+	<!-- responsive css -->
+	<link rel="stylesheet" th:href="@{~/css/responsive.css}">
+	<!-- star css -->
+	<link th:href="@{~/css/star-rating.css}" rel="stylesheet" />
+	<!-- modernizr js -->
+	<script th:src="@{~/js/vendor/modernizr-2.8.3.min.js}"></script>
+</head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+		<header class="header-pos">
+
+			<div th:replace="~{fragments/header-bottom.html :: header-bottom-area}"></div>
+
+			<div th:replace="~{fragments/mobile-menu.html :: mobile-menu}"></div>
+
+		</header>
+
+		<div th:replace="~{fragments/breadcrumb-area.html :: breadcrumb-area}"></div>
+
+		<!-- shop-area start -->
+		<div class="shop-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-9">
+						<div class="row">
+							<div class="col-md-5 col-sm-5 col-xs-12">
+								<div class="single-pro-tab-content">
+									<!-- Tab panes -->
+									<div class="tab-content">
+										<div role="tabpanel" class="tab-pane active" id="home"><a href="#"><img class="zoom" th:src="'data:image/png;base64,'+${product.product_image}" th:data-zoom-image="'data:image/png;base64,'+${product.product_image}" alt="" /></a></div>
+									</div>
+								</div>								
+							</div>
+							<div class="col-md-7 col-sm-7 col-xs-12 shop-list shop-details">								
+								<div class="product-content">
+									<h3><a th:href="@{~/product/}+${product.id}" th:text="${product.product_name}"></a></h3>
+									<div class="price">
+										<span th:text="'Rs.'+${product.product_price}+'/-'"></span>
+									</div>
+									<div class="s-p-rating">
+										<span class="rating">
+											<i class="fa fa-star" th:if="${average>=1}"></i>
+											<i class="fa fa-star-o" th:if="${average<1}"></i>
+											<i class="fa fa-star" th:if="${average>=2}"></i>
+											<i class="fa fa-star-o" th:if="${average<2}"></i>
+											<i class="fa fa-star" th:if="${average>=3}"></i>
+											<i class="fa fa-star-o" th:if="${average<3}"></i>
+											<i class="fa fa-star" th:if="${average>=4}"></i>
+											<i class="fa fa-star-o" th:if="${average<4}"></i>
+											<i class="fa fa-star" th:if="${average>=5}"></i>
+											<i class="fa fa-star-o" th:if="${average<5}"></i>
+										</span>	
+										<span class="review-no" th:text="${reviews.size()}+' Review (s)'"></span>
+									</div>
+									<p style="margin-bottom: 0;" th:text="${product.product_description}"></p>
+									<p style="margin-top: 0; margin-bottom: 0; border: none" th:text="'Size: '+${product.product_size}"></p>
+									<p style="margin-top: 0;" th:text="'Color: '+${product.product_color}"></p>
+									<div class="product-action">
+										<div class="button-top">
+											<a th:href="@{~/wishlist/add/}+${product.id}"><i class="fa fa-heart"></i></a>
+											<a th:href="@{~/cart/add/}+${product.id}"><i class="fa fa-shopping-cart"></i></a>
+										</div>
+									</div>
+								</div>							
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 col-sm-12">
+								<div class="product-tabs">
+										<div>
+										  <!-- Nav tabs -->
+										  <ul class="pro-details-tab" role="tablist">
+											<li role="presentation" class="active"><a href="#page-comments" aria-controls="page-comments" role="tab" data-toggle="tab" th:text="'Reviews ('+${reviews.size()}+')'"></a></li>
+										  </ul>
+										  <!-- Tab panes -->
+										  <div class="tab-content">
+											<div role="tabpanel" class="tab-pane active" id="page-comments">
+												<div class="product-tab-desc">
+													<div class="product-page-comments">
+														<ul>
+															<li>
+																<div class="product-comments">
+																	<div class="product-comments-content" th:each="eachReview:${reviews}">
+																		<p><strong th:text="${eachReview.user.email}"></strong> -
+																			<span th:text="${eachReview.date}">March 7, 2015:</span>
+																			<span class="pro-comments-rating">
+																				<i class="fa fa-star" th:if="${eachReview.rate}>=1"></i>
+																				<i class="fa fa-star" th:if="${eachReview.rate}>=2"></i>
+																				<i class="fa fa-star" th:if="${eachReview.rate}>=3"></i>
+																				<i class="fa fa-star" th:if="${eachReview.rate}>=4"></i>
+																				<i class="fa fa-star" th:if="${eachReview.rate}>=5"></i>
+																			</span>
+																		</p>
+																		<div class="desc" th:text="${eachReview.review}">
+																		</div>
+																		<a th:href="@{~/review/delete/}+${product.id}+'/'+${eachReview.id}" th:if="${eachReview.user.id}==${id}">DELETE</a>
+																	</div>
+																</div>
+															</li>
+														</ul>
+														<div class="review-form-wrapper">
+															<h3>Add a review</h3>
+															<form th:action="@{~/review/save/}+${product.id}" th:method="post" th:object="${review}">
+																<input hidden th:value="${product.id}" name="product">
+																<input hidden th:value="${id}" name="user">
+																<div class="your-rating">
+																	<select class = "star-rating" name="rate">
+																		<option value="5">Excellent</option>
+																		<option value="4">Very Good</option>
+																		<option value="3">Average</option>
+																		<option value="2">Poor</option>
+																		<option value="1">Terrible</option>
+																	</select>
+																</div>
+																<textarea id="product-message" cols="30" rows="10" placeholder="Write a Review..." name="review"></textarea>
+																<input type="submit" value="submit" />
+															</form>
+														</div>
+													</div>
+												</div>
+											</div>
+										  </div>
+										</div>						
+									</div>							
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="section-title">
+									<h2>Related product</h2>
+									<div class="title-icon">
+										<span><i class="fa fa-angle-left"></i> <i class="fa fa-angle-right"></i></span>
+									</div>
+								</div>
+							</div>
+							<div class="related-curosel">
+								<!-- single-product start -->
+								<div class="col-md-12" th:each="relatedSingle:${related}">
+									<div class="single-product">
+										<div class="product-img">
+											<a th:href="@{~/product/}+${relatedSingle.id}">
+												<img th:src="'data:image/png;base64,'+${relatedSingle.product_image}" alt="" />
+											</a>
+											<div class="product-action">
+												<div class="button-top">
+													<a th:href="@{~/wishlist/add/}+${relatedSingle.id}"><i class="fa fa-heart"></i></a>
+													<a th:href="@{~/cart/add/}+${relatedSingle.id}"><i class="fa fa-shopping-cart"></i></a>
+												</div>
+											</div>
+										</div>
+										<div class="product-content">
+											<h3><a th:href="@{~/product/}+${relatedSingle.id}" th:text="${relatedSingle.product_name}"></a></h3>
+											<div class="price">
+												<span th:text="'Rs.'+${relatedSingle.product_price}+'/-'"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- single-product end -->
+							</div>
+						</div>
+					</div>
+					<!-- left-sidebar start -->
+					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+						<!-- widget-categories start -->
+						<aside class="widget widget-categories">
+							<h3 class="sidebar-title">Categories</h3>
+							<ul class="sidebar-menu">
+								<li th:each="category:${categories}"><a th:href="@{~/shop/}+${category.id}" th:text="${category.categoryName}"></a></li>
+							</ul>
+						</aside>
+						<!-- widget-categories end -->
+					</div>
+					<!-- left-sidebar end -->
+				</div>
+			</div>
+		</div>
+		<!-- shop-area end -->
+
+		<!-- footer start -->
+		<footer>
+			<div th:replace="~{fragments/footer.html :: footer-top}"></div>
+			<div th:replace="~{fragments/footer.html :: footer-top-area}"></div>
+			<div th:replace="~{fragments/footer.html :: footer-bottom-area}"></div>
+		</footer>
+		<!-- footer end -->
+
+		<!-- jquery latest version -->
+		<script data-cfasync="false" th:src="@{../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js}"></script><script th:src="@{/js/vendor/jquery-1.12.0.min.js}"></script>
+		<!-- bootstrap js -->
+		<script th:src="@{~/js/bootstrap.min.js}"></script>
+		<!-- owl.carousel js -->
+		<script th:src="@{~/js/owl.carousel.min.js}"></script>
+		<!-- meanmenu js -->
+		<script th:src="@{~/js/jquery.meanmenu.js}"></script>
+		<!-- jquery-ui js -->
+		<script th:src="@{~/js/jquery-ui.min.js}"></script>
+		<!-- wow js -->
+		<script th:src="@{~/js/wow.min.js}"></script>
+		<!-- plugins js -->
+		<script th:src="@{~/js/plugins.js}"></script>
+		<!-- main js -->
+		<script th:src="@{~/js/main.js}"></script>
+		<script>
+			$(".zoom").elevateZoom();
+		</script>
+		<!-- star js -->
+		<script th:src="@{~/js/star-rating.min.js}"></script>
+
+		<script>
+			const starRatingControl = new StarRating('.star-rating',{
+				maxStars: 5,
+				stars: function (el, item, index) {
+					el.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect class="gl-star-full" width="19" height="19" x="2.5" y="2.5"/><polygon fill="#FFF" points="12 5.375 13.646 10.417 19 10.417 14.665 13.556 16.313 18.625 11.995 15.476 7.688 18.583 9.333 13.542 5 10.417 10.354 10.417"/></svg>';
+				},
+			});
+		</script>
+
+		<script>
+			let breadcrumb=document.getElementsByClassName("breadcrumb-area").item(0);
+			breadcrumb.getElementsByTagName("h1").item(0).innerText="Product Details";
+			breadcrumb.getElementsByTagName("li").item(1).innerText="Category | Product Details";
+		</script>
+    </body>
+
+</html>

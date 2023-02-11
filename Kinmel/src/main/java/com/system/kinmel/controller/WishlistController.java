@@ -14,43 +14,47 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
+@RequestMapping("/wishlist")
 public class WishlistController {
     private final WishlistService wishlistService;
     private final UserService userService;
     private final CartService cartService;
 
-    @GetMapping("/wishlist")
+    @GetMapping()
     public String displayWishlist(Principal principal, Model model){
         Integer id = userService.findByEmail(principal.getName()).getId();
         List<Wishlist> list = wishlistService.fetchAll(id);
         model.addAttribute("wishlistItems", list);
 
         List<Cart> list2 = cartService.fetchAll(id);
+
+        double total = 0.0;
+        for(Cart totalCalc:list2){
+            if (totalCalc.getProduct().getProduct_quantity()>0) total += totalCalc.getQuantity()*totalCalc.getProduct().getProduct_price();
+        }
+
+        model.addAttribute("total", total);
         model.addAttribute("cartItems", list2);
 
         return "/wishlist";
     }
 
-    @PostMapping("/addToWishlist")
-    public String saveToWishlist(@Valid WishlistPojo wishlistPojo){
-        wishlistService.saveToWishlist(wishlistPojo);
-        return "redirect:/login";
+    @GetMapping("/add/{id}")
+    public String saveToWishlist(@PathVariable Integer id, Principal principal){
+        wishlistService.saveToWishlist(id, principal);
+        return "redirect:/shop";
     }
 
-    @DeleteMapping("/deleteWishlist/{id}")
-    public String deleteWishlistItem(@PathVariable("id") Integer id, Principal principal){
-        User user = userService.findByEmail(principal.getName());
-        wishlistService.deleteFromWishlist(user.getId(), id);
+    @GetMapping("/remove/{id}")
+    public String deleteWishlistItem(@PathVariable("id") Integer id){
+        wishlistService.deleteFromWishlist(id);
         return "redirect:/wishlist";
     }
 }

@@ -2,12 +2,10 @@ package com.system.kinmel.entity;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import java.sql.Date;
 
-
+@Builder
 @Entity
 @Getter
 @Setter
@@ -40,18 +38,15 @@ public class Product {
     @Column(nullable = false,name = "product_color")
     private String product_color;
 
-
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "product_category",
+            referencedColumnName = "id",
+            foreignKey = @ForeignKey(name = "FK_categoryId"))
+    private Category product_category;
 
     @Column(name = "product_image",nullable = false)
     private String product_image;
 
-
-
-
-    
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "product_category", nullable = false,referencedColumnName = "id", foreignKey = @ForeignKey(name = "product_category_name"))
-    private Category category;
-
-
+    @Transient
+    private String product_imageBase64;
 }

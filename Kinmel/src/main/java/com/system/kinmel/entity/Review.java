@@ -1,13 +1,11 @@
 package com.system.kinmel.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Date;
 
+@Builder
 @Entity
 @Getter
 @Setter
@@ -39,11 +37,5 @@ public class Review {
     private String review;
 
     @Column
-    private String date;
-
-    @Column
-    private String reply;
-
-    @Column
-    private String replyDate;
+    private Date date;
 }

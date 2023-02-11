@@ -1,0 +1,187 @@
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Shop || Kinmel</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" type="image/x-icon" th:href="@{~/img/favicon.ico}">
+
+  <!-- bootstrap v3.3.6 css -->
+  <link rel="stylesheet" th:href="@{~/css/bootstrap.min.css}">
+  <!-- animate css -->
+  <link rel="stylesheet" th:href="@{~/css/animate.css}">
+  <!-- jquery-ui.min css -->
+  <link rel="stylesheet" th:href="@{~/css/jquery-ui.min.css}">
+  <!-- meanmenu css -->
+  <link rel="stylesheet" th:href="@{~/css/meanmenu.min.css}">
+  <!-- owl.carousel css -->
+  <link rel="stylesheet" th:href="@{~/css/owl.carousel.css}">
+  <!-- slick css -->
+  <link rel="stylesheet" th:href="@{~/css/slick.css}">
+  <!-- font-awesome css -->
+  <link rel="stylesheet" th:href="@{~/css/font-awesome.min.css}">
+  <!-- style css -->
+  <link rel="stylesheet" th:href="@{~/css/style.css}">
+  <!-- responsive css -->
+  <link rel="stylesheet" th:href="@{~/css/responsive.css}">
+  <!-- modernizr js -->
+  <script th:src="@{~/js/vendor/modernizr-2.8.3.min.js}"></script>
+</head>
+
+<body>
+
+<header class="header-pos">
+
+  <div th:replace="~{fragments/header-bottom.html :: header-bottom-area}"></div>
+
+  <div th:replace="~{fragments/mobile-menu.html :: mobile-menu}"></div>
+
+</header>
+
+<div class="breadcrumb-area" th:fragment="breadcrumb-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="breadcrumb-list">
+          <h1 th:text="${singleCategory.categoryName}"></h1>
+          <ul>
+            <li><a th:href="@{~/dashboard}">home</a><span class="divider">|</span></li>
+            <li><a th:href="@{~/shop}">Shop</a><span class="divider">|</span></li>
+            <li th:text="${singleCategory.categoryName}"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- shop-area start -->
+<div class="shop-area">
+  <div class="container">
+    <div class="row">
+      <!-- left-sidebar start -->
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+        <!-- widget-categories start -->
+        <aside class="widget widget-categories">
+          <h3 class="sidebar-title">Categories</h3>
+          <ul class="sidebar-menu">
+            <li th:each="category:${categories}"><a th:href="@{~/shop/}+${category.id}" th:text="${category.categoryName}"></a></li>
+          </ul>
+        </aside>
+        <!-- widget-categories end -->
+      </div>
+      <!-- left-sidebar end -->
+      <div class="col-md-9 col-sm-12 col-xs-12">
+        <div class="shop-content">
+          <!-- Nav tabs -->
+          <ul class="shop-tab" role="tablist">
+            <li><span class="sorting-name"> View as:  </span></li>
+            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-th" aria-hidden="true"></i></a></li>
+            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-th-list" aria-hidden="true"></i></a></li>
+          </ul>
+          <div class="short-by">
+            <span class="sorting-show"> Sort by:</span>
+            <select>
+              <option value="volvo">popularity</option>
+              <option value="saab">Default</option>
+              <option value="mercedes">average rating</option>
+              <option value="audi">newness</option>
+              <option value="audi">low to high</option>
+              <option value="audi">high to low</option>
+            </select>
+          </div>
+
+          <div class="clear"></div>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">
+              <div class="row">
+                <div class="col-md-4 col-sm-4" th:each="product:${products}">
+                  <div class="single-product">
+                    <div class="product-img">
+                      <a th:href="@{~/product/}+${product.id}">
+                        <img th:src="'data:image/png;base64,'+${product.product_image}" alt="" />
+                      </a>
+                      <div class="product-action">
+                        <div class="button-top">
+                          <a th:href="@{~/wishlist/add/}+${product.id}"><i class="fa fa-heart"></i></a>
+                          <a th:href="@{~/cart/add/}+${product.id}"><i class="fa fa-shopping-cart"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-content">
+                      <h3><a th:href="@{~/product/}+${product.id}" th:text="${product.product_name}"></a></h3>
+                      <div class="price">
+                        <span th:text="'Rs.'+${product.product_price}+'/-'"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="profile">
+              <div class="row shop-list">
+                <div class="col-md-12">
+                  <div class="single-product" th:each="product:${products}">
+                    <div class="product-img">
+                      <a th:href="@{~/product/}+${product.id}">
+                        <img th:src="'data:image/png;base64,'+${product.product_image}" alt="" />
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h3><a th:href="@{~/product/}+${product.id}" th:text="${product.product_name}"></a></h3>
+                      <div class="price">
+                        <span th:text="'Rs.'+${product.product_price}+'/-'"></span>
+                      </div>
+                      <p th:text="${product.product_description}"></p>
+                      <div class="product-action">
+                        <div class="button-top">
+                          <a th:href="@{~/wishlist/add/}+${product.id}"><i class="fa fa-heart"></i></a>
+                          <a th:href="@{~/cart/add/}+${product.id}"><i class="fa fa-shopping-cart"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- shop-area end -->
+
+<!-- footer start -->
+<footer>
+  <div th:replace="~{fragments/footer.html :: footer-top}"></div>
+  <div th:replace="~{fragments/footer.html :: footer-top-area}"></div>
+  <div th:replace="~{fragments/footer.html :: footer-bottom-area}"></div>
+</footer>
+<!-- footer end -->
+
+<!-- jquery latest version -->
+<script data-cfasync="false" th:src="@{../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js}"></script><script th:src="@{/js/vendor/jquery-1.12.0.min.js}"></script>
+<!-- bootstrap js -->
+<script th:src="@{~/js/bootstrap.min.js}"></script>
+<!-- owl.carousel js -->
+<script th:src="@{~/js/owl.carousel.min.js}"></script>
+<!-- meanmenu js -->
+<script th:src="@{~/js/jquery.meanmenu.js}"></script>
+<!-- jquery-ui js -->
+<script th:src="@{~/js/jquery-ui.min.js}"></script>
+<!-- wow js -->
+<script th:src="@{~/js/wow.min.js}"></script>
+<!-- plugins js -->
+<script th:src="@{~/js/plugins.js}"></script>
+<!-- main js -->
+<script th:src="@{~/js/main.js}"></script>
+
+</body>
+
+
+</html>
