@@ -1,10 +1,6 @@
 package com.system.kinmel.services.impl;
 
 import com.system.kinmel.entity.Category;
-<<<<<<< HEAD
-import com.system.kinmel.pojo.CategoryPojo;
-=======
->>>>>>> databaseManagement
 import com.system.kinmel.repo.CategoryRepo;
 import com.system.kinmel.services.CategoryService;
 import lombok.RequiredArgsConstructor;
