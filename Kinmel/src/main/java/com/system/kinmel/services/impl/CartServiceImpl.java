@@ -165,4 +165,9 @@ public class CartServiceImpl implements CartService {
     public List<Cart> fetchAll() {
         return cartRepo.findAll(Sort.by(Sort.Direction.DESC,"id"));
     }
+
+    @Override
+    public List<Object[]> fetchCustomer() {
+        return cartRepo.fetchAllCustomer();
+    }
 }

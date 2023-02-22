@@ -1,12 +1,12 @@
 package com.system.kinmel.repo;
 
 import com.system.kinmel.entity.Cart;
+import com.system.kinmel.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Repository
 public interface CartRepo extends JpaRepository<Cart, Integer> {
@@ -21,4 +21,9 @@ public interface CartRepo extends JpaRepository<Cart, Integer> {
 
     @Query(value = "SELECT product_id, SUM(quantity) AS sum_column1 FROM cart GROUP BY product_id ORDER BY sum_column1 DESC LIMIT 4", nativeQuery = true)
     Optional<List<Integer>> best();
+
+
+    @Query(value = "SELECT user_id, COUNT(*) as count FROM Cart GROUP BY user_id",nativeQuery = true)
+    List<Object[]> fetchAllCustomer();
+
 }
