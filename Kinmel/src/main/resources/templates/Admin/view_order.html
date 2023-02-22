@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" th:href="@{~/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{~/css/main.css}">
+    <link rel="stylesheet" th:href="@{~/css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{~/js/vendor/dropify/css/dropify.min.css}">
+
+</head>
+<div th:replace="fragments/admindashboard.html :: sidenav"></div>
+<div id="wrapper">
+
+
+
+    <div id="main-content">
+        <div class="block-header">
+            <div class="row clearfix">
+                <div class="col-md-6 col-sm-12">
+                    <h1>Orders</h1>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                </div>
+
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row clearfix">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="body">
+                            <button type="button" class="btn btn-simple btn-sm mb-1 btn-default btn-filter" data-target="all">All</button>
+                            <button type="button" class="btn btn-simple btn-sm mb-1 btn-success btn-filter" data-target="Ordered">ordered</button>
+                            <button type="button" class="btn btn-simple btn-sm mb-1 btn-warning btn-filter" data-target="Dispachted">Dispachted</button>
+                            <button type="button" class="btn btn-simple btn-sm mb-1 btn-info btn-filter" data-target="Delivered">Delivered</button>
+                            <div class="table-responsive m-t-20">
+                                <table class="table table-filter table-hover m-b-0">
+                                    <tbody>
+
+
+                                    <tr th:each="orders : ${AllOrders}" th:data-status="${orders.status}">
+                                        <td><span th:text="${orders.billingFirstName} + ${orders.billingLastName}"></span></td>
+                                        <td><span th:text="${orders.product.product_name}"></span></td>
+                                        <td><span th:text="${orders.quantity}"></span></td>
+                                        <td><span class="badge badge-success" th:text="${orders.status}"></span></td>
+
+                                    </tr>
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+
+
+        $('.btn-filter').on('click', function () {
+            var $target = $(this).data('target');
+            if ($target != 'all') {
+                $('.table tr').css('display', 'none');
+                $('.table tr[data-status="' + $target + '"]').fadeIn('slow');
+            } else {
+                $('.table tr').css('display', 'none').fadeIn('slow');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
