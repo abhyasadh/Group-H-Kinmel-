@@ -27,12 +27,6 @@ public class ProductController {
     @GetMapping("/addproduct")
     public String getaddProduct(Model model){
 
-        System.out.println("--------------------");
-
-        System.out.println("HERE REACHED");
-
-        System.out.println("--------------------");
-
         List<Category> categories = categoryService.fetchAll();
         model.addAttribute("categories",categories);
         return "Admin/add_product";
