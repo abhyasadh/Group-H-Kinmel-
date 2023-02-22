@@ -54,7 +54,7 @@
 						<aside class="widget widget-categories">
 							<h3 class="sidebar-title">Categories</h3>
 							<ul class="sidebar-menu">
-								<li th:each="category:${categories}"><a th:href="@{~/shop/}+${category.id}" th:text="${category.categoryName}"></a></li>
+								<li th:each="category:${categories}"><a th:href="@{~/shop/}+${category.id}" th:text="${category.category_name}"></a></li>
 							</ul>
 						</aside>
 						<!-- widget-categories end -->

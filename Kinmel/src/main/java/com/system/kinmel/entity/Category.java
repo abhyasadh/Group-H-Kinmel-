@@ -17,6 +17,6 @@ public class Category {
     @SequenceGenerator(name = "kinMel_user_seq_gen", sequenceName = "kinMel_user_id_seq", allocationSize = 1)
     @GeneratedValue(generator = "kinMel_user_seq_gen", strategy = GenerationType.SEQUENCE)
     private Integer id;
-    @Column
+    @Column(nullable = false)
     private String category_name;
 }

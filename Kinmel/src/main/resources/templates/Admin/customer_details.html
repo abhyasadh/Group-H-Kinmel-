@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Details</title>
+
+    <link rel="stylesheet" th:href="@{~/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{~/css/main.css}">
+    <link rel="stylesheet" th:href="@{~/css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{~/js/vendor/dropify/css/dropify.min.css}">
+
+</head>
+<div th:replace="fragments/admindashboard.html :: sidenav"></div>
+<div id="wrapper">
+
+
+
+    <div id="main-content">
+        <div class="block-header">
+            <div class="row clearfix">
+                <div class="col-md-6 col-sm-12">
+                    <h1>Customer Details</h1>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                </div>
+
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row clearfix">
+                <div class="col-lg-12">
+                    <div class="card">
+
+                        <div class="body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover js-basic-example dataTable table-custom">
+                                    <thead>
+                                    <tr>
+                                        <th>Email</th>
+                                        <th>Ordered Times</th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+
+
+                                    <tr th:each="customers : ${AllCustomers}">
+                                        <td><span th:text="${customers.key}"></span></td>
+                                        <td><span th:text="${customers.value}"></span></td>
+
+                                    </tr>
+
+
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</body>
+</html>
