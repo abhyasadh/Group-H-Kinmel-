@@ -18,5 +18,5 @@ public class Category {
     @GeneratedValue(generator = "kinMel_user_seq_gen", strategy = GenerationType.SEQUENCE)
     private Integer id;
     @Column
-    private String categoryName;
+    private String category_name;
 }

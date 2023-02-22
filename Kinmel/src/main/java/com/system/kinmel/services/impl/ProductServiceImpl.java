@@ -40,7 +40,7 @@ public class ProductServiceImpl implements ProductService {
         product.setProduct_color(productPojo.getProduct_color());
 
         if(!Objects.equals(productPojo.getProduct_image().getOriginalFilename(), "")){
-            Path fileNameAndPath = Paths.get(UPLOAD_DIRECTORY+"profile-picture\\", productPojo.getProduct_image().getOriginalFilename());
+            Path fileNameAndPath = Paths.get(UPLOAD_DIRECTORY+ productPojo.getProduct_image().getOriginalFilename());
             Files.write(fileNameAndPath, productPojo.getProduct_image().getBytes());
 
             product.setProduct_image(productPojo.getProduct_image().getOriginalFilename());
