@@ -10,6 +10,7 @@ import com.system.kinmel.repo.SaleRepo;
 import com.system.kinmel.repo.UserRepo;
 import com.system.kinmel.services.CartService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.security.Principal;
@@ -147,7 +148,7 @@ public class CartServiceImpl implements CartService {
                 cart.setShippingPostal(pojo.getShippingPostal());
             }
             cart.setNotes(pojo.getNotes());
-            cart.setStatus("Purchased");
+            cart.setStatus("Ordered");
 
             cartRepo.save(cart);
         }
@@ -158,5 +159,15 @@ public class CartServiceImpl implements CartService {
     public String updateProduct(double quantity, Integer id) {
         productRepo.updateQuantity(quantity, id);
         return "Updated Quantity";
+    }
+
+    @Override
+    public List<Cart> fetchAll() {
+        return cartRepo.findAll(Sort.by(Sort.Direction.DESC,"id"));
+    }
+
+    @Override
+    public List<Object[]> fetchCustomer() {
+        return cartRepo.fetchAllCustomer();
     }
 }

@@ -10,6 +10,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
@@ -35,5 +37,11 @@ public class UserServiceImpl implements UserService {
         //builder
 
         return user;
+    }
+
+    @Override
+    public User findUserById(Integer user_id) {
+        Optional<User> optionalUser = userRepo.findById(user_id);
+        return optionalUser.orElse(null);
     }
 }

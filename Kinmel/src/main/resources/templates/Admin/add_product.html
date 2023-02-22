@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -10,17 +10,13 @@
     <link rel="stylesheet" th:href="@{~/js/vendor/dropify/css/dropify.min.css}">
 
 </head>
-<body>
 
 
-<body class="theme-orange">
 
-<div th:replace="fragments/admindashboard.html :: topnav"></div>
 <div th:replace="fragments/admindashboard.html :: sidenav"></div>
 
 
 
-<div class="overlay"></div>
 <div id="wrapper">
 
 
@@ -29,7 +25,7 @@
         <div class="block-header">
             <div class="row clearfix">
                 <div class="col-md-6 col-sm-12">
-                    <h2>Add Product</h2>
+                    <h1>Add Product</h1>
                 </div>
                 <div class="col-md-6 col-sm-12">
                 </div>
@@ -55,11 +51,11 @@
 
                                 <div class="form-group col-md-12 col-lg-3">
                                     <label>Product Category</label>
-                                        <select id="single-selection" name="product_category" class="multiselect multiselect-custom form-control">
-                                            <th:block th:each="category : ${categories}">
-                                                <option th:value="${category.id}" th:text="${category.category_name}"></option>
-                                            </th:block>
-                                        </select>
+                                    <select id="single-selection" name="product_category" class="multiselect multiselect-custom form-control">
+                                        <th:block th:each="category : ${categories}">
+                                            <option th:value="${category.id}" th:text="${category.category_name}"></option>
+                                        </th:block>
+                                    </select>
 
 
                                 </div>
@@ -78,7 +74,7 @@
                                 </div>
                                 <div class="form-group col-lg-6 col-md-12">
                                     <label>Description</label>
-                                    <textarea class="form-control" rows="5" cols="30" required name="product_description"></textarea>
+                                    <textarea class="form-control" rows="9" cols="30" required name="product_description"></textarea>
                                 </div>
                                 <div class="form-group col-md-12 col-lg-6">
 
@@ -87,8 +83,9 @@
 
                                 </div>
 
-
-                                <button type="submit" class="btn btn-primary">Add</button>
+                                <div class="form-group col-md-12 col-lg-5">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Add New Product</button>
                             </form>
                         </div>
                     </div>
@@ -97,38 +94,37 @@
             </div>
         </div>
     </div>
-
+</div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
     <script th:src="@{~/js/vendor/dropify/js/dropify.min.js}"></script>
 
-<script>
-    $(function() {
-        "use strict";
-        $('.dropify').dropify();
+    <script>
+        $(function() {
+            "use strict";
+            $('.dropify').dropify();
 
-        var drEvent = $('#dropify-event').dropify();
-        drEvent.on('dropify.beforeClear', function(event, element) {
-            return confirm("Do you really want to delete \"" + element.file.name + "\" ?");
-        });
+            var drEvent = $('#dropify-event').dropify();
+            drEvent.on('dropify.beforeClear', function(event, element) {
+                return confirm("Do you really want to delete \"" + element.file.name + "\" ?");
+            });
 
-        drEvent.on('dropify.afterClear', function(event, element) {
-            alert('File deleted');
-        });
+            drEvent.on('dropify.afterClear', function(event, element) {
+                alert('File deleted');
+            });
 
-        $('.dropify-fr').dropify({
-            messages: {
-                default: 'Glissez-déposez un fichier ici ou cliquez',
-                replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
-                remove: 'Supprimer',
-                error: 'Désolé, le fichier trop volumineux'
-            }
+            $('.dropify-fr').dropify({
+                messages: {
+                    default: 'Glissez-déposez un fichier ici ou cliquez',
+                    replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
+                    remove: 'Supprimer',
+                    error: 'Désolé, le fichier trop volumineux'
+                }
+            });
         });
-    });
-</script>
-</body>
+    </script>
 
 </body>
 </html>

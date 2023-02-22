@@ -6,4 +6,6 @@ import com.system.kinmel.pojo.UserPojo;
 public interface UserService {
     void saveUser(UserPojo userPojo);
     User findByEmail(String email);
+
+    User findUserById(Integer user_id);
 }

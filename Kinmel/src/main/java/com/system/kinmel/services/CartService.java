@@ -6,6 +6,7 @@ import com.system.kinmel.pojo.CartPojo;
 
 import java.security.Principal;
 import java.util.List;
+import java.util.Objects;
 
 public interface CartService {
     String saveToCart(Integer id, Principal principal);
@@ -23,4 +24,8 @@ public interface CartService {
     String checkout(Integer id, CartPojo pojo, List<Cart> itemsToPurchase);
 
     String updateProduct(double quantity, Integer id);
+
+    List<Cart> fetchAll();
+
+    List<Object[]> fetchCustomer();
 }
