@@ -670,4 +670,63 @@ ul.list-justify.large-number span{
 }
 .m-t--10{
     margin-top:-10px
+}.m-r--10{
+    margin-right:-10px
+}
+.m-b--10{
+    margin-bottom:-10px
+}
+.m-l--5{
+    margin-left:-5px
+}
+.m-t--5{
+    margin-top:-5px
+}
+.m-r--5{
+    margin-right:-5px
+}
+.m-b--5{
+    margin-bottom:-5px
+}
+.m-l-0{
+    margin-left:0
+}
+.m-t-0,.weather2 .days-list .day h5,.weather .city,.weather .city h3,.page-calendar .event-name h4{
+    margin-top:0
+}
+.m-r-0,.panel-group .panel .panel-title>a i.right,.c_list .fancy-checkbox{
+    margin-right:0
+}
+.m-b-0,.card .header,ul.choose-skin,.auth-main .lead,.block-header h2,.block-header .breadcrumb,#toast-container .toast,.weather .city h3,.weather6 p,.top_counter .content .number,.basic-list,.c_list .fancy-checkbox,.c_list .c_name,.c_list address,.social_media_table .table,.feeds_widget,.chat-app .chat .chat-history ul li:last-child,.page-calendar .event-name h6,.page-calendar .event-name h4,.page-calendar .event-name p,.page-calendar .event-name address,.pricing,.pricing h3{
+    margin-bottom:0
+}
+.m-l-5,.badge,.btn-toolbar>.btn-group,.wizard .actions a,.pricing3 .pricing-option .price b{
+    margin-left:5px
+}
+.m-t-5,.card .header h2 small,.user-account .dropdown,.auth-main .lead,.top_summary small,.setting-list li,.team-info,.page-calendar .event-name address{
+    margin-top:5px
+}
+.m-r-5,.nav.nav-tabs-new>li>a,.nav.nav-tabs-new2>li>a,.badge,.panel-group .panel .panel-title>a i,.new_timeline .bullet,.b4gallery .nav-item,.page-calendar .event-name address i{
+    margin-right:5px
+}
+.m-b-5,.auth-main .btn-signin-social,.weather .days li img{
+    margin-bottom:5px
+}
+.m-l-10,#left-sidebar .navbar-brand span,.accordion2 .accordion-thumb span,.c_list .c_name{
+    margin-left:10px
+}
+.m-t-10,.tab-content,.navbar-fixed-top .navbar-btn,.page-loader-wrapper p,.weather3 .top .wrapper .temp .deg,.social-links{
+    margin-top:10px
+}
+.m-r-10,.user-account .dropdown .dropdown-menu a i,ul.choose-skin li div,.list-referrals .value,.top_counter .icon,.right_chat .media .media-object,.testimonial4 .carousel-info img{
+    margin-right:10px
+}
+.m-b-10,.rightbar .card h6,ul.choose-skin li div,.weather4 i,.pricing3 .pricing-option .price{
+    margin-bottom:10px
+}
+.m-l-15{
+    margin-left:15px
+}
+.m-t-15{
+    margin-top:15px
 }
