@@ -3922,3 +3922,37 @@ select.form-control:not([size]):not([multiple]){
 .twitch-tv-color{
   color:#6441a5!important
 }
+
+.twitter-color{
+  color:#55acee!important
+}
+.vimeo-color{
+  color:#162221!important
+}
+.vine-color{
+  color:#00b488!important
+}
+.wechat-color{
+  color:#7bb32e!important
+}
+.whatsapp-color{
+  color:#43d854!important
+}
+.wordpress-color{
+  color:#21759b!important
+}
+.yahoo-color{
+  color:#410093!important
+}
+.youtube-color{
+  color:#cd201f!important
+}
+.z500px-bg{
+  background-color:#0099e5!important
+}
+.z500px-bg:hover,.z500px-bg:focus{
+  background-color:#08c!important
+}
+.about-me-bg{
+  background-color:#00405d!important
+}
