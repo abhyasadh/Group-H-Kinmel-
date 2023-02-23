@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>DashBoard</title>
+
+    <link rel="stylesheet" th:href="@{~/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{~/css/main.css}">
+    <link rel="stylesheet" th:href="@{~/css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{~/js/vendor/dropify/css/dropify.min.css}">
+
+</head>
+
+
+
+<div th:replace="fragments/admindashboard.html :: sidenav"></div>
+
+
+
+<div id="wrapper">
+
+
+
+    <div id="main-content">
+        <div class="block-header">
+            <div class="row clearfix">
+                <div class="col-md-6 col-sm-12">
+                    <h1>DashBoard</h1>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                </div>
+
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row clearfix">
+                <div class="col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>Weekly Chart</h2>
+                        </div>
+                        <div class="body">
+                            <canvas id="weekly-sales" class="ct-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>Last Week Chart</h2>
+                        </div>
+                        <div class="body">
+                            <canvas id="last-week-sales" class="ct-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>Product Sells</h2>
+                        </div>
+                        <div class="body">
+                            <canvas id="product-sales" class="ct-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>Last Week Status</h2>
+                        </div>
+                        <div class="body">
+                            <canvas id="status" class="ct-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    var weeksales = [[${weeksales}]];
+
+    var lastweeksales = [[${thisweeksale}]];
+    var lastweeklabel = [];
+    var lastweekdata = [];
+
+    if (lastweeksales) {
+        for (var i = 0; i < lastweeksales.length; i++) {
+            lastweeklabel.push(lastweeksales[i][1]);
+            lastweekdata.push(lastweeksales[i][0]);
+        }
+    }
+
+    var productsale = [[${productsale}]];
+    var productsalelabel = [];
+    var productsaledata = [];
+
+    if (productsale) {
+        for (var i = 0; i < productsale.length; i++) {
+            productsalelabel.push(productsale[i][1]);
+            productsaledata.push(productsale[i][2]);
+        }
+    }
+
+
+
+
+    var statusCount = [[${status}]];
+    var statusLabels = [];
+    var statusData = [];
+
+    if (statusCount) {
+        for (var i = 0; i < statusCount.length; i++) {
+            statusLabels.push(statusCount[i][0]);
+            statusData.push(statusCount[i][1]);
+        }
+    }
+    /*]]>*/
+</script>
+
+
+<script>
+    $(function() {
+        "use strict";
+        var options;
+
+        var data = {
+            labels: ['', '', '', '', ''],
+            series: [
+                weeksales,
+            ]
+        };
+
+        // Last 5 week Slaes chart
+
+        var ctx = document.getElementById('weekly-sales').getContext('2d');
+
+        // Define the chart data
+        var chartData = {
+            labels: data.labels,
+            datasets: [{
+                label: 'Last Five Week sales',
+                data: weeksales,
+                fill: false,
+                borderColor: 'rgb(75, 192, 192)',
+                tension: 0.1
+            }]
+        };
+
+        // Define the chart options
+        var chartOptions = {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        };
+
+        // Create the chart object
+        var chart = new Chart(ctx, {
+            type: 'line',
+            data: chartData,
+            options: chartOptions
+        });
+
+
+        var last_week_sale_data = {
+            labels: lastweeklabel,
+            series: [
+                lastweekdata,
+            ]
+        };
+
+        // Last week Slaes chart
+
+
+        var ctx = document.getElementById('last-week-sales').getContext('2d');
+
+        // Define the chart data
+        var chartData = {
+            labels: last_week_sale_data.labels,
+            datasets: [{
+                label: 'Last week sales',
+                data: last_week_sale_data.series[0],
+                fill: false,
+                borderColor: 'rgb(75, 192, 192)',
+                tension: 0.1
+            }]
+        };
+
+        // Define the chart options
+        var chartOptions = {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        };
+
+        // Create the chart object
+        var chart = new Chart(ctx, {
+            type: 'line',
+            data: chartData,
+            options: chartOptions
+        });
+
+
+
+
+        // bar chart
+        var barData = {
+            labels: productsalelabel,
+            datasets: [
+                {
+                    label: "Product Sales",
+                    backgroundColor: "rgba(51, 102, 255, 0.5)",
+                    borderColor: "rgba(51, 102, 255, 0.8)",
+                    borderWidth: 1,
+                    data: productsaledata
+                }
+            ]
+        };
+
+        var options = {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+            },
+            legend: {
+                display: false
+            }
+        };
+
+        var ctx = document.getElementById("product-sales").getContext("2d");
+
+        var chart = new Chart(ctx, {
+            type: 'bar',
+            data: barData,
+            options: options
+        });
+
+
+        //Status
+
+        var dataPie = {
+            datasets: [{
+                data: statusData,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.8)',
+                    'rgba(54, 162, 235, 0.8)',
+                    'rgba(75, 192, 192, 0.8)'
+                ]
+            }],
+            labels: statusLabels
+        };
+
+        var optionsPie = {
+            responsive: true,
+            legend: {
+                position: 'top',
+                labels: {
+                    fontColor: '#333',
+                    fontSize: 12
+                }
+            },
+            animation: {
+                animateScale: true,
+                animateRotate: true
+            }
+        };
+
+        var ctxPie = document.getElementById('status').getContext('2d');
+        var myPieChart = new Chart(ctxPie, {
+            type: 'pie',
+            data: dataPie,
+            options: optionsPie
+        });
+
+
+
+
+
+    });
+
+
+
+
+
+</script>
+
+</body>
+</html>
