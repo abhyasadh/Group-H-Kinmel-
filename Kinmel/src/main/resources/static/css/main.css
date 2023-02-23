@@ -2729,3 +2729,367 @@ ul.list-justify.large-number span{
 .w_social3 .twitter-widget .icon i{
     color:#0084b4
 }
+
+.w_social3 .instagram-widget .icon i{
+    color:#fb3958
+}
+.w_social3 .linkedin-widget .icon i{
+    color:#0077b5
+}
+.w_social3 .behance-widget .icon i{
+    color:#053eff
+}
+.w_profile{
+    position:relative
+}
+.w_profile .profile-image img{
+    border-radius:50%;
+    width:180px;
+    border:3px solid #fff;
+    box-shadow:0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)
+}
+.w_profile .social-icon a{
+    margin:0 5px
+}
+@media screen and (max-width:640px){
+    .w_profile{
+        text-align:center
+    }
+    .w_profile .profile-image{
+        margin-bottom:20px
+    }
+}
+.ms-container{
+    width:auto!important
+}
+.todo_list .fancy-checkbox input[type=checkbox]:checked+span{
+    text-decoration:line-through
+}
+.w_bitcoin .body{
+    position:absolute
+}
+.w_bitcoin #sparkline16{
+    margin-bottom:-2px
+}
+.feeds_widget li a{
+    display:block;
+    padding:12px 15px;
+    border:1px solid #f0f0f0;
+    margin:4px 0
+}
+.feeds_widget li a:hover{
+    background:#f0f0f0
+}
+.feeds_widget li .feeds-left{
+    float:left;
+    width:33px;
+    font-size:18px
+}
+.feeds_widget li .feeds-body{
+    width:auto
+}
+.feeds_widget li .feeds-body .title{
+    font-size:15px;
+    font-weight:600
+}
+.feeds_widget li .feeds-body>small{
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+    width:calc(100% - 60px);
+    font-size:13px;
+    color:#777
+}
+.timeline-item{
+    padding:3em 2em 2em;
+    position:relative;
+    border-left:1px solid #eee
+}
+.timeline-item:before{
+    content:attr(date-is);
+    position:absolute;
+    left:2em;
+    top:1em;
+    color:#777
+}
+.timeline-item:after{
+    width:15px;
+    height:15px;
+    top:1em;
+    position:absolute;
+    left:-8px;
+    border-radius:10px;
+    content:'';
+    background:#fff;
+    border:3px solid
+}
+.timeline-item.green:after{
+    border-color:#86c541
+}
+.timeline-item.blue:after{
+    border-color:#1d8ecd
+}
+.timeline-item.warning:after{
+    border-color:#f5a81d
+}
+.timeline-item.red:after{
+    border-color:#ee2558
+}
+.timeline-item.dark:after{
+    border-color:#17191c
+}
+.timeline-item .msg{
+    margin:15px 0
+}
+.chat-app .people-list{
+    -webkit-transition:all .3s ease-in-out;
+    -moz-transition:all .3s ease-in-out;
+    -ms-transition:all .3s ease-in-out;
+    -o-transition:all .3s ease-in-out;
+    transition:all .3s ease-in-out;
+    width:280px;
+    position:absolute;
+    right:0;
+    top:0;
+    padding:20px;
+    z-index:7
+}
+.chat-app .chat{
+    margin-right:280px;
+    border-right:1px solid #f0f0f0
+}
+.chat-app .chat .chat-header{
+    padding:15px 20px;
+    border-bottom:2px solid #f0f0f0
+}
+.chat-app .chat .chat-header img{
+    float:left;
+    border-radius:40px;
+    width:40px
+}
+.chat-app .chat .chat-header .chat-about{
+    float:left
+}
+.chat-app .chat .chat-history{
+    padding:20px;
+    border-bottom:2px solid #fff
+}
+.chat-app .chat .chat-history ul li{
+    list-style:none
+}
+.chat-app .chat .chat-history .message-data img{
+    border-radius:40px;
+    width:40px
+}
+.chat-app .chat .chat-history .message-data-time{
+    color:#444;
+    font-size:12px
+}
+.chat-app .chat .chat-history .message{
+    color:#444;
+    padding:18px 20px;
+    line-height:26px;
+    font-size:16px;
+    border-radius:7px;
+    position:relative
+}
+.chat-app .chat .chat-history .message:after{
+    bottom:100%;
+    left:7%;
+    border:solid transparent;
+    content:" ";
+    height:0;
+    width:0;
+    position:absolute;
+    pointer-events:none;
+    border-bottom-color:#fff;
+    border-width:10px;
+    margin-left:-10px
+}
+.chat-app .chat .chat-history .my-message{
+    background:#f7f7f7
+}
+.chat-app .chat .chat-history .my-message:after{
+    bottom:100%;
+    left:30px;
+    border:solid transparent;
+    content:" ";
+    height:0;
+    width:0;
+    position:absolute;
+    pointer-events:none;
+    border-bottom-color:#f7f7f7;
+    border-width:10px;
+    margin-left:-10px
+}
+.chat-app .chat .chat-history .other-message{
+    background:#eee
+}
+.chat-app .chat .chat-history .other-message:after{
+    border-bottom-color:#eee;
+    left:93%
+}
+.chat-app .chat .chat-message{
+    padding:20px
+}
+.float-right{
+    float:right
+}
+@media screen and (max-width:767px){
+    .chat-app .people-list{
+        height:465px;
+        width:100%;
+        overflow-x:auto;
+        background:#fff;
+        left:-400px;
+        display:none
+    }
+    .chat-app .people-list.open{
+        left:0
+    }
+    .chat-app .chat{
+        margin:0
+    }
+    .chat-app .chat .chat-header{
+        border-radius:.55rem .55rem 0 0
+    }
+    .chat-app .chat-history{
+        height:300px;
+        overflow-x:auto
+    }
+}
+@media only screen and (min-width:768px) and (max-width:992px){
+    .chat-app .chat-list{
+        height:650px;
+        overflow-x:auto
+    }
+    .chat-app .chat-history{
+        height:600px;
+        overflow-x:auto
+    }
+}
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:1){
+    .chat-app .chat-list{
+        height:480px;
+        overflow-x:auto
+    }
+    .chat-app .chat-history{
+        height:calc(100vh - 350px);
+        overflow-x:auto
+    }
+}
+.page-calendar .event-name h6{
+    text-transform:capitalize
+}
+.page-calendar .event-name h4{
+    line-height:24px
+}
+.page-calendar .event-name h4 span{
+    line-height:16px
+}
+.page-calendar .event-name p{
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+    width:100%
+}
+.event-control{
+    background-color:#f0f0f0;
+    cursor:pointer
+}
+.event-control:hover{
+    background-color:#fff
+}
+.event-control a{
+    color:#444;
+    cursor:pointer;
+    opacity:.5
+}
+.event-control a:hover{
+    opacity:1
+}
+.event-control[class*=bg-]:not(.bg-default):not(.bg-white) a{
+    color:#444!important;
+    opacity:1
+}
+.event-control[class*=bg-]:not(.bg-default):not(.bg-white) a:hover{
+    color:#fff!important
+}
+.fc-overlay{
+    display:none;
+    position:absolute;
+    min-width:260px;
+    padding:15px 0;
+    top:auto;
+    left:50%;
+    margin-left:-150px;
+    z-index:1000;
+    color:#444!important
+}
+.fc-overlay.left{
+    left:100%;
+    top:-15px;
+    padding:0 10px;
+    margin:0
+}
+.fc-overlay.right{
+    left:auto;
+    right:100%;
+    top:-15px;
+    padding:0 10px
+}
+.fc-overlay .panel{
+    padding:10px
+}
+.fc .fc-toolbar{
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    border-radius:0;
+    color:#444;
+    background:0 0
+}
+.fc .fc-toolbar h2{
+    text-transform:uppercase
+}
+.fc .fc-toolbar .fc-today-button,.fc .fc-toolbar .fc-state-default{
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+    background:#444;
+    color:#bdbdbd;
+    padding:8px 18px;
+    height:auto;
+    border:none;
+    text-shadow:none
+}
+.fc .fc-view-container .fc-event{
+    border-radius:.1875rem;
+    color:#f7f7f7;
+    border:0;
+    padding:3px 5px
+}
+.fc .fc-view-container .fc-event.fc-event-end:not(.fc-event-start){
+    border:0!important
+}
+.fc .fc-view-container .fc-event:focus,.fc .fc-view-container .fc-event:hover,.fc .fc-view-container .fc-event:active{
+    color:#fff;
+    z-index:1000
+}
+.fc .fc-view-container .fc-view.fc-basic-view>table>thead tr th.fc-widget-header,.fc .fc-view-container .fc-view.fc-basic-view>table>thead tr td.fc-widget-header,.fc .fc-view-container .fc-view.fc-agenda>table>thead tr th.fc-widget-header,.fc .fc-view-container .fc-view.fc-agenda>table>thead tr td.fc-widget-header{
+    color:#666;
+    border:1px solid #eee;
+    padding:10px
+}
+.fc .fc-view-container .fc-view.fc-basic-view>table tbody tr td.fc-widget-content,.fc .fc-view-container .fc-view.fc-agenda>table tbody tr td.fc-widget-content{
+    border:0;
+    border-bottom:1px solid #eee;
+    border-right:1px solid #eee
+}
+.fc .fc-view-container .fc-view.fc-basic-view>table tbody tr td.fc-widget-content.fc-state-highlight,.fc .fc-view-container .fc-view.fc-agenda>table tbody tr td.fc-widget-content.fc-state-highlight{
+    background:#fff
+}
+.fc .fc-view-container .fc-view.fc-basic-view>table tbody tr td.fc-day-number,.fc .fc-view-container .fc-view.fc-agenda>table tbody tr td.fc-day-number{
+    color:#444;
+    padding:5px 10px;
+    margin:5px
+}
