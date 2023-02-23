@@ -100,3 +100,52 @@
 .wi-lightning:before{
     content:"\f016"
 }
+
+.wi-rain-mix:before{
+  content:"\f017"
+}
+.wi-rain-wind:before{
+  content:"\f018"
+}
+.wi-rain:before{
+  content:"\f019"
+}
+.wi-showers:before{
+  content:"\f01a"
+}
+.wi-snow:before{
+  content:"\f01b"
+}
+.wi-sprinkle:before{
+  content:"\f01c"
+}
+.wi-storm-showers:before{
+  content:"\f01d"
+}
+.wi-thunderstorm:before{
+  content:"\f01e"
+}
+.wi-windy:before{
+  content:"\f021"
+}
+.wi-night-alt-cloudy-gusts:before{
+  content:"\f022"
+}
+.wi-night-alt-cloudy-windy:before{
+  content:"\f023"
+}
+.wi-night-alt-hail:before{
+  content:"\f024"
+}
+.wi-night-alt-lightning:before{
+  content:"\f025"
+}
+.wi-night-alt-rain-mix:before{
+  content:"\f026"
+}
+.wi-night-alt-rain-wind:before{
+  content:"\f027"
+}
+.wi-night-alt-rain:before{
+  content:"\f028"
+}
