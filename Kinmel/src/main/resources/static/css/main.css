@@ -1,0 +1,102 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700";
+@font-face{
+    font-family:simple-line-icons;
+    src:url(../fonts/simple-Line-Icons.eot);
+    src:url(../fonts/simple-Line-Icons.eot) format("embedded-opentype"),url(../fonts/simple-Line-Icons.woff) format("woff"),url(../fonts/simple-Line-Icons.ttf) format("truetype"),url(../fonts/simple-Line-Icons.svg#Simple-Line-Icons) format("svg");
+    font-weight:400;
+    font-style:normal
+}
+[data-icon]:before{
+    font-family:simple-line-icons;
+    content:attr(data-icon);
+    speak:none;
+    font-weight:400;
+    font-variant:normal;
+    text-transform:none;
+    line-height:1;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    font-size:17px
+}
+@font-face{
+    font-family:weathericons;
+    src:url(../fonts/weathericons-regular-webfont.eot);
+    src:url(../fonts/weathericons-regular-webfontd41d.eot?#iefix) format("embedded-opentype"),url(../fonts/weathericons-regular-webfont.woff) format("woff"),url(../fonts/weathericons-regular-webfont.ttf) format("truetype"),url(../fonts/weathericons-regular-webfont.svg#weathericons-regular-webfontRg) format("svg");
+    font-weight:400;
+    font-style:normal
+}
+.wi{
+    display:inline-block;
+    font-family:weathericons;
+    font-style:normal;
+    font-weight:400;
+    line-height:1;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale
+}
+.wi-day-cloudy-gusts:before{
+    content:"\f000"
+}
+.wi-day-cloudy-windy:before{
+    content:"\f001"
+}
+.wi-day-cloudy:before{
+    content:"\f002"
+}
+.wi-day-fog:before{
+    content:"\f003"
+}
+.wi-day-hail:before{
+    content:"\f004"
+}
+.wi-day-lightning:before{
+    content:"\f005"
+}
+.wi-day-rain-mix:before{
+    content:"\f006"
+}
+.wi-day-rain-wind:before{
+    content:"\f007"
+}
+.wi-day-rain:before{
+    content:"\f008"
+}
+.wi-day-showers:before{
+    content:"\f009"
+}
+.wi-day-snow:before{
+    content:"\f00a"
+}
+.wi-day-sprinkle:before{
+    content:"\f00b"
+}
+.wi-day-sunny-overcast:before{
+    content:"\f00c"
+}
+.wi-day-sunny:before{
+    content:"\f00d"
+}
+.wi-day-storm-showers:before{
+    content:"\f00e"
+}
+.wi-day-thunderstorm:before{
+    content:"\f010"
+}
+.wi-cloudy-gusts:before{
+    content:"\f011"
+}
+.wi-cloudy-windy:before{
+    content:"\f012"
+}
+.wi-cloudy:before{
+    content:"\f013"
+}
+.wi-fog:before{
+    content:"\f014"
+}
+.wi-hail:before{
+    content:"\f015"
+}
+.wi-lightning:before{
+    content:"\f016"
+}
