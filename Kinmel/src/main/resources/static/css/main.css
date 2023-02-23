@@ -247,3 +247,90 @@ myspace-bg{
 .soundcloud-bg{
     background-color:#f80!important
 }
+.soundcloud-bg:hover,.soundcloud-bg:focus{
+    background-color:#e67a00!important
+}
+.spotify-bg{
+    background-color:#2ebd59!important
+}
+.spotify-bg:hover,.spotify-bg:focus{
+    background-color:#29a84f!important
+}
+.squarespace-bg{
+    background-color:#222!important
+}
+.squarespace-bg:hover,.squarespace-bg:focus{
+    background-color:#151515!important
+}
+.stackoverflow-bg{
+    background-color:#fe7a15!important
+}
+.stackoverflow-bg:hover,.stackoverflow-bg:focus{
+    background-color:#f86c01!important
+}
+.stripe-bg{
+    background-color:#00afe1!important
+}
+.stripe-bg:hover,.stripe-bg:focus{
+    background-color:#009bc8!important
+}
+.stumbleupon-bg{
+    background-color:#eb4924!important
+}
+.stumbleupon-bg:hover,.stumbleupon-bg:focus{
+    background-color:#e13b15!important
+}
+.telegram-bg{
+    background-color:#08c!important
+}
+.telegram-bg:hover,.telegram-bg:focus{
+    background-color:#0077b3!important
+}
+.tumblr-bg{
+    background-color:#35465c!important
+}
+.tumblr-bg:hover,.tumblr-bg:focus{
+    background-color:#2c3a4c!important
+}
+.twitch-tv-bg{
+    background-color:#6441a5!important
+}
+.twitch-tv-bg:hover,.twitch-tv-bg:focus{
+    background-color:#593a93!important
+}
+.twitter-bg{
+    background-color:#55acee!important
+}
+.twitter-bg:hover,.twitter-bg:focus{
+    background-color:#3ea1ec!important
+}
+.vimeo-bg{
+    background-color:#162221!important
+}
+.vimeo-bg:hover,.vimeo-bg:focus{
+    background-color:#0c1312!important
+}
+.vine-bg{
+    background-color:#00b488!important
+}
+.vine-bg:hover,.vine-bg:focus{
+    background-color:#009b75!important
+}
+.wechat-bg{
+    background-color:#7bb32e!important
+}
+.wechat-bg:hover,.wechat-bg:focus{
+    background-color:#6d9f29!important
+}
+.whatsapp-bg{
+    background-color:#43d854!important
+}
+.whatsapp-bg:hover,.whatsapp-bg:focus{
+    background-color:#2ed441!important
+}
+.wordpress-bg{
+    background-color:#21759b!important
+}
+.wordpress-bg:hover,.wordpress-bg:focus{
+    background-color:#1d6586!important
+}
