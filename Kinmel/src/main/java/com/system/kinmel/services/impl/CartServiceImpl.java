@@ -170,4 +170,24 @@ public class CartServiceImpl implements CartService {
     public List<Object[]> fetchCustomer() {
         return cartRepo.fetchAllCustomer();
     }
+
+    @Override
+    public List<Integer> fetch5weeksales() {
+        return cartRepo.fetchlast5weeksales();
+    }
+
+    @Override
+    public List<Object[]> fetchlastweeksale() {
+        return cartRepo.getDailySalesLastWeek();
+    }
+
+    @Override
+    public List<Object[]> fetchproductlastweeksales() {
+        return cartRepo.getProductSalesLastWeek();
+    }
+
+    @Override
+    public List<Object[]> fetchstatusCount() {
+        return cartRepo.getStatusCountLastWeek();
+    }
 }

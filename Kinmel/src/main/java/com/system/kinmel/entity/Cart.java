@@ -5,6 +5,8 @@ import lombok.*;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
+import java.util.Date;
+
 @Builder
 @Getter
 @Setter
@@ -101,4 +103,9 @@ public class Cart {
 
     @Column
     private String shippingTown;
+
+    @Column(nullable = false, updatable = false)
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createdDate = new Date();
+
 }

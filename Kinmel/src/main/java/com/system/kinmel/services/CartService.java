@@ -28,4 +28,12 @@ public interface CartService {
     List<Cart> fetchAll();
 
     List<Object[]> fetchCustomer();
+
+    List<Integer> fetch5weeksales();
+
+    List<Object[]> fetchlastweeksale();
+
+    List<Object[]> fetchproductlastweeksales();
+
+    List<Object[]> fetchstatusCount();
 }
