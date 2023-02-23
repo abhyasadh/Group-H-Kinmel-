@@ -334,3 +334,34 @@ myspace-bg{
 .wordpress-bg:hover,.wordpress-bg:focus{
     background-color:#1d6586!important
 }
+.yahoo-bg{
+    background-color:#410093!important
+}
+.yahoo-bg:hover,.yahoo-bg:focus{
+    background-color:#36007a!important
+}
+.youtube-bg{
+    background-color:#cd201f!important
+}
+.youtube-bg:hover,.youtube-bg:focus{
+    background-color:#b71d1c!important
+}
+h6{
+    font-weight:600
+}
+h3{
+    font-weight:700
+}
+ul.list-justify>li{
+    margin-bottom:5px
+}
+ul.list-justify>li span,ul.list-justify>li strong{
+    float:right
+}
+ul.list-justify.large-number>li{
+    margin-bottom:15px
+}
+ul.list-justify.large-number span{
+    font-size:32px;
+    line-height:1
+}
