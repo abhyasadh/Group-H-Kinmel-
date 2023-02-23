@@ -1130,3 +1130,108 @@ body.waitMe_body .waitMe_container.text>div{
   transform:rotate(225deg);
   animation:win8 5.5s infinite
 }
+
+.waitMe_container .waitMe_progress.win8>div>div{
+  width:15%;
+  height:15%;
+  border-radius:50%;
+  position:absolute
+}
+.waitMe_container .waitMe_progress.win8 .waitMe_progress_elem2{
+  animation-delay:.24s
+}
+.waitMe_container .waitMe_progress.win8 .waitMe_progress_elem3{
+  animation-delay:.48s
+}
+.waitMe_container .waitMe_progress.win8 .waitMe_progress_elem4{
+  animation-delay:.72s
+}
+.waitMe_container .waitMe_progress.win8 .waitMe_progress_elem5{
+  animation-delay:.96s
+}
+@keyframes win8{
+  0%{
+      transform:rotate(225deg);
+      animation-timing-function:ease-out
+  }
+  7%{
+      opacity:1;
+      transform:rotate(345deg);
+      animation-timing-function:linear
+  }
+  30%{
+      transform:rotate(455deg);
+      animation-timing-function:ease-in-out
+  }
+  39%{
+      transform:rotate(690deg);
+      animation-timing-function:linear
+  }
+  70%{
+      opacity:1;
+      transform:rotate(815deg);
+      animation-timing-function:ease-out
+  }
+  75%{
+      transform:rotate(945deg);
+      animation-timing-function:ease-out
+  }
+  76%{
+      opacity:0;
+      transform:rotate(945deg)
+  }
+  100%{
+      opacity:0;
+      transform:rotate(945deg)
+  }
+}
+.waitMe_container .waitMe_progress.win8_linear{
+  margin:auto;
+  width:150px;
+  height:6px
+}
+.waitMe_container .waitMe_progress.win8_linear>div{
+  width:100%;
+  height:100%;
+  left:0;
+  opacity:0;
+  position:absolute;
+  animation:win8_linear 3s infinite
+}
+.waitMe_container .waitMe_progress.win8_linear>div>div{
+  width:4%;
+  height:100%;
+  border-radius:50%
+}
+.waitMe_container .waitMe_progress.win8_linear .waitMe_progress_elem2{
+  animation-delay:.3s
+}
+.waitMe_container .waitMe_progress.win8_linear .waitMe_progress_elem3{
+  animation-delay:.6s
+}
+.waitMe_container .waitMe_progress.win8_linear .waitMe_progress_elem4{
+  animation-delay:.9s
+}
+.waitMe_container .waitMe_progress.win8_linear .waitMe_progress_elem5{
+  animation-delay:1.2s
+}
+@keyframes win8_linear{
+  0%,100%{
+      transform:translateX(0);
+      animation-timing-function:ease-out
+  }
+  10%{
+      opacity:1;
+      transform:translateX(33.333%);
+      animation-timing-function:linear
+  }
+  50%{
+      opacity:1;
+      transform:translateX(53.333%);
+      animation-timing-function:ease-in-out
+  }
+  60%{
+      opacity:0;
+      transform:translateX(86.666%)
+  }
+}
