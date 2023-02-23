@@ -346,3 +346,152 @@
 .wi-night-snow-thunderstorm:before{
   content:"\f06c"
 }
+
+.wi-night-alt-snow-thunderstorm:before{
+  content:"\f06d"
+}
+.wi-solar-eclipse:before{
+  content:"\f06e"
+}
+.wi-lunar-eclipse:before{
+  content:"\f070"
+}
+.wi-meteor:before{
+  content:"\f071"
+}
+.wi-hot:before{
+  content:"\f072"
+}
+.wi-hurricane:before{
+  content:"\f073"
+}
+.wi-smog:before{
+  content:"\f074"
+}
+.wi-alien:before{
+  content:"\f075"
+}
+.wi-snowflake-cold:before{
+  content:"\f076"
+}
+.wi-stars:before{
+  content:"\f077"
+}
+.wi-night-partly-cloudy:before{
+  content:"\f083"
+}
+.wi-umbrella:before{
+  content:"\f084"
+}
+.wi-day-windy:before{
+  content:"\f085"
+}
+.wi-night-alt-cloudy:before{
+  content:"\f086"
+}
+.wi-up-left:before{
+  content:"\f087"
+}
+.wi-down-right:before{
+  content:"\f088"
+}
+.wi-time-12:before{
+  content:"\f089"
+}
+.wi-time-1:before{
+  content:"\f08a"
+}
+.wi-time-2:before{
+  content:"\f08b"
+}
+.wi-time-3:before{
+  content:"\f08c"
+}
+.wi-time-4:before{
+  content:"\f08d"
+}
+.wi-time-5:before{
+  content:"\f08e"
+}
+.wi-time-6:before{
+  content:"\f08f"
+}
+.wi-time-7:before{
+  content:"\f090"
+}
+.wi-time-8:before{
+  content:"\f091"
+}
+.wi-time-9:before{
+  content:"\f092"
+}
+.wi-time-10:before{
+  content:"\f093"
+}
+.wi-time-11:before{
+  content:"\f094"
+}
+.wi-day-sleet:before{
+  content:"\f0b2"
+}
+.wi-night-sleet:before{
+  content:"\f0b3"
+}
+.wi-night-alt-sleet:before{
+  content:"\f0b4"
+}
+.wi-sleet:before{
+  content:"\f0b5"
+}
+.wi-day-haze:before{
+  content:"\f0b6"
+}
+.wi-beafort-0:before{
+  content:"\f0b7"
+}
+.wi-beafort-1:before{
+  content:"\f0b8"
+}
+.wi-beafort-2:before{
+  content:"\f0b9"
+}
+.wi-beafort-3:before{
+  content:"\f0ba"
+}
+.wi-beafort-4:before{
+  content:"\f0bb"
+}
+.wi-beafort-5:before{
+  content:"\f0bc"
+}
+.wi-beafort-6:before{
+  content:"\f0bd"
+}
+.wi-beafort-7:before{
+  content:"\f0be"
+}
+.wi-beafort-8:before{
+  content:"\f0bf"
+}
+.wi-beafort-9:before{
+  content:"\f0c0"
+}
+.wi-beafort-10:before{
+  content:"\f0c1"
+}
+.wi-beafort-11:before{
+  content:"\f0c2"
+}
+.wi-beafort-12:before{
+  content:"\f0c3"
+}
+.wi-wind-default:before{
+  content:"\f0b1"
+}
+.wi-wind-default._0-deg{
+  -webkit-transform:rotate(0deg);
+  -moz-transform:rotate(0deg);
+  -ms-transform:rotate(0deg);
+  -o-transform:rotate(0deg);
+  transform:rotate(0deg)
+}
