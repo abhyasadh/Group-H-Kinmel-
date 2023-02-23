@@ -3426,3 +3426,95 @@ select.form-control:not([size]):not([multiple]){
 .blockquote.blockquote-primary{
   border-color:#00bcd2
 }
+
+.blockquote.blockquote-primary small{
+  color:#00bcd2
+}
+.blockquote.blockquote-info{
+  border-color:#3c89da
+}
+.blockquote.blockquote-info small{
+  color:#3c89da
+}
+.blockquote.blockquote-danger{
+  border-color:#de4848
+}
+.blockquote.blockquote-danger small{
+  color:#de4848
+}
+.blockquote small{
+  font-size:.93em;
+  text-transform:uppercase
+}
+.btn{
+  -webkit-transition:all .3s ease-in-out;
+  -moz-transition:all .3s ease-in-out;
+  -ms-transition:all .3s ease-in-out;
+  -o-transition:all .3s ease-in-out;
+  transition:all .3s ease-in-out
+}
+.btn:hover{
+  -moz-box-shadow:0 5px 10px 0 rgba(0,0,0,.2);
+  -webkit-box-shadow:0 5px 10px 0 rgba(0,0,0,.2);
+  box-shadow:0 5px 10px 0 rgba(0,0,0,.2)
+}
+.btn-default{
+  color:#777;
+  background-color:#fff;
+  border-color:#eee;
+  padding:6px 18px
+}
+.btn-default.btn-sm{
+  padding:4px 10px
+}
+#jqstooltip{
+  background-color:#fff;
+  border-color:#ddd;
+  color:#5a5a5a
+}
+#jqstooltip .jqsfield{
+  color:#5a5a5a
+}
+.ct-chart{
+  position:relative
+}
+.ct-series .ct-line{
+  stroke-width:3px
+}
+.ct-series .ct-bar{
+  stroke-width:15px
+}
+.ct-series .ct-point{
+  stroke-width:10px;
+  stroke-linecap:circle
+}
+.ct-series-a .ct-line,.ct-series-a .ct-bar,.ct-series-a .ct-point{
+  stroke:#6ebdd1
+}
+.ct-series-a .ct-area,.ct-series-a .ct-slice-donut-solid,.ct-series-a .ct-slice-pie,.ct-series-a .ct-bar{
+  fill:#6ebdd1
+}
+.ct-series-b .ct-line,.ct-series-b .ct-bar,.ct-series-b .ct-point{
+  stroke:#f9ab6c
+}
+.ct-series-b .ct-area,.ct-series-b .ct-slice-donut-solid,.ct-series-b .ct-slice-pie,.ct-series-b .ct-bar{
+  fill:#f9ab6c
+}
+.ct-series-c .ct-line,.ct-series-c .ct-bar,.ct-series-c .ct-point{
+  stroke:#afc979
+}
+.ct-series-c .ct-area,.ct-series-c .ct-slice-donut-solid,.ct-series-c .ct-slice-pie,.ct-series-c .ct-bar{
+  fill:#afc979
+}
+.ct-series-d .ct-line,.ct-series-d .ct-bar,.ct-series-d .ct-point{
+  stroke:#ab7df6
+}
+.ct-series-d .ct-area,.ct-series-d .ct-slice-donut-solid,.ct-series-d .ct-slice-pie,.ct-series-d .ct-bar{
+  fill:#ab7df6
+}
+.ct-series-e .ct-line,.ct-series-e .ct-bar,.ct-series-e .ct-point{
+  stroke:#5cc196
+}
+.ct-series-e .ct-area,.ct-series-e .ct-slice-donut-solid,.ct-series-e .ct-slice-pie,.ct-series-e .ct-bar{
+  fill:#5cc196
+}
