@@ -3640,3 +3640,99 @@ select.form-control:not([size]):not([multiple]){
   background-color:#6ebdd1;
   border-color:#6ebdd1
 }
+
+.ct-legend .ct-series-1:before{
+  background-color:#f9ab6c;
+  border-color:#f9ab6c
+}
+.ct-legend .ct-series-2:before{
+  background-color:#afc979;
+  border-color:#afc979
+}
+.ct-legend .ct-series-3:before{
+  background-color:#ab7df6;
+  border-color:#ab7df6
+}
+.ct-legend .ct-series-4:before{
+  background-color:#5cc196;
+  border-color:#5cc196
+}
+.ct-legend .ct-series-5:before{
+  background-color:#d17905;
+  border-color:#d17905
+}
+.ct-legend .ct-series-6:before{
+  background-color:#453d3f;
+  border-color:#453d3f
+}
+.ct-legend .ct-series-7:before{
+  background-color:#59922b;
+  border-color:#59922b
+}
+.ct-legend .ct-series-8:before{
+  background-color:#0544d3;
+  border-color:#0544d3
+}
+.ct-legend .ct-series-9:before{
+  background-color:#6b0392;
+  border-color:#6b0392
+}
+.ct-legend .ct-series-10:before{
+  background-color:#f05b4f;
+  border-color:#f05b4f
+}
+.ct-legend .ct-series-11:before{
+  background-color:#dda458;
+  border-color:#dda458
+}
+.ct-legend .ct-series-12:before{
+  background-color:#eacf7d;
+  border-color:#eacf7d
+}
+.ct-legend .ct-series-13:before{
+  background-color:#86797d;
+  border-color:#86797d
+}
+.ct-legend .ct-series-14:before{
+  background-color:#b2c326;
+  border-color:#b2c326
+}
+.z500px-color{
+  color:#0099e5!important
+}
+.about-me-color{
+  color:#00405d!important
+}
+.airbnb-color{
+  color:#fd5c63!important
+}
+.alphabet-color{
+  color:#ed1c24!important
+}
+.amazon-color{
+  color:#f90!important
+}
+.american-express-color{
+  color:#002663!important
+}
+.aol-color{
+  color:#ff0b00!important
+}
+.behance-color{
+  color:#1769ff!important
+}
+.bing-color{
+  color:#ffb900!important
+}
+.bitbucket-color{
+  color:#205081!important
+}
+.bitly-color{
+  color:#ee6123!important
+}
+.blogger-color{
+  color:#f57d00!important
+}
+.booking-com-color{
+  color:#003580!important
+}
