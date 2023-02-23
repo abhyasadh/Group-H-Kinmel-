@@ -36,4 +36,10 @@ public interface CartService {
     List<Object[]> fetchproductlastweeksales();
 
     List<Object[]> fetchstatusCount();
+
+    List<String> distinctstatus();
+
+    List<Cart> cartdetails();
+
+    void updatecartstatus(Integer id,String status);
 }

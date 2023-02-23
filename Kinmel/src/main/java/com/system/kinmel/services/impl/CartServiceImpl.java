@@ -190,4 +190,19 @@ public class CartServiceImpl implements CartService {
     public List<Object[]> fetchstatusCount() {
         return cartRepo.getStatusCountLastWeek();
     }
+
+    @Override
+    public List<String> distinctstatus() {
+        return cartRepo.findDistinctStatuses();
+    }
+
+    @Override
+    public List<Cart> cartdetails() {
+        return cartRepo.findallCart();
+    }
+
+    @Override
+    public void updatecartstatus(Integer id, String status) {
+        cartRepo.updateTaskStatus(id, status);
+    }
 }
