@@ -3410,3 +3410,15 @@ ul.list-justify.large-number span{
 .theme-orange .ct-series-f .ct-line,.theme-orange .ct-series-f .ct-bar,.theme-orange .ct-series-f .ct-point{
     stroke:#2ac151
 }
+.theme-orange .ct-legend .ct-series-3:before{
+    background-color:#e4dbc2;
+    border-color:#e4dbc2
+}
+.theme-orange .ct-legend .ct-series-4:before{
+    background-color:#1a79ee;
+    border-color:#1a79ee
+}
+.theme-orange .ct-legend .ct-series-5:before{
+    background-color:#2ac151;
+    border-color:#2ac151
+}
