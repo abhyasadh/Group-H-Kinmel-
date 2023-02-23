@@ -2694,3 +2694,166 @@ label{
   font-size:13px;
   color:#929292
 }
+
+.multiselect-custom+.btn-group ul.multiselect-container>li>a{
+  padding:5px 15px;
+  display:block;
+  outline:none
+}
+.multiselect-custom+.btn-group ul.multiselect-container>li>a label.checkbox{
+  padding:0;
+  font-size:14px
+}
+.multiselect-custom+.btn-group ul.multiselect-container>li>a label.checkbox:before{
+  display:inline-block;
+  vertical-align:middle;
+  *vertical-align:auto;
+  *zoom:1;
+  *display:inline;
+  position:relative;
+  bottom:1px;
+  content:"";
+  width:16px;
+  height:16px;
+  margin-right:10px;
+  border:1px solid #ccc;
+  background-color:#fafafa
+}
+.multiselect-custom+.btn-group ul.multiselect-container>li>a label.checkbox input[type=checkbox]{
+  display:none
+}
+.multiselect-custom+.btn-group ul.multiselect-container>li.active>a label.checkbox:before{
+  font-family:FontAwesome;
+  content:'\f00c';
+  font-size:12px;
+  color:#99a1a7;
+  text-align:center;
+  line-height:15px;
+  background-color:#f0f0f0
+}
+.multiselect-custom+.btn-group ul.multiselect-container>li.active .checkbox{
+  color:#fff
+}
+.multiselect-custom+.btn-group ul.multiselect-container>li:hover{
+  background-color:#f7f7f7
+}
+.multiselect-custom+.btn-group ul.multiselect-container>li>a{
+  padding:5px 15px;
+  display:block;
+  outline:none
+}
+.multiselect-custom+.btn-group ul.multiselect-container>li>a label.radio{
+  padding:0
+}
+.multiselect-custom+.btn-group ul.multiselect-container>li>a label.radio:before{
+  display:inline-block;
+  vertical-align:middle;
+  *vertical-align:auto;
+  *zoom:1;
+  *display:inline;
+  -webkit-border-radius:8px;
+  -moz-border-radius:8px;
+  border-radius:8px;
+  position:relative;
+  bottom:1px;
+  content:"";
+  width:16px;
+  height:16px;
+  margin-right:10px;
+  border:1px solid #ccc;
+  background-color:#fafafa
+}
+.multiselect-custom+.btn-group ul.multiselect-container>li>a label.radio input[type=radio]{
+  display:none
+}
+.multiselect-custom+.btn-group ul.multiselect-container>li.active>a label.radio:before{
+  font-family:FontAwesome;
+  content:'\f111';
+  color:#99a1a7;
+  font-size:8px;
+  text-align:center;
+  line-height:15px
+}
+.multiselect-custom+.btn-group ul.multiselect-container>li.active .radio{
+  color:#fff
+}
+.multiselect-custom+.btn-group ul.multiselect-container>li:hover{
+  background-color:#f7f7f7
+}
+.multiselect-search{
+  -moz-border-radius-topright:2px!important;
+  -webkit-border-top-right-radius:2px!important;
+  border-top-right-radius:2px!important;
+  -moz-border-radius-bottomright:2px!important;
+  -webkit-border-bottom-right-radius:2px!important;
+  border-bottom-right-radius:2px!important
+}
+.btn.multiselect-clear-filter{
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+  position:absolute;
+  top:2px;
+  right:0;
+  padding-left:0;
+  padding-right:0;
+  border:none;
+  background:0 0;
+  z-index:9!important;
+  outline:none
+}
+.btn.multiselect-clear-filter:hover,.btn.multiselect-clear-filter:focus{
+  background:0 0;
+  outline:none
+}
+.multiselect_div>.btn-group{
+  display:block
+}
+.multiselect_div>.btn-group .btn{
+  text-align:left;
+  position:relative;
+  width:100%;
+  border:1px solid #ced4da
+}
+.multiselect_div>.btn-group .btn:hover{
+  box-shadow:none
+}
+.multiselect_div>.btn-group .btn:after{
+  position:absolute;
+  right:15px;
+  top:15px
+}
+.multiselect_div>.btn-group ul{
+  width:100%
+}
+.datepicker{
+  padding:10px;
+  font-size:14px
+}
+.datepicker table tr td.active.active,.datepicker table tr td.active.highlighted.active,.datepicker table tr td.active.highlighted:active,.datepicker table tr td.active.active:active{
+  background-color:#5c8ed4;
+  border-color:#3c78cb
+}
+.range-to{
+  padding:4px 10px!important;
+  background:#ced4da;
+  margin:0!important
+}
+.parsley-errors-list{
+  margin-top:8px
+}
+.parsley-errors-list li{
+  color:#de4848;
+  font-size:.9em;
+  margin-top:3px
+}
+input.parsley-error,select.parsley-error,textarea.parsley-error{
+  background-color:#fbf5f5;
+  border-color:#efd8d8
+}
+.form-control.parsley-error:focus{
+  border-color:#e1b3b3
+}
+.form-control.parsley-success:focus{
+  border-color:#afd99d
+}
