@@ -2357,3 +2357,201 @@ html.fullscreen-bg,html.fullscreen-bg body,html.fullscreen-bg #wrapper{
 .sidebar-nav ul{
   list-style:none
 }
+
+.sidebar-nav .metismenu{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column
+}
+.sidebar-nav .metismenu>li{
+  -webkit-box-flex:1;
+  -ms-flex:1 1 0%;
+  flex:1 1 0%;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  position:relative
+}
+.sidebar-nav .metismenu>li.active>a{
+  background-color:#f1f1f1
+}
+.sidebar-nav .metismenu>li .active a{
+  font-weight:700
+}
+.sidebar-nav .metismenu>li i{
+  position:relative;
+  top:2px;
+  width:31px
+}
+.sidebar-nav .metismenu a{
+  -webkit-transition:all .3s ease-out;
+  -moz-transition:all .3s ease-out;
+  -ms-transition:all .3s ease-out;
+  -o-transition:all .3s ease-out;
+  transition:all .3s ease-out;
+  color:#999;
+  border-radius:.1875rem;
+  position:relative;
+  padding:13px 15px;
+  outline-width:0
+}
+.sidebar-nav .metismenu ul a{
+  color:#777;
+  font-size:14px;
+  padding:10px 15px 10px 47px;
+  position:relative
+}
+.sidebar-nav .metismenu ul a::before{
+  content:'--';
+  position:absolute;
+  left:19px
+}
+.sidebar-nav .metismenu ul ul a{
+  padding:10px 15px 10px 70px
+}
+.sidebar-nav .metismenu ul.collapse a:hover,.sidebar-nav .metismenu ul.collapse a:focus{
+  text-decoration:none
+}
+.sidebar-nav .metismenu a:hover,.sidebar-nav .metismenu a:focus{
+  text-decoration:none;
+  background:#24242f
+}
+.rightbar{
+  -moz-box-shadow:0 5px 10px 0 rgba(0,0,0,.3);
+  -webkit-box-shadow:0 5px 10px 0 rgba(0,0,0,.3);
+  box-shadow:0 5px 10px 0 rgba(0,0,0,.3);
+  -webkit-transition:all .3s ease-in-out;
+  -moz-transition:all .3s ease-in-out;
+  -ms-transition:all .3s ease-in-out;
+  -o-transition:all .3s ease-in-out;
+  transition:all .3s ease-in-out;
+  position:fixed;
+  right:-320px;
+  top:0;
+  width:300px;
+  background:#fff;
+  height:100vh;
+  z-index:13;
+  padding:15px 20px
+}
+@media screen and (max-width:1200px){
+  .rightbar{
+      width:280px
+  }
+}
+.rightbar.open{
+  right:0
+}
+.rightbar .nav{
+  border-bottom:1px solid #eee
+}
+.rightbar .card{
+  box-shadow:none;
+  border:0
+}
+.rightbar .card h6{
+  font-size:15px
+}
+ul.choose-skin li div{
+  -webkit-transition:all .3s ease-in-out;
+  -moz-transition:all .3s ease-in-out;
+  -ms-transition:all .3s ease-in-out;
+  -o-transition:all .3s ease-in-out;
+  transition:all .3s ease-in-out;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+  height:40px;
+  width:55px;
+  overflow:hidden;
+  position:relative;
+  box-shadow:0 1px 2px 0 rgba(0,0,0,.2)
+}
+ul.choose-skin li div:before{
+  content:'';
+  height:5px;
+  width:40px;
+  position:absolute;
+  right:0;
+  top:0
+}
+ul.choose-skin li div:hover{
+  cursor:pointer;
+  box-shadow:0 2px 8px 0 rgba(0,0,0,.3)
+}
+ul.choose-skin li div.purple{
+  border-left:15px solid #fff;
+  background:#eee
+}
+ul.choose-skin li div.purple::before{
+  background:#6462ef
+}
+ul.choose-skin li div.green{
+  border-left:15px solid #fff;
+  background:#eee
+}
+ul.choose-skin li div.green::before{
+  background:#50d38a
+}
+ul.choose-skin li div.orange{
+  border-left:15px solid #fff;
+  background:#eee
+}
+ul.choose-skin li div.orange::before{
+  background:#feb800
+}
+ul.choose-skin li div.blue{
+  border-left:15px solid #444;
+  background:#eee
+}
+ul.choose-skin li div.blue::before{
+  background:#0e9be2
+}
+ul.choose-skin li div.cyan{
+  border-left:15px solid #444;
+  background:#eee
+}
+ul.choose-skin li div.cyan::before{
+  background:#00bcd2
+}
+ul.choose-skin li div.blush{
+  border-left:15px solid #444;
+  background:#eee
+}
+ul.choose-skin li div.blush::before{
+  background:#e25985
+}
+ul.choose-skin li.active div::after{
+  position:absolute;
+  color:#444;
+  font-size:12px;
+  top:15px;
+  left:15px;
+  content:'\f00c';
+  font-family:fontawesome
+}
+label{
+  font-weight:600
+}
+.search-form{
+  position:relative
+}
+.search-form .btn{
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+  position:absolute;
+  top:10px;
+  right:15px;
+  border:none;
+  color:#999;
+  background-color:transparent
+}
