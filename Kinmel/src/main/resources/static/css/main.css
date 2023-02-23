@@ -3093,3 +3093,190 @@ ul.list-justify.large-number span{
     padding:5px 10px;
     margin:5px
 }
+
+.fc .fc-view-container .fc-view.fc-basic-view>table tbody tr td.fc-day-number.fc-state-highlight,.fc .fc-view-container .fc-view.fc-agenda>table tbody tr td.fc-day-number.fc-state-highlight{
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    background-color:#ee2558;
+    color:#fff;
+    padding:4px 6px;
+    float:right
+}
+.fc .fc-view-container .fc-view.fc-basic-view>table tbody tr td:first-child.fc-widget-content,.fc .fc-view-container .fc-view.fc-agenda>table tbody tr td:first-child.fc-widget-content{
+    border-left:1px solid #eee
+}
+.fc .fc-view-container .fc-view.fc-basic-view .fc-body .fc-row .fc-bg,.fc .fc-view-container .fc-view.fc-agenda .fc-body .fc-row .fc-bg{
+    border-bottom:1px solid #eee
+}
+.fc .fc-view-container .fc-view.fc-basic-view .fc-body .fc-row:last-of-type .fc-bg,.fc .fc-view-container .fc-view.fc-agenda .fc-body .fc-row:last-of-type .fc-bg{
+    border-bottom:0
+}
+.fc .fc-view-container .fc-view.fc-basic-view .fc-agenda-allday .fc-agenda-axis,.fc .fc-view-container .fc-view.fc-basic-view .fc-agenda-allday .fc-agenda-gutter,.fc .fc-view-container .fc-view.fc-agenda .fc-agenda-allday .fc-agenda-axis,.fc .fc-view-container .fc-view.fc-agenda .fc-agenda-allday .fc-agenda-gutter{
+    border-left:1px solid #eee;
+    border-right:1px solid #eee;
+    background-color:#f0f0f0;
+    color:#444;
+    font-weight:300;
+    padding:10px 5px
+}
+.fc .fc-view-container .fc-view.fc-basic-view>table>tbody>tr>td.fc-state-highlight,.fc .fc-view-container .fc-view.fc-agenda>table>tbody>tr>td.fc-state-highlight{
+    background:#f0f0f0
+}
+.fc .fc-view-container .fc-view.fc-basic-view>table>tbody>tr>td.fc-sat,.fc .fc-view-container .fc-view.fc-agenda>table>tbody>tr>td.fc-sat{
+    border-right:0
+}
+.fc .fc-view-container .fc-view.fc-basic-view .fc-agenda-slots tr,.fc .fc-view-container .fc-view.fc-agenda .fc-agenda-slots tr{
+    line-height:35px
+}
+.fc .fc-view-container .fc-view.fc-basic-view .fc-agenda-slots tr th,.fc .fc-view-container .fc-view.fc-agenda .fc-agenda-slots tr th{
+    background-color:#f0f0f0;
+    color:#444;
+    font-weight:300;
+    border:0;
+    border-left:1px solid #eee;
+    border-right:1px solid #eee;
+    padding-top:10px
+}
+.fc .fc-view-container .fc-view.fc-basic-view .fc-agenda-slots tr td.fc-widget-content,.fc .fc-view-container .fc-view.fc-agenda .fc-agenda-slots tr td.fc-widget-content{
+    border-bottom:1px solid #eee;
+    line-height:50px
+}
+.fc .fc-view-container .fc-view.fc-basic-view .fc-agenda-slots tr td.fc-widget-content:last-child,.fc .fc-view-container .fc-view.fc-agenda .fc-agenda-slots tr td.fc-widget-content:last-child{
+    border-right:0
+}
+.fc .fc-view-container .fc-view.fc-basic-view .fc-agenda-slots tr.fc-minor td.fc-widget-content,.fc .fc-view-container .fc-view.fc-agenda .fc-agenda-slots tr.fc-minor td.fc-widget-content{
+    border-bottom:1px solid #eee
+}
+.fc .fc-view-container .fc-view.fc-basic-view .fc-agenda-divider,.fc .fc-view-container .fc-view.fc-agenda .fc-agenda-divider{
+    border:1px solid #eee
+}
+.fc .fc-view-container .fc-view.fc-basic-view .fc-agenda-divider .fc-agenda-divider-inner,.fc .fc-view-container .fc-view.fc-agenda .fc-agenda-divider .fc-agenda-divider-inner{
+    background-color:#f0f0f0;
+    height:3px
+}
+.fc .fc-view-container .fc-list-view .fc-list-item{
+    color:#f0f0f0
+}
+.fc .fc-view-container .fc-other-month{
+    background:#f7f7f7
+}
+.fc .fc-view-container .fc-basic-view .fc-day-number,.fc .fc-view-container .fc-basic-view .fc-week-number{
+    float:left;
+    padding:10px 0 5px 10px
+}
+.fc .fc-popover{
+    border-radius:.55rem;
+    box-shadow:0 10px 50px 0 rgba(0,0,0,.2);
+    border:none;
+    padding:10px
+}
+.fc .fc-popover .fc-event-container{
+    padding:0
+}
+.fc .fc-popover .fc-event{
+    padding:4px 8px;
+    margin:2px 0
+}
+.fc .fc-agendaWeek-view .fc-head .fc-widget-header span,.fc .fc-agendaDay-view .fc-head .fc-widget-header span,.fc .fc-listWeek-view .fc-head .fc-widget-header span{
+    padding:10px;
+    display:inline-block
+}
+.fc .fc-agendaWeek-view .fc-unthemed td,.fc .fc-agendaDay-view .fc-unthemed td,.fc .fc-listWeek-view .fc-unthemed td{
+    border-color:#f4f7f6
+}
+@media only screen and (max-width:420px){
+    .fc-toolbar .fc-right{
+        display:none
+    }
+    .fc-toolbar .fc-left{
+        width:100%;
+        margin-bottom:15px
+    }
+    .fc .fc-toolbar .fc-today-button{
+        float:right
+    }
+}
+.pricing{
+    color:#777
+}
+.pricing li{
+    list-style:none;
+    padding:13px
+}
+.pricing li:first-child,.pricing li:last-child{
+    padding:20px 13px
+}
+.pricing li:nth-last-child(2){
+    padding:30px 13px
+}
+.pricing li+li{
+    border-top:1px solid #f0f0f0
+}
+.pricing big{
+    font-size:32px
+}
+.pricing h3{
+    font-size:36px
+}
+.pricing span{
+    color:#bdbdbd;
+    font-weight:400
+}
+.pricing.active big,.pricing.active h3{
+    color:#1d8ecd
+}
+.pricing2 .pricing-plan{
+    border-bottom:none;
+    flex-basis:100%;
+    padding:25px 0
+}
+.pricing2 .pricing-plan .pricing-img{
+    max-width:100%
+}
+.pricing2 .pricing-plan .pricing-header{
+    color:#777;
+    font-weight:600;
+    letter-spacing:1px
+}
+.pricing2 .pricing-plan .pricing-features{
+    letter-spacing:1px;
+    margin:50px 0 25px;
+    line-height:30px;
+    list-style:none
+}
+.pricing2 .pricing-plan .pricing-price{
+    display:block;
+    font-size:32px;
+    font-weight:700
+}
+.pricing3 .pricing-option{
+    padding:20px
+}
+.pricing3 .pricing-option i{
+    font-size:60px
+}
+.pricing3 .pricing-option .price{
+    font-size:2rem;
+    text-transform:uppercase;
+    position:relative
+}
+.pricing3 .pricing-option .price b{
+    position:absolute;
+    font-size:1rem;
+    font-weight:600
+}
+.invoice1 .logo,.invoice1 .clientlogo{
+    float:left;
+    height:70px;
+    width:70px
+}
+.invoice1 .info{
+    float:left
+}
+.invoice1 .invoice-top .title{
+    float:right
+}
+.invoice1 .invoice-mid .info{
+    width:calc(100% - 90px)
+}
