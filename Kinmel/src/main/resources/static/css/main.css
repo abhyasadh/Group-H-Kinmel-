@@ -100,3 +100,33 @@
 .kik-bg:hover,.kik-bg:focus{
     background-color:#73a71f!important
 }
+.lastfm-bg{
+    background-color:#d51007!important
+}
+.lastfm-bg:hover,.lastfm-bg:focus{
+    background-color:#bc0e06!important
+}
+.line-bg{
+    background-color:#00c300!important
+}
+.line-bg:hover,.line-bg:focus{
+    background-color:#0a0!important
+}
+.linkedin-bg{
+    background-color:#0077b5!important
+}
+.linkedin-bg:hover,.linkedin-bg:focus{
+    background-color:#00669c!important
+}
+.mail-ru-bg{
+    background-color:#168de2!important
+}
+.mail-ru-bg:hover,.mail-ru-bg:focus{
+    background-color:#147fcb!important
+}
+.mailchimp-bg{
+    background-color:#2c9ab7!important
+}
+.mailchimp-bg:hover,.mailchimp-bg:focus{
+    background-color:#2789a2!important
+}
