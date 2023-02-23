@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>DashBoard</title>
+
+    <link rel="stylesheet" th:href="@{~/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{~/css/main.css}">
+    <link rel="stylesheet" th:href="@{~/css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{~/js/vendor/dropify/css/dropify.min.css}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+
+
+    <!-- Nestable CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nestable2/dist/jquery.nestable.min.css">
+
+    <!-- Nestable JS -->
+    <script src="https://cdn.jsdelivr.net/npm/nestable2/dist/jquery.nestable.min.js"></script>
+
+<style>
+    .dd-handle{
+        height: 125px;
+    }
+</style>
+
+
+</head>
+
+<body>
+
+<div th:replace="fragments/admindashboard.html :: sidenav"></div>
+
+
+
+<div id="wrapper">
+
+    <div id="main-content" class="taskboard">
+        <div class="block-header">
+            <div class="row clearfix">
+                <div class="col-md-6 col-sm-12">
+                    <h2>TaskBoard</h2>
+                </div>
+                <div class="col-md-6 col-sm-12 text-right">
+
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row clearfix">
+                <div class="col-lg-4 col-md-12" th:each="status : ${status}">
+                    <div class="card planned_task">
+                        <div class="header">
+                            <h2 th:text = "${status}"></h2>
+                        </div>
+                        <div class="body">
+                            <div class="dd" data-plugin="nestable">
+                                <ol class="dd-list">
+                                    <li class="dd-item" th:each = "cart : ${details}" th:if = "${cart.status == status}" th:data-id="${cart.id}"  style="margin-bottom: 20px;">
+                                        <div class="dd-handle">
+                                            <h4>Order id : <span th:text="${cart.id}"></span></h4>
+                                            <h5 th:text="${cart.product.product_name}"></h5>
+                                            <p>No.of Quantity  = <span th:text="${cart.quantity}"></span></p>
+
+                                        </div>
+
+
+                                    </li>
+
+
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function(){
+        $('.dd').nestable({
+            group: 1,
+            maxDepth: 2
+        });
+
+        $('.dd').on('change', function() {
+            // update the order of tasks
+            var data = $('.dd').nestable('serialize');
+
+            var id = data[0].id;
+            var status = $(this).closest('.planned_task').find('.header h2').text().trim();
+
+            // do something with the updated task order
+
+            $.ajax({
+                type: "POST",
+                url: "/admin/update-cart-status",
+                data:{
+                    cart_id : parseInt(id),
+                    status : status
+                },
+                success: function(response) {
+                    // Handle the server response
+                    console.log("CHANGED FINALLY")
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.error("Error updating task status: " + textStatus, errorThrown.message);
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
