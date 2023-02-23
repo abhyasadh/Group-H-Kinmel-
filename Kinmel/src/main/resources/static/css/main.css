@@ -55,3 +55,24 @@
 .flixster-bg{
     background-color:#2971b2!important
 }
+.flixster-bg:hover,.flixster-bg:focus{
+    background-color:#24649d!important
+}
+.foursquare-bg{
+    background-color:#0732a2!important
+}
+.foursquare-bg:hover,.foursquare-bg:focus{
+    background-color:#062a8a!important
+}
+.github-bg{
+    background-color:#333!important
+}
+.github-bg:hover,.github-bg:focus{
+    background-color:#262626!important
+}
+.google-bg{
+    background-color:#4285f4!important
+}
+.google-bg:hover,.google-bg:focus{
+    background-color:#2a75f3!important
+}
