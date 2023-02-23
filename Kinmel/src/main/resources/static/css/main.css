@@ -3956,3 +3956,40 @@ select.form-control:not([size]):not([multiple]){
 .about-me-bg{
   background-color:#00405d!important
 }
+
+.about-me-bg:hover,.about-me-bg:focus{
+  background-color:#002e44!important
+}
+.airbnb-bg{
+  background-color:#fd5c63!important
+}
+.airbnb-bg:hover,.airbnb-bg:focus{
+  background-color:#fd434b!important
+}
+.alphabet-bg{
+  background-color:#ed1c24!important
+}
+.alphabet-bg:hover,.alphabet-bg:focus{
+  background-color:#de1219!important
+}
+.amazon-bg{
+  background-color:#f90!important
+}
+.amazon-bg:hover,.amazon-bg:focus{
+  background-color:#e68a00!important
+}
+.american-express-bg{
+  background-color:#002663!important
+}
+.american-express-bg:hover,.american-express-bg:focus{
+  background-color:#001c4a!important
+}
+.aol-bg{
+  background-color:#ff0b00!important
+}
+.aol-bg:hover,.aol-bg:focus{
+  background-color:#e60a00!important
+}
+.behance-bg{
+  background-color:#1769ff!important
+}
