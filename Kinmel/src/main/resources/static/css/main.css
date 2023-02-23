@@ -3323,3 +3323,25 @@ ul.list-justify.large-number span{
 .theme-orange .sidebar-nav .metismenu .has-arrow:after{
     color:#e8e8e8
 }
+
+.theme-orange #left-sidebar .navbar-brand{
+    border-color:#e8e8e8
+}
+.theme-orange #left-sidebar .navbar-brand span{
+    color:#feb800
+}
+.theme-orange #left-sidebar .user-account{
+    color:#fff
+}
+.theme-orange #left-sidebar .user-account .user_div{
+    border-color:#e8e8e8
+}
+.theme-orange #left-sidebar .user-account .user_div .user-photo{
+    border-color:#feb800
+}
+.theme-orange #left-sidebar .user-account .dropdown-menu{
+    background:#000
+}
+.theme-orange #left-sidebar .user-account .dropdown-menu a{
+    color:#e8e8e8
+}
