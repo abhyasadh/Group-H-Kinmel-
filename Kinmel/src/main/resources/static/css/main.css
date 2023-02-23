@@ -3310,3 +3310,16 @@ ul.list-justify.large-number span{
 .theme-orange .sidebar-nav .metismenu>li i{
     color:#fff
 }
+.theme-orange .sidebar-nav .metismenu a{
+    color:#fff
+}
+.theme-orange .sidebar-nav .metismenu a:hover,.theme-orange .sidebar-nav .metismenu a:focus{
+    background:#feb800;
+    color:#fff
+}
+.theme-orange .sidebar-nav .metismenu a:hover i,.theme-orange .sidebar-nav .metismenu a:focus i{
+    color:#fff
+}
+.theme-orange .sidebar-nav .metismenu .has-arrow:after{
+    color:#e8e8e8
+}
