@@ -3112,3 +3112,110 @@ select.form-control:not([size]):not([multiple]){
 #toast-container .toast-info .toast-close-button{
   color:#2a5ba0
 }
+
+#toast-container .toast-success{
+  background-color:#22af46
+}
+#toast-container .toast-success .toast-close-button{
+  color:#115a24
+}
+#toast-container .toast-warning{
+  background-color:#f3ad06
+}
+#toast-container .toast-warning .toast-close-button{
+  color:#8f6604
+}
+#toast-container .toast-error{
+  background-color:#de4848
+}
+#toast-container .toast-error .toast-close-button{
+  color:#8d1919
+}
+#toast-container .toast a{
+  text-decoration:underline
+}
+#toast-container .toast a:hover,#toast-container .toast a:focus{
+  text-decoration:none;
+  color:#fff
+}
+#toast-container .toast .toast-message{
+  font-size:14px;
+  line-height:1.4
+}
+.bootstrap-tagsinput .tag{
+  margin:2px!important
+}
+.noUi-target{
+  box-shadow:none!important;
+  border-color:#eee
+}
+.noUi-target .noUi-background,.noUi-target .noUi-connect{
+  box-shadow:none!important
+}
+.accordion .card-header .btn{
+  padding:10px 20px;
+  width:100%
+}
+.accordion2{
+  list-style:none;
+  border-top:1px solid #eee
+}
+.accordion2 .accordion-item{
+  border-bottom:1px solid #eee;
+  padding:0 15px
+}
+.accordion2 .accordion-thumb{
+  font-weight:400;
+  padding:.8rem 0;
+  cursor:pointer
+}
+.accordion2 .accordion-thumb::before{
+  -webkit-transition:all .3s ease-in-out;
+  -moz-transition:all .3s ease-in-out;
+  -ms-transition:all .3s ease-in-out;
+  -o-transition:all .3s ease-in-out;
+  transition:all .3s ease-in-out;
+  content:"\f138";
+  font-family:fontawesome
+}
+.accordion2 .accordion-panel{
+  padding-bottom:.8rem;
+  display:none
+}
+.accordion2 .accordion-item.is-active .accordion-thumb::before{
+  content:"\f13a"
+}
+.carousel.vert .carousel-item-next.carousel-item-left,.carousel.vert .carousel-item-prev.carousel-item-right{
+  -webkit-transform:translate3d(0,0,0);
+  transform:translate3d(0,0,0)
+}
+.carousel.vert .carousel-item-next,.carousel.vert .active.carousel-item-right{
+  -webkit-transform:translate3d(0,100%,0);
+  transform:translate3d(0,100% 0)
+}
+.carousel.vert .carousel-item-prev,.carousel.vert .active.carousel-item-left{
+  -webkit-transform:translate3d(0,-100%,0);
+  transform:translate3d(0,-100%,0)
+}
+.progress{
+  -webkit-border-radius:2px;
+  -moz-border-radius:2px;
+  border-radius:2px;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+  background-color:#f1f1f1
+}
+.progress.wide{
+  width:60px
+}
+.progress .progress-bar{
+  -webkit-transition:width 3s ease;
+  -moz-transition:width 3s ease;
+  -ms-transition:width 3s ease;
+  -o-transition:width 3s ease;
+  transition:width 3s ease;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none
+}
