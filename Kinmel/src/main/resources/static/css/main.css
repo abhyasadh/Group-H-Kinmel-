@@ -3377,3 +3377,36 @@ ul.list-justify.large-number span{
 .theme-orange .blog-page .single_post .footer .stats li a:hover{
     color:#feb800
 }
+.theme-orange .ct-series-a .ct-line,.theme-orange .ct-series-a .ct-bar,.theme-orange .ct-series-a .ct-point{
+    stroke:#380e47
+}
+.theme-orange .ct-series-a .ct-area,.theme-orange .ct-series-a .ct-slice-donut-solid,.theme-orange .ct-series-a .ct-slice-pie,.theme-orange .ct-series-a .ct-bar{
+    fill:#380e47
+}
+.theme-orange .ct-series-b .ct-line,.theme-orange .ct-series-b .ct-bar,.theme-orange .ct-series-b .ct-point{
+    stroke:#feb800
+}
+.theme-orange .ct-series-b .ct-area,.theme-orange .ct-series-b .ct-slice-donut-solid,.theme-orange .ct-series-b .ct-slice-pie,.theme-orange .ct-series-b .ct-bar{
+    fill:#feb800
+}
+.theme-orange .ct-series-c .ct-line,.theme-orange .ct-series-c .ct-bar,.theme-orange .ct-series-c .ct-point{
+    stroke:#ffd974
+}
+.theme-orange .ct-series-c .ct-area,.theme-orange .ct-series-c .ct-slice-donut-solid,.theme-orange .ct-series-c .ct-slice-pie,.theme-orange .ct-series-c .ct-bar{
+    fill:#ffd974
+}
+.theme-orange .ct-series-d .ct-line,.theme-orange .ct-series-d .ct-bar,.theme-orange .ct-series-d .ct-point{
+    stroke:#e4dbc2
+}
+.theme-orange .ct-series-d .ct-area,.theme-orange .ct-series-d .ct-slice-donut-solid,.theme-orange .ct-series-d .ct-slice-pie,.theme-orange .ct-series-d .ct-bar{
+    fill:#e4dbc2
+}
+.theme-orange .ct-series-e .ct-line,.theme-orange .ct-series-e .ct-bar,.theme-orange .ct-series-e .ct-point{
+    stroke:#1a79ee
+}
+.theme-orange .ct-series-e .ct-area,.theme-orange .ct-series-e .ct-slice-donut-solid,.theme-orange .ct-series-e .ct-slice-pie,.theme-orange .ct-series-e .ct-bar{
+    fill:#1a79ee
+}
+.theme-orange .ct-series-f .ct-line,.theme-orange .ct-series-f .ct-bar,.theme-orange .ct-series-f .ct-point{
+    stroke:#2ac151
+}
