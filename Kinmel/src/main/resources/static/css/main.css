@@ -1606,3 +1606,97 @@ a:hover,a:focus{
 .overlay.open{
   display:block
 }
+
+@media screen and (max-width:767px){
+  .hidden-xs{
+      display:none
+  }
+}
+@media screen and (max-width:992px){
+  .hidden-sm{
+      display:none
+  }
+}
+@media screen and (max-width:1024px){
+  .hidden-md{
+      display:none
+  }
+}
+*[dir=rtl] .metismenu .arrow{
+  float:left
+}
+*[dir=rtl] .metismenu .plus-times{
+  float:left
+}
+*[dir=rtl] .metismenu .plus-minus{
+  float:left
+}
+.metismenu .arrow{
+  float:right;
+  line-height:1.42857
+}
+.metismenu .glyphicon.arrow:before{
+  content:"\e079"
+}
+.metismenu .active>a>.glyphicon.arrow:before{
+  content:"\e114"
+}
+.metismenu .fa.arrow:before{
+  content:"\f104"
+}
+.metismenu .active>a>.fa.arrow:before{
+  content:"\f107"
+}
+.metismenu .ion.arrow:before{
+  content:"\f3d2"
+}
+.metismenu .active>a>.ion.arrow:before{
+  content:"\f3d0"
+}
+.metismenu .plus-times{
+  float:right
+}
+.metismenu .fa.plus-times:before{
+  content:"\f067"
+}
+.metismenu .active>a>.fa.plus-times{
+  transform:rotate(45deg)
+}
+.metismenu .plus-minus{
+  float:right
+}
+.metismenu .fa.plus-minus:before{
+  content:"\f067"
+}
+.metismenu .active>a>.fa.plus-minus:before{
+  content:"\f068"
+}
+.metismenu .collapse{
+  display:none
+}
+.metismenu .collapse.in{
+  display:block
+}
+.metismenu .collapsing{
+  position:relative;
+  height:0;
+  overflow:hidden;
+  transition-timing-function:ease;
+  transition-duration:.35s;
+  transition-property:height,visibility
+}
+.metismenu .has-arrow{
+  position:relative
+}
+.metismenu .has-arrow:after{
+  position:absolute;
+  content:'+';
+  right:1em;
+  transition:all .3s ease-out;
+  color:#4c4c54
+}
+*[dir=rtl] .metismenu .has-arrow::after{
+  right:auto;
+  left:1em;
+  transform:rotate(135deg) translate(0,-50%)
+}
