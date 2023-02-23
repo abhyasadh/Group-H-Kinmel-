@@ -365,3 +365,36 @@ ul.list-justify.large-number span{
     font-size:32px;
     line-height:1
 }
+.text-primary{
+    color:#5c8ed4
+}
+.text-info{
+    color:#3c89da
+}
+.text-success{
+    color:#22af46
+}
+.text-warning{
+    color:#f3ad06
+}
+.text-danger{
+    color:#de4848
+}
+.text-muted{
+    color:#9a9a9a
+}
+.text-larger{
+    font-size:1.2em
+}
+.text-large{
+    font-size:1.53em
+}
+.m-l--125{
+    margin-left:-125px
+}
+.m-t--125{
+    margin-top:-125px
+}
+.m-r--125{
+    margin-right:-125px
+}
