@@ -3362,3 +3362,18 @@ ul.list-justify.large-number span{
 .theme-orange .wizard>.steps .done a{
     background:#6f7b7d
 }
+.theme-orange .wizard .actions a{
+    background:#380e47
+}
+.theme-orange .maintenance{
+    background:#feb800
+}
+.theme-orange .maintenance>div{
+    background:#fff
+}
+.theme-orange .noUi-connect{
+    background:#feb800
+}
+.theme-orange .blog-page .single_post .footer .stats li a:hover{
+    color:#feb800
+}
