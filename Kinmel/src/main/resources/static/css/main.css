@@ -3280,3 +3280,33 @@ ul.list-justify.large-number span{
 .invoice1 .invoice-mid .info{
     width:calc(100% - 90px)
 }
+
+.invoice .table tr td{
+    vertical-align:middle
+}
+.theme-orange ::selection{
+    color:#fff;
+    background:#feb800
+}
+.theme-orange .page-loader-wrapper{
+    background:#feb800
+}
+.theme-orange .navbar-fixed-top{
+    background:#feb800
+}
+.theme-orange .navbar-fixed-top .form-control{
+    border:0
+}
+.theme-orange .navbar-fixed-top .icon-menu i{
+    color:#fff
+}
+.theme-orange .sidebar-nav .metismenu>li.active>a{
+    background:#380e47;
+    color:#fff
+}
+.theme-orange .sidebar-nav .metismenu>li.active>a i{
+    color:#fff
+}
+.theme-orange .sidebar-nav .metismenu>li i{
+    color:#fff
+}
