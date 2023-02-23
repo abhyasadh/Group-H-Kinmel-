@@ -3345,3 +3345,20 @@ ul.list-justify.large-number span{
 .theme-orange #left-sidebar .user-account .dropdown-menu a{
     color:#e8e8e8
 }
+.theme-orange .fc .fc-view-container .fc-view.fc-basic-view>table>thead tr th.fc-widget-header{
+    background:#feb800;
+    border-color:#feb800;
+    color:#fff
+}
+.theme-orange .auth-main:after{
+    background:#feb800
+}
+.theme-orange .auth-main:before{
+    background:#380e47
+}
+.theme-orange .wizard>.steps .current a{
+    background:#feb800
+}
+.theme-orange .wizard>.steps .done a{
+    background:#6f7b7d
+}
